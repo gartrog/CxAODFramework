@@ -16,3 +16,4 @@
 ## 15-08-06
 
 * FrameworkExe: use of a few command-line arguments in hsg5framework. Jon
+* CxAODMaker: emulation of the VBF+photon trigger. Liaoshan

@@ -11,8 +11,8 @@
 
 * CxAODReader/CxAODReader\_VHbb/CxAODTools/FrameworkExe: new BTagging tool, final rel20 one. Jeff
 * FrameworkExe: CXAOD-8, fixed name of JER systematic. Daniel
-* FrameworkExe: correct name in testCxAODVariations
+* FrameworkExe: correct name in testCxAODVariations. Daniel
 
-## 15-08-09
+## 15-08-06
 
 * FrameworkExe: use of a few command-line arguments in hsg5framework. Jon

@@ -30,3 +30,6 @@
 * CxAODReader: Fix bugs with new b-tagging on data. Daniel
 * CxAODReader: Some cleanups. Daniel
 
+## 15-08-10
+
+* FrameworkSub: CXAOD-21: Bump to 2.3.23. Bugfixes in xAODRootAccess. No change in CP tools. Daniel

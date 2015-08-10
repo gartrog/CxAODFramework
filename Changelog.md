@@ -18,3 +18,15 @@
 * FrameworkExe: use of a few command-line arguments in hsg5framework. Jon
 * CxAODMaker: emulation of the VBF+photon trigger. Liaoshan
 * CxAODMaker/FrameworkExe: CXAOD-13, fix bug with MET systematics. Nicolas
+
+## 15-08-07
+
+* FrameworkSub: Update the lists of samples in In/ with generic lists that should be updated. CXAOD-17. Daniel
+* Tag FrameworkSub 12-4: like 12-2, with updated samples list, for new and complete production with DxAOD. Daniel
+* CxAODMaker: More truth information, well targetted at our processes. Daniel
+
+## 15-08-08
+
+* CxAODReader: Fix bugs with new b-tagging on data. Daniel
+* CxAODReader: Some cleanups. Daniel
+

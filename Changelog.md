@@ -23,7 +23,7 @@
 
 * FrameworkSub: Update the lists of samples in In/ with generic lists that should be updated. CXAOD-17. Daniel
 * Tag FrameworkSub 12-4: like 12-2, with updated samples list, for new and complete production with DxAOD. Daniel
-* CxAODMaker: More truth information, well targetted at our processes. Daniel
+* CxAODMaker: CXAOD-20: more truth information, well targetted at our processes. Daniel
 
 ## 15-08-08
 

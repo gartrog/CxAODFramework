@@ -33,3 +33,5 @@
 ## 15-08-10
 
 * FrameworkSub: CXAOD-21: Bump to 2.3.23. Bugfixes in xAODRootAccess. No change in CP tools. Daniel
+* FrameworkSub: bugfixes in sample names in In/ files. Daniel
+* CxAODMaker: re-enable writing of event count histogram to CxAOD file. Daniel

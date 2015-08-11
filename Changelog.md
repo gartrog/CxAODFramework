@@ -35,3 +35,13 @@
 * FrameworkSub: CXAOD-21: Bump to 2.3.23. Bugfixes in xAODRootAccess. No change in CP tools. Daniel
 * FrameworkSub: bugfixes in sample names in In/ files. Daniel
 * CxAODMaker: re-enable writing of event count histogram to CxAOD file. Daniel
+
+## 15-08-11
+
+* CxAODReader: Add possibility to call automatic yield file generation from reader executable. CXAOD-22. Daniel
+* Tag FrameworkSub 12-5: same as 12-4, with fixed dataset names in In/. Daniel
+* CxAODMaker\_VHbb/FrameworkExe: dump in CxAOD only fat jets that pass some preselection. CXAOD-23. Nicolas
+* CxAODTool/CxAODMaker: add LumiMetaDataTool to propagate LB information on data. CXAOD-3. Nicolas
+* CxAODMaker: Fix crashes in 2 lepton production due to nullptr in JetRegressionVars. CXAOD-28 CXAOD-29. Jon
+
+

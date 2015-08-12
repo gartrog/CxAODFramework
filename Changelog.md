@@ -18,6 +18,7 @@
 * FrameworkExe: use of a few command-line arguments in hsg5framework. Jon
 * CxAODMaker: emulation of the VBF+photon trigger. Liaoshan
 * CxAODMaker/FrameworkExe: CXAOD-13, fix bug with MET systematics. Nicolas
+* CxAODReader: Add function to fill cutflow hists with/without weights in one go. Sam
 
 ## 15-08-07
 

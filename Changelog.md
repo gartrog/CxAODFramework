@@ -48,4 +48,14 @@
 * Tag FrameworkSub 12-6: same as 12-5, with fix for crashed in 2 lepton production applied. Daniel
 * CxAODReader/FrameworkExe: CXAOD-31: enable failure on unchecked status codes by default in the Reader. Daniel
 
+## 15-08-12
+
+* CxAODReader: fixes on btagging. CXAOD-18, CXAOD-34. Hannah
+* CxAODMaker: Update PU. CXAOD-16. Daniel
+* CxAODTools/CxAODMaker: Small changes to taus in OR. Agni
+
+## 15-08-13
+
+* CxAODMaker/FrameworkSub: Update data and GRL up to period C5. CXAOD-25. Daniel
+
 

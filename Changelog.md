@@ -57,5 +57,6 @@
 ## 15-08-13
 
 * CxAODMaker/FrameworkSub: Update data and GRL up to period C5. CXAOD-25. Daniel
+* FrameworkExe/CxAODReader: Use xAOD branch access when reading NominalOnly. CXAOD-35. Daniel
 
 

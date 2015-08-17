@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 import pysvn
+import time
 from datetime import date
 
 rpath='svn+ssh://haysjm@svn.cern.ch/reps/atlasoff/PhysicsAnalysis/HiggsPhys/Run2/Hbb/CxAODFramework/'
@@ -14,21 +15,31 @@ packages=['CxAODMaker',
           'TupleMaker',
           'TupleReader']
 
-# get all log records for a given package between two revisions
-def getLogRecordRevision(client,package,irev1,irev2):
-    results={}
+# get all log records between two pysvn.Revisions
+def getLogRecordSVNRevision(client,package,rev1,rev2):
+    results = {}
     results[package] = []
-    rev1 = pysvn.Revision( pysvn.opt_revision_kind.number, irev1)
-    rev2 = pysvn.Revision( pysvn.opt_revision_kind.number, irev2)
     logs = client.log(rpath+package+'/trunk',rev1,rev2)
     for log in logs:
-        print log['date'],date.fromtimestamp(log['date'])
-        logRecord = ( log['author'], date.fromtimestamp(log['date']), log['message'])
+        logRecord = ( log['author'] , date.fromtimestamp(log['date']),log['message'])
         results[package].append(logRecord)
     return results
+              
+# get all log records from the last n days
+def getLogRecordSince(client,package,d):
+    rev2 = pysvn.Revision( pysvn.opt_revision_kind.head )
+    timestamp = time.time() - d*86400
+    rev1 = pysvn.Revision( pysvn.opt_revision_kind.date, timestamp)
+    return getLogRecordSVNRevision(client,package,rev1,rev2)
+    
+# get all log records for a given package between two revisions
+def getLogRecordRevision(client,package,irev1,irev2):
+    rev1 = pysvn.Revision( pysvn.opt_revision_kind.number, irev1)
+    rev2 = pysvn.Revision( pysvn.opt_revision_kind.number, irev2)
+    return getLogRecordSVNRevision(client,package,rev1,rev2)
 
 # get all log records for a given package from the trunk since the last tag of the package
-def getLogRecord(client,package,rev2):
+def getLogRecord(client,package):
     taglist=[]
     taglistRaw=client.list(rpath+package+'/tags',depth=pysvn.depth.immediates)
     for tagpath in taglistRaw:
@@ -64,6 +75,12 @@ def getResultsRevision(client,irev1,irev2):
         results.update(getLogRecordRevision(client,pack,irev1,irev2))
     return results
 
+def getResultsSince(client,days):
+    results = {}
+    for pack in packages:
+        results.update(getLogRecordSince(client,pack,days))
+    return results
+
 def getAllResults(client):
 # build tag info for each package:
 # 
@@ -85,7 +102,8 @@ def printResults(results):
 if __name__ == "__main__":
     client=pysvn.Client()
 #    allResults = getAllResults(client)
-    allResults = getResultsRevision(client,688958,689715)
+#    allResults = getResultsRevision(client,688958,689715)
+    allResults = getResultsSince(client,7)
     printResults(allResults)
 
     

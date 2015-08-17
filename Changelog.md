@@ -68,3 +68,5 @@
 ## 15-08-16
 * CxAODReader fix compiler warning. Daniel
 
+## 15-08-17
+* CxAODMaker Update FatJet calibration to EtaJET_JMS jennis

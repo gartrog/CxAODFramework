@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 import pysvn
+from datetime import date
 
 rpath='svn+ssh://haysjm@svn.cern.ch/reps/atlasoff/PhysicsAnalysis/HiggsPhys/Run2/Hbb/CxAODFramework/'
 packages=['CxAODMaker',
@@ -13,6 +14,7 @@ packages=['CxAODMaker',
           'TupleMaker',
           'TupleReader']
 
+# get all log records for a given package between two revisions
 def getLogRecordRevision(client,package,irev1,irev2):
     results={}
     results[package] = []
@@ -20,10 +22,12 @@ def getLogRecordRevision(client,package,irev1,irev2):
     rev2 = pysvn.Revision( pysvn.opt_revision_kind.number, irev2)
     logs = client.log(rpath+package+'/trunk',rev1,rev2)
     for log in logs:
-        logRecord = ( log['author'], log['date'], log['message'])
+        print log['date'],date.fromtimestamp(log['date'])
+        logRecord = ( log['author'], date.fromtimestamp(log['date']), log['message'])
         results[package].append(logRecord)
     return results
 
+# get all log records for a given package from the trunk since the last tag of the package
 def getLogRecord(client,package,rev2):
     taglist=[]
     taglistRaw=client.list(rpath+package+'/tags',depth=pysvn.depth.immediates)
@@ -49,7 +53,8 @@ def getLogRecord(client,package,rev2):
         print 'Getting logs for ',package,' from revision ',rev1,' until revision ',rev2
         logs = client.log(rpath+package+'/trunk',rev1,rev2)
         for log in logs:
-            logRecord = ( log['author'], log['date'], log['message'])
+            print '---> ',log['date'],date.fromtimestamp(log['date'])
+            logRecord = ( log['author'], date.fromtimestamp(log['date']), log['message'])
             results[package].append(logRecord)
     return results
 
@@ -75,12 +80,12 @@ def printResults(results):
         print pack
         logs = results[pack]
         for log in logs:
-            print '    ','{0:10} : {1}'.format(log[0],log[2].rstrip('\n'))
+            print '    ','{0:10} : {1} : {2}'.format(log[0],log[1],log[2].rstrip('\n'))
 
 if __name__ == "__main__":
     client=pysvn.Client()
 #    allResults = getAllResults(client)
-    allResults = getResultsRevision(client,678738,683752)
+    allResults = getResultsRevision(client,688958,689715)
     printResults(allResults)
 
     

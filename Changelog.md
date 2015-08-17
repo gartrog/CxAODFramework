@@ -63,4 +63,8 @@
 
 * Make PRW file configurable from cfg file. CXAOD-36. Lulu
 
+## 15-08-15
+
+## 15-08-16
+* CxAODReader fix compiler warning. Daniel
 

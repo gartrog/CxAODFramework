@@ -70,3 +70,36 @@
 
 ## 15-08-17
 * CxAODMaker Update FatJet calibration to EtaJET_JMS jennis
+
+## 15-08-18
+* CxAODMaker adding isolation selection tool to photon handler, and other small changes -- support for additional triggers, latest config files, etc. prose
+* CxAODTools skip duplicated mc_channel_number, remove deprecated DerivEffProvider, Daniel
+* CxAODTools update to vbf+gamma OR tool and addition of common properties for photon isolation prose
+* CxAODReader  CXAOD-41: use applySherpaTruthPtCut config flag, default is false, Daniel
+* CxAODReader  adding sample names for VBF+gamma analysis for HistNameSvc, prose
+* CxAODReader_VHbb  minor changes to AnalysisReader_VBFHbb -- different histogram binning, MV2c20 cut, debug info, prose
+* FrameworkExe  add sample HZZllqq,  CXAOD-41: add applySherpaTruthPtCut flag, Daniel
+* FrameworkExe adding the HZZvvqq sample string, arturo
+* FrameworkExe support for additional vbf+gamma samples, prose
+
+## 15-08-19
+* CxAODTools fixed typo in HLT_mu24_iloose_L1MU15 trigger, amontalb
+* CxAODTools Update made to the XSectionProvider to allow for the XSection_13TeV.txt and XSection_8TeV.txt files to be read in properly and contain the additional information that sets the sample name associated to a given DSID.   (performed for @CxAOD-19), meehan
+* CxAODReader Update made to AnalysisReader and HistNameSvc to simplify the manner in which the sample name is determined.  It is no longer hardcoded into the HistNameSvc and therefore, when new samples are added, one need not update this file.  Instead, the sample name is now set by using the map generated in the XSectionProvider tool, which has been modified as well, to allow for another member of the struct containing the sample name.  (performed for @CxAOD-19), meehan
+* CXAODReader_VHbb added missing protection, hannah
+
+## 15-08-20
+* CxAODMaker shallow copies of input containers recorded in EventLoop's TStore, resolves JIRA ticket CXAOD-38, Kristian
+* CxAODReader remove some debug output, add counter for selected events, print at end of job, Daniel
+* FrameworkExe Update of the samples to copy in SVN, more names have been added to the list too, Arturo
+
+## 15-08-21  
+* CxAODReader_VHbb, proper init, Hannah
+
+## 15-08-22
+
+## 15-08-23
+
+## 15-08-24
+* CxAODTools, CxAODReader, CxAODReader_VHbb, FrameworkExe, new b-tagging tool, jhetherl
+* CxAODReader_VHbb put m_doTruthTagging flag back, Hannah

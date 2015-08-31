@@ -157,3 +157,8 @@
 * CxAODTools : rm __MAKECINT__, hanar
 * FrameworkExe : added two additional, recommended systematics affecting METTrack, hanar
 
+## 15-08-31
+* CxAODMaker : Higgs tagger, benitezj
+* CxAODTools : adding deletes..., hanar
+* CxAODTools : Higgs tagger, benitezj
+* CxAODTools : use m_msgLevel; reduce messaging, hanar

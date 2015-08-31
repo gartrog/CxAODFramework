@@ -99,11 +99,18 @@ def printResults(results):
         for log in logs:
             print '    ','{0:10} : {1} : {2}'.format(log[0],log[1],log[2].rstrip('\n'))
 
+def printResultsAlternate(results):
+    for pack in packages:
+        logs = results[pack]
+        for log in logs:
+            print '{0} : {1} : {2:10}, {3}'.format(log[1],pack,log[2].rstrip('\n'),log[0])
+        
 if __name__ == "__main__":
     client=pysvn.Client()
 #    allResults = getAllResults(client)
 #    allResults = getResultsRevision(client,688958,689715)
     allResults = getResultsSince(client,7)
-    printResults(allResults)
+#    printResults(allResults)
+    printResultsAlternate(allResults)
 
     

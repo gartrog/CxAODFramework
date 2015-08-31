@@ -103,3 +103,57 @@
 ## 15-08-24
 * CxAODTools, CxAODReader, CxAODReader_VHbb, FrameworkExe, new b-tagging tool, jhetherl
 * CxAODReader_VHbb put m_doTruthTagging flag back, Hannah
+* CxAODReader : b-tagging tool harmonization, jhetherl
+* CxAODReader_VHbb : put m_doTruthTagging flag back, hanar
+* CxAODTools : b-tagging update, jhetherl
+
+## 15-08-25
+* CxAODMaker : My update to CxAODMaker in the trunk - Add Jet Shape related paramters to the CxAOD and minor modification in type of return of get_indexPV() function, okumura
+* CxAODReader : init m_triggerTool with nullptr on job creation, dbuesche
+* CxAODReader : put trigger decision access at reader level, djamin
+* CxAODReader : skip initialization of m_bTagTool if config invalid (prevent crash), safely delete m_bTagTool and m_overlapRemoval, dbuesche
+* CxAODReader_VHbb : put trigger decision access at reader level, djamin
+* CxAODReader_VHbb : Update from Yasu - for VBF inclusive analysis, add a new function declaration and implementation, and add lines to swithc type to "VBFIncl" in nitializeSelection function, okumura
+* CxAODTools : My update to CxAODTools in the trunk - Add Jet Shape related paramters to the CxAOD, okumura
+* CxAODTools : put trigger decision access at reader level, djamin
+* CxAODTools_VHbb : My update CxAODTools_VHbb in the trunk - add VBF inclusive analysis selector reproducing the Run1 analysis pre-selection so far, okumura
+
+## 15-08-26
+* CxAODMaker : Added OverlapRegister to CxAODMaker - turned off by default. Second part of [CERN-JIRA](CXAOD-52). Next is implementing it in CxAODReader., grkeren
+* CxAODReader : add info output for finalize methods, dbuesche
+* CxAODReader : removed m_mcChannel retrieval in initializeIsMC (); ensure consistent usage throughout the code; CXAOD-51, hanar
+* CxAODTools : Added OverlapRegister and related files. First part of [CERN-JIRA](CXAOD-52), grkeren
+* CxAODTools : proper CLIDs, adjusted print-out, grkeren
+* FrameworkExe : remove duplicated comment, dbuesche
+* FrameworkExe : update default sample (previous was removed), add TrackJet::AddPreselJets=true, dbuesche
+
+## 15-08-27
+* CxAODMaker : copyIfExists ConeTruthLabelID and HadronConeExclTruthLabelID for truth jets, dbuesche
+* CxAODMaker : replace using PileupReweightingTool by wrapper PUReweightingTool; CXAOD-54, hanar
+* CxAODMaker : Update to photon efficiency correction config files, prose
+* CxAODMaker_VHbb : Remove VBF0phEvtSelection and add VBFInclEvtSelection, prose
+* CxAODReader : delete m_triggerTool, hanar
+* CxAODReader : introduced setEventWeight method, where MC gen weight, lumi weight and PU weight are derived and multplied; getLumiWeight(double& weight) was renamed and cleaned-up; applyPUWeight() was introduced where the PU weight is either retrieved from the input CxAOD or retrieved from the PUReweightingTool depending on the config settings; the execute() method was restructured and cleaned-up, in order to avoid retrieving the eventInfo several times and to decorate it with the lumi and PU weight for each systematic variation; CXAOD-46, hanar
+* CxAODReader_VHbb : changes to vbf0ph analysis reader, and update vbf analyses names for consistent analysis selection between reader and maker, prose
+* CxAODTools : condensed the code for OverlapRegisterAccessor, grkeren
+* CxAODTools : fix 2lep TriggerTool for matching bug and put xe80 by default for 0lep, djamin
+* CxAODTools : introduced setEventWeight method, where MC gen weight, lumi weight and PU weight are derived and multplied; getLumiWeight(double& weight) was renamed and cleaned-up; applyPUWeight() was introduced where the PU weight is either retrieved from the input CxAOD or retrieved from the PUReweightingTool depending on the config settings; the execute() method was restructured and cleaned-up, in order to avoid retrieving the eventInfo several times and to decorate it with the lumi and PU weight for each systematic variation; CXAOD-46, hanar
+* CxAODTools : Use isWHSignalElectrons in VBF+gamma OR, prose
+* CxAODTools_VHbb : Updating VBFHbb*EvtSelection to a common preSelection so that vbf and vbf+gamma can share CxAODs, prose
+* CxAODTools : wrapper for PU reweighting; CXAOD-54, hanar
+* CxAODTools : wrapper for PU reweighting; CXAOD-54, hanar
+* CxAODTools : wrapper for PU reweighting; CXAOD-54, hanar
+* FrameworkExe : enable PU retrieval in config; CXAOD-46, hanar
+
+## 15-08-28
+* CxAODMaker : add electron isolation effSF; CXAOD-37, lulu
+* CxAODMaker : CXAOD-58: add efficiency scale factors for Tight working point, dbuesche
+* CxAODMaker : CXAOD-58 bugfix: write correct looseIsoSF, dbuesche
+* CxAODMaker : CXAOD-58: user proper xAOD::Muon::Quality enum for MuonSelectionTool (no change in behaviour), dbuesche
+* CxAODMaker : removed deprecated debugging output; added debug output; CXAOD-63, hanar
+* CxAODReader : CXAOD-40: temporarily disable trigger tool initialization, dbuesche
+* CxAODReader_VHbb : CXAOD-40: temporarily enable trigger tool initialization in CxAODReader_VHbb, dbuesche
+* CxAODTools : add electron isolation effSF, lulu
+* CxAODTools : rm __MAKECINT__, hanar
+* FrameworkExe : added two additional, recommended systematics affecting METTrack, hanar
+

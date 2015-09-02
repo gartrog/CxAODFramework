@@ -69,60 +69,54 @@
 * CxAODReader fix compiler warning. Daniel
 
 ## 15-08-17
-* CxAODMaker Update FatJet calibration to EtaJET_JMS jennis
+* CxAODMaker Update FatJet calibration to EtaJET\_JMS jennis
 
 ## 15-08-18
 * CxAODMaker adding isolation selection tool to photon handler, and other small changes -- support for additional triggers, latest config files, etc. prose
-* CxAODTools skip duplicated mc_channel_number, remove deprecated DerivEffProvider, Daniel
+* CxAODTools skip duplicated mc\_channel\_number, remove deprecated DerivEffProvider, Daniel
 * CxAODTools update to vbf+gamma OR tool and addition of common properties for photon isolation prose
 * CxAODReader  CXAOD-41: use applySherpaTruthPtCut config flag, default is false, Daniel
 * CxAODReader  adding sample names for VBF+gamma analysis for HistNameSvc, prose
-* CxAODReader_VHbb  minor changes to AnalysisReader_VBFHbb -- different histogram binning, MV2c20 cut, debug info, prose
+* CxAODReader\_VHbb  minor changes to AnalysisReader\_VBFHbb -- different histogram binning, MV2c20 cut, debug info, prose
 * FrameworkExe  add sample HZZllqq,  CXAOD-41: add applySherpaTruthPtCut flag, Daniel
 * FrameworkExe adding the HZZvvqq sample string, arturo
 * FrameworkExe support for additional vbf+gamma samples, prose
 
 ## 15-08-19
-* CxAODTools fixed typo in HLT_mu24_iloose_L1MU15 trigger, amontalb
-* CxAODTools Update made to the XSectionProvider to allow for the XSection_13TeV.txt and XSection_8TeV.txt files to be read in properly and contain the additional information that sets the sample name associated to a given DSID.   (performed for @CxAOD-19), meehan
+* CxAODTools fixed typo in HLT\_mu24\_iloose\_L1MU15 trigger, amontalb
+* CxAODTools Update made to the XSectionProvider to allow for the XSection\_13TeV.txt and XSection\_8TeV.txt files to be read in properly and contain the additional information that sets the sample name associated to a given DSID.   (performed for @CxAOD-19), meehan
 * CxAODReader Update made to AnalysisReader and HistNameSvc to simplify the manner in which the sample name is determined.  It is no longer hardcoded into the HistNameSvc and therefore, when new samples are added, one need not update this file.  Instead, the sample name is now set by using the map generated in the XSectionProvider tool, which has been modified as well, to allow for another member of the struct containing the sample name.  (performed for @CxAOD-19), meehan
-* CXAODReader_VHbb added missing protection, hannah
+* CXAODReader\_VHbb added missing protection, hannah
 
 ## 15-08-20
 * CxAODMaker shallow copies of input containers recorded in EventLoop's TStore, resolves JIRA ticket CXAOD-38, Kristian
 * CxAODReader remove some debug output, add counter for selected events, print at end of job, Daniel
 * FrameworkExe Update of the samples to copy in SVN, more names have been added to the list too, Arturo
 
-## 15-08-21  
-* CxAODReader_VHbb, proper init, Hannah
+## 15-08-21
+* CxAODReader\_VHbb, proper init, Hannah
 
 ## 15-08-22
 
 ## 15-08-23
 
 ## 15-08-24
-* CxAODTools, CxAODReader, CxAODReader_VHbb, FrameworkExe, new b-tagging tool, jhetherl
-* CxAODReader_VHbb put m_doTruthTagging flag back, Hannah
-* CxAODReader : b-tagging tool harmonization, jhetherl
-* CxAODReader_VHbb : put m_doTruthTagging flag back, hanar
-* CxAODTools : b-tagging update, jhetherl
+* CxAODTools, CxAODReader, CxAODReader\_VHbb, FrameworkExe, new b-tagging tool, jhetherl
+* CxAODReader\_VHbb : put m\_doTruthTagging flag back, hanar
 
 ## 15-08-25
-* CxAODMaker : My update to CxAODMaker in the trunk - Add Jet Shape related paramters to the CxAOD and minor modification in type of return of get_indexPV() function, okumura
-* CxAODReader : init m_triggerTool with nullptr on job creation, dbuesche
+* CxAODMaker, CxAODTools : Add Jet Shape related paramters to the CxAOD and minor modification in type of return of get\_indexPV() function, okumura
+* CxAODReader : init m\_triggerTool with nullptr on job creation, dbuesche
 * CxAODReader : put trigger decision access at reader level, djamin
-* CxAODReader : skip initialization of m_bTagTool if config invalid (prevent crash), safely delete m_bTagTool and m_overlapRemoval, dbuesche
-* CxAODReader_VHbb : put trigger decision access at reader level, djamin
-* CxAODReader_VHbb : Update from Yasu - for VBF inclusive analysis, add a new function declaration and implementation, and add lines to swithc type to "VBFIncl" in nitializeSelection function, okumura
-* CxAODTools : My update to CxAODTools in the trunk - Add Jet Shape related paramters to the CxAOD, okumura
-* CxAODTools : put trigger decision access at reader level, djamin
-* CxAODTools_VHbb : My update CxAODTools_VHbb in the trunk - add VBF inclusive analysis selector reproducing the Run1 analysis pre-selection so far, okumura
+* CxAODReader : skip initialization of m\_bTagTool if config invalid (prevent crash), safely delete m\_bTagTool and m\_overlapRemoval, dbuesche
+* CxAODReader\_VHbb : Update from Yasu - for VBF inclusive analysis, add a new function declaration and implementation, and add lines to swithc type to "VBFIncl" in nitializeSelection function, okumura
+* CxAODTools\_VHbb : add VBF inclusive analysis selector reproducing the Run1 analysis pre-selection so far, okumura
 
 ## 15-08-26
+* CxAODTools : Added OverlapRegister and related files. First part of [CERN-JIRA](CXAOD-52), grkeren
 * CxAODMaker : Added OverlapRegister to CxAODMaker - turned off by default. Second part of [CERN-JIRA](CXAOD-52). Next is implementing it in CxAODReader., grkeren
 * CxAODReader : add info output for finalize methods, dbuesche
-* CxAODReader : removed m_mcChannel retrieval in initializeIsMC (); ensure consistent usage throughout the code; CXAOD-51, hanar
-* CxAODTools : Added OverlapRegister and related files. First part of [CERN-JIRA](CXAOD-52), grkeren
+* CxAODReader : removed m\_mcChannel retrieval in initializeIsMC (); ensure consistent usage throughout the code; CXAOD-51, hanar
 * CxAODTools : proper CLIDs, adjusted print-out, grkeren
 * FrameworkExe : remove duplicated comment, dbuesche
 * FrameworkExe : update default sample (previous was removed), add TrackJet::AddPreselJets=true, dbuesche
@@ -131,17 +125,15 @@
 * CxAODMaker : copyIfExists ConeTruthLabelID and HadronConeExclTruthLabelID for truth jets, dbuesche
 * CxAODMaker : replace using PileupReweightingTool by wrapper PUReweightingTool; CXAOD-54, hanar
 * CxAODMaker : Update to photon efficiency correction config files, prose
-* CxAODMaker_VHbb : Remove VBF0phEvtSelection and add VBFInclEvtSelection, prose
-* CxAODReader : delete m_triggerTool, hanar
+* CxAODMaker\_VHbb : Remove VBF0phEvtSelection and add VBFInclEvtSelection, prose
+* CxAODReader : delete m\_triggerTool, hanar
 * CxAODReader : introduced setEventWeight method, where MC gen weight, lumi weight and PU weight are derived and multplied; getLumiWeight(double& weight) was renamed and cleaned-up; applyPUWeight() was introduced where the PU weight is either retrieved from the input CxAOD or retrieved from the PUReweightingTool depending on the config settings; the execute() method was restructured and cleaned-up, in order to avoid retrieving the eventInfo several times and to decorate it with the lumi and PU weight for each systematic variation; CXAOD-46, hanar
-* CxAODReader_VHbb : changes to vbf0ph analysis reader, and update vbf analyses names for consistent analysis selection between reader and maker, prose
+* CxAODReader\_VHbb : changes to vbf0ph analysis reader, and update vbf analyses names for consistent analysis selection between reader and maker, prose
 * CxAODTools : condensed the code for OverlapRegisterAccessor, grkeren
 * CxAODTools : fix 2lep TriggerTool for matching bug and put xe80 by default for 0lep, djamin
 * CxAODTools : introduced setEventWeight method, where MC gen weight, lumi weight and PU weight are derived and multplied; getLumiWeight(double& weight) was renamed and cleaned-up; applyPUWeight() was introduced where the PU weight is either retrieved from the input CxAOD or retrieved from the PUReweightingTool depending on the config settings; the execute() method was restructured and cleaned-up, in order to avoid retrieving the eventInfo several times and to decorate it with the lumi and PU weight for each systematic variation; CXAOD-46, hanar
 * CxAODTools : Use isWHSignalElectrons in VBF+gamma OR, prose
-* CxAODTools_VHbb : Updating VBFHbb*EvtSelection to a common preSelection so that vbf and vbf+gamma can share CxAODs, prose
-* CxAODTools : wrapper for PU reweighting; CXAOD-54, hanar
-* CxAODTools : wrapper for PU reweighting; CXAOD-54, hanar
+* CxAODTools\_VHbb : Updating VBFHbb\*EvtSelection to a common preSelection so that vbf and vbf+gamma can share CxAODs, prose
 * CxAODTools : wrapper for PU reweighting; CXAOD-54, hanar
 * FrameworkExe : enable PU retrieval in config; CXAOD-46, hanar
 
@@ -152,13 +144,13 @@
 * CxAODMaker : CXAOD-58: user proper xAOD::Muon::Quality enum for MuonSelectionTool (no change in behaviour), dbuesche
 * CxAODMaker : removed deprecated debugging output; added debug output; CXAOD-63, hanar
 * CxAODReader : CXAOD-40: temporarily disable trigger tool initialization, dbuesche
-* CxAODReader_VHbb : CXAOD-40: temporarily enable trigger tool initialization in CxAODReader_VHbb, dbuesche
+* CxAODReader\_VHbb : CXAOD-40: temporarily enable trigger tool initialization in CxAODReader\_VHbb, dbuesche
 * CxAODTools : add electron isolation effSF, lulu
-* CxAODTools : rm __MAKECINT__, hanar
+* CxAODTools : rm \_\_MAKECINT\_\_, hanar
 * FrameworkExe : added two additional, recommended systematics affecting METTrack, hanar
 
 ## 15-08-31
 * CxAODMaker : Higgs tagger, benitezj
 * CxAODTools : adding deletes..., hanar
 * CxAODTools : Higgs tagger, benitezj
-* CxAODTools : use m_msgLevel; reduce messaging, hanar
+* CxAODTools : use m\_msgLevel; reduce messaging, hanar

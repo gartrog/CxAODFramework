@@ -172,5 +172,5 @@
 * CxAODMaker, CxAODTools, Add official BosonTag tool to FatJetHandler and switch for fatjet mass calibration. CXAOD-81. joe
 * CxAODMaker: fix Higgs tagger corrected momentum. CXAOD-81. jose
 * FrameworkSub: added back dijet and A-\>Zh. andy
-
+* CxAODReader: added switches for applying lumi and PU weights; CXAOD-46. hannah
 

@@ -154,3 +154,23 @@
 * CxAODTools : adding deletes..., hanar
 * CxAODTools : Higgs tagger, benitezj
 * CxAODTools : use m\_msgLevel; reduce messaging, hanar
+
+## 15-09-01
+* FrameworkExe-00-01-10: CXAOD-43: disable running on ggA (missing Xsection), daniel
+* Tag FrameworkSub 12-8: Able to read 12-6 CxAODs. daniel
+* CxAODTools, CxAODReader, CxAODReader\_VHbb: fix analysisType bug int/str in TriggerTool. CXAOD-40. david
+
+## 15-09-02
+* CxAODTools, CxAODMaker: modification in PU tool logic. CXAOD-54. jose
+* CxAODTools, CxAODReader\_VHbb: add definition of trigger used for A-\>Zh, vbf and vbfa (matching too) analysis. david
+* CxAODMaker: bugfix for MET in systematics. Takuya
+* CxAODReader: adapt for the interface changes introduced by Revision: 692706; CXAOD-54. hannah
+* CxAODMaker, CxAODTools: adding PDF info as props to eventinfo. CXAOD-82. ines
+
+## 15-09-03
+* FrameworkSub: updated cross section numbers 361106-361108, 361372-361443. ycguo
+* CxAODMaker, CxAODTools, Add official BosonTag tool to FatJetHandler and switch for fatjet mass calibration. CXAOD-81. joe
+* CxAODMaker: fix Higgs tagger corrected momentum. CXAOD-81. jose
+* FrameworkSub: added back dijet and A-\>Zh. andy
+
+

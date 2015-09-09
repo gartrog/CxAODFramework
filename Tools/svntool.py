@@ -13,7 +13,8 @@ packages=['CxAODMaker',
           'FrameworkExe',
           'FrameworkExe_VHbb',
           'TupleMaker',
-          'TupleReader']
+          'TupleReader',
+          'FrameworkSub']
 
 # get all log records between two pysvn.Revisions
 def getLogRecordSVNRevision(client,package,rev1,rev2):
@@ -109,7 +110,7 @@ if __name__ == "__main__":
     client=pysvn.Client()
 #    allResults = getAllResults(client)
 #    allResults = getResultsRevision(client,688958,689715)
-    allResults = getResultsSince(client,7)
+    allResults = getResultsSince(client,8)
 #    printResults(allResults)
     printResultsAlternate(allResults)
 

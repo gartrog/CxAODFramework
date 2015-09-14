@@ -175,24 +175,43 @@
 * CxAODReader: added switches for applying lumi and PU weights; CXAOD-46. hannah
 
 ## 15-09-04
-CxAODMaker : Add official BosonTag tool to FatJetHandler and switch for fatjet mass calibration, jennis
-CxAODMaker : debug flag, benitezj
-CxAODMaker : fix Higgs tagger corrected momentum, benitezj
-CxAODReader : added switches for applying lumi and PU weights; CXAOD-46, hanar
-CxAODTools : Add boson substructure property for fatjets, jennis
-FrameworkExe : added switches for applying lumi and PU weights; CXAOD-46, hanar
-FrameworkSub : Added dijet and A-\>Zh, amehta
+* CxAODMaker : Add official BosonTag tool to FatJetHandler and switch for fatjet mass calibration, jennis
+* CxAODMaker : debug flag, benitezj
+* CxAODMaker : fix Higgs tagger corrected momentum, benitezj
+* CxAODReader : added switches for applying lumi and PU weights; CXAOD-46, hanar
+* CxAODTools : Add boson substructure property for fatjets, jennis
+* FrameworkExe : added switches for applying lumi and PU weights; CXAOD-46, hanar
+* FrameworkSub : Added dijet and A-\>Zh, amehta
 
 ## 15-09-06
-CxAODMaker : Implement possible workaround for CutBookkkeepers bug. CXAOD-89, nmorange
+* CxAODMaker : Implement possible workaround for CutBookkkeepers bug. CXAOD-89, nmorange
 
 ## 15-09-07
-CxAODMaker : add mu18\_mu8noL1 and mu24\_mu8noL1 triggers at Maker level to store on CxAODs, djamin
-CxAODMaker : CXAOD-45 updated TauHandler to run TauTruthMatchTool - needed for TauSmearingTool. Aparently this wont be neccessary when this gets run in the derivations. This fixes the problem stopping us moving to 2.3.25, haysjm
-CxAODTools : add mu18\_mu8noL1 and mu24\_mu8noL1 triggers at Maker level to store on CxAODs, djamin
-FrameworkExe : CXAOD-45 added a flag to the default config file to turn on running of the TauTruthMatchingTool in the TauHandler - should be tru by default otherwise tool will fail on current derivations, haysjm
-FrameworkSub : added missing checkout of JetSubStructureMomentTools needed to match version of JetSubStructureutils, haysjm
+* CxAODMaker, CxAODTools : add mu18\_mu8noL1 and mu24\_mu8noL1 triggers at Maker level to store on CxAODs, djamin
+* CxAODMaker : CXAOD-45 updated TauHandler to run TauTruthMatchTool - needed for TauSmearingTool. Aparently this wont be neccessary when this gets run in the derivations. This fixes the problem stopping us moving to 2.3.25, haysjm
+* FrameworkExe : CXAOD-45 added a flag to the default config file to turn on running of the TauTruthMatchingTool in the TauHandler - should be tru by default otherwise tool will fail on current derivations, haysjm
+* FrameworkSub : added missing checkout of JetSubStructureMomentTools needed to match version of JetSubStructureutils, haysjm
 
 ## 15-09-08
-FrameworkSub : adding madgraph xs FrameworkSub in mydevbranch, cwang
+* FrameworkSub : adding madgraph xs FrameworkSub in mydevbranch, cwang
+
+## 15-09-09
+* CxAODReader: do not write MVA job output stream if flag is off, fsforza
+* CxAODMaker: Added switch to turn of Xbb tagging. Disable this automatically for non-standard fatjet collections. jennis
+
+## 15-09-10
+* CxAODMaker: Removed error messages from FatJetHandler for lack of muon collection if Xbb tagger disabled, jennis
+
+## 15-09-11
+* CxAODTools: added switch to remove tau from OR - default is to remove (avoids change inbehaviour) - but config option added to default config file to switch off taus in OR CXAOD-90. haysjm
+* CxAODMaker: modified TauHandler to use new switch in TauAnalysisTools-00-01-09 to turn off truth match checking - this means we don't need to run truth matching - which wont work on our current derivations CXAOD-92 CXAOD-90. haysjm
+* FrameworkExe: added switches to the default config file to not run TauTruthMatching and to remove taus from the overlap removal CXAOD-90 CXAOD-92. haysjm
+* FrameworkSub: moved the release up to 2.3.25 and added checkout of TauAnalysisTools-00-01-09, CXAOD-92, CXAOD-90, CXAOD-45. haysjm
+
+## 15-09-14
+* CxAODMaker: Clean up code to turn of Xbb tag, jennis
+* CxAODMaker: Add switch to turn off accessing TruthEvents, jennis
+* FrameworkExe: pulled in GRL checker script from Tom CXAOD-48, haysjm
+* FrameworkSub: bootstrap updated ready to make FrameworkSub tag CXAOD-55, haysjm
+
 

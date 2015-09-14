@@ -196,3 +196,28 @@ FrameworkSub : added missing checkout of JetSubStructureMomentTools needed to ma
 ## 15-09-08
 FrameworkSub : adding madgraph xs FrameworkSub in mydevbranch, cwang
 
+## 15-09-09
+CxAODMaker : Added switch to turn of Xbb tagging. Disable this automatically for non-standard fatjet collections, jennis
+CxAODReader : do not write MVA job output stream if flag is off, fsforza
+
+## 15-09-10
+CxAODMaker : Removed error messages from FatJetHandler for lack of muon collection if Xbb tagger disabled, jennis
+
+## 15-09-11
+CxAODMaker : modified TauHandler to use new switch in TauAnalysisTools-00-01-09 to turn off truth match checking - this means we don't need to run truth matching - whic
+h wont work on our current derivations CXAOD-92 CXAOD-90, haysjm
+CxAODTools : added switch to remove tau from OR - default is to remove (avoids change in behaviour) - but config option added to default config file to switch off taus 
+in OR CXAOD-90, haysjm
+FrameworkExe : added switches to the default config file to not run TauTruthMatching and to remove taus from the overlap removal CXAOD-90 CXAOD-92, haysjm
+FrameworkSub : moved the release up to 2.3.25 and added checkout of TauAnalysisTools-00-01-09, CXAOD-92, CXAOD-90, CXAOD-45, haysjm
+
+## 15-09-12
+
+## 15-09-13
+	
+## 15-09-14
+CxAODMaker : Add switch to turn off accessing TruthEvents, jennis
+CxAODMaker : Clean up code to turn of Xbb tag, jennis
+FrameworkExe : pulled in GRL checker script from Tom CXAOD-48, haysjm
+FrameworkSub : bootstrap updated ready to make FrameworkSub tag CXAOD-55, haysjm
+FrameworkSub : really final update this time - at least for the package list. further updates for input samples expected CXAOD-55, haysjm

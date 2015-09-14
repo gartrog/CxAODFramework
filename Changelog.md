@@ -181,15 +181,15 @@ CxAODMaker : fix Higgs tagger corrected momentum, benitezj
 CxAODReader : added switches for applying lumi and PU weights; CXAOD-46, hanar
 CxAODTools : Add boson substructure property for fatjets, jennis
 FrameworkExe : added switches for applying lumi and PU weights; CXAOD-46, hanar
-FrameworkSub : Added dijet and A->Zh, amehta
+FrameworkSub : Added dijet and A-\>Zh, amehta
 
 ## 15-09-06
 CxAODMaker : Implement possible workaround for CutBookkkeepers bug. CXAOD-89, nmorange
 
 ## 15-09-07
-CxAODMaker : add mu18_mu8noL1 and mu24_mu8noL1 triggers at Maker level to store on CxAODs, djamin
+CxAODMaker : add mu18\_mu8noL1 and mu24\_mu8noL1 triggers at Maker level to store on CxAODs, djamin
 CxAODMaker : CXAOD-45 updated TauHandler to run TauTruthMatchTool - needed for TauSmearingTool. Aparently this wont be neccessary when this gets run in the derivations. This fixes the problem stopping us moving to 2.3.25, haysjm
-CxAODTools : add mu18_mu8noL1 and mu24_mu8noL1 triggers at Maker level to store on CxAODs, djamin
+CxAODTools : add mu18\_mu8noL1 and mu24\_mu8noL1 triggers at Maker level to store on CxAODs, djamin
 FrameworkExe : CXAOD-45 added a flag to the default config file to turn on running of the TauTruthMatchingTool in the TauHandler - should be tru by default otherwise tool will fail on current derivations, haysjm
 FrameworkSub : added missing checkout of JetSubStructureMomentTools needed to match version of JetSubStructureutils, haysjm
 

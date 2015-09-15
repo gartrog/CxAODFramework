@@ -214,4 +214,8 @@
 * FrameworkExe: pulled in GRL checker script from Tom CXAOD-48, haysjm
 * FrameworkSub: bootstrap updated ready to make FrameworkSub tag CXAOD-55, haysjm
 
+## 15-09-15
+* CxAODMaker, CxAODMaker\_VHbb: pass derivation name from AnalysisBase to EventInfoHandler; access HLT\_Jet/Photon information only in case of HIGG5D1 and HIGG5D3 derivations;CXAOD-84, hanar
+* FrameworkSub: removing pkg already in release, fsforza
+* CxAODMaker, FrameworkSub: Bump to 2.3.26: electron efficiency SF (looseLH, mediumLH, tightLH) updated to v02. CXAOD-94. nmorange
 

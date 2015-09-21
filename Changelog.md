@@ -235,6 +235,7 @@
 * FrameworkSub: updated input files for MC - 50ns p2375 - includes Powheg and MadGraph V+jets samples p2411 CXAOD-65. haysjm
 * FrameworkExe: bump the vtag. haysjm
 * FrameworkSub: updated packages to final list for tag14. haysjm
+* Tag FrameworkSub 00-14-00. haysjm
 
 ## 15-09-18
 * CxAODTools, FrameworkExe: added option (for the reader) to run with PU data SF variation. Default is 1.16. Option is commented in config file. fsforza
@@ -245,6 +246,7 @@
 
 ## 15-09-19
 * FrameworkExe: update sample list names. dbuesche
+* Tag FrameworkSub 00-14-01. haysjm
 
 ## 15-09-20
 * CxAODMaker: remove 1 compilation warning. fsforza
@@ -257,6 +259,7 @@
 * FrameworkExe: bugfix in sample list in copy script. dbuesche
 * FrameworkExe: add switch for verbose mode. dbuesche
 * FrameworkExe: add W/Z Madgraph and Powheg samples in copy script. dbuesche
+* CxAODMaker, FrameworkExe: switch for including (or not) taus in the MET calculation. agbet
 
 
 

@@ -218,4 +218,46 @@
 * CxAODMaker, CxAODMaker\_VHbb: pass derivation name from AnalysisBase to EventInfoHandler; access HLT\_Jet/Photon information only in case of HIGG5D1 and HIGG5D3 derivations;CXAOD-84, hanar
 * FrameworkSub: removing pkg already in release, fsforza
 * CxAODMaker, FrameworkSub: Bump to 2.3.26: electron efficiency SF (looseLH, mediumLH, tightLH) updated to v02. CXAOD-94. nmorange
+* CxAODMaker: Hack 50ns GRL to include 50ns Run from Period D. Add Period D GRL. Add full 50ns ilumicalc file. CXAOD-64. nmorange
+* FrameworkSub: Update data lists to full 50ns dataset with latest derivations available. CXAOD-65. nmorange
+* CxAODReader\_VHbb: moved jet rescaling to function. hanar
+* FrameworkExe: Use the updated ilumicalc files. CXAOD-64. nmorange
+* CxAODReader\_VHbb: apply lepton sfs. hanar
+* CxAODReader\_VHbb: replace MET cut, by HT/sqrt(MET) - need to follow up: how is the top CR defined then?. hanar
+
+## 15-09-16
+* CxAODMaker: Remove muon trigger SF bits, that are now done at Reader level. fsforza
+
+## 15-09-17
+* CxAODMaker: remove unused header. fsforza
+* CxAODMaker: fix missing header file in Objecthandler.icc - possibly caused by upgrade to 2.3.26?. haysjm
+* FrameworkSub: update tags to pull in filx to missing header in CxAODMaker. haysjm
+* FrameworkSub: updated input files for MC - 50ns p2375 - includes Powheg and MadGraph V+jets samples p2411 CXAOD-65. haysjm
+* FrameworkExe: bump the vtag. haysjm
+* FrameworkSub: updated packages to final list for tag14. haysjm
+
+## 15-09-18
+* CxAODTools, FrameworkExe: added option (for the reader) to run with PU data SF variation. Default is 1.16. Option is commented in config file. fsforza
+* FrameworkSub: add slides for histSvc. dbuesche
+* FrameworkSub: remove duplicated sample lists. dbuesche
+* CxAODMaker: retrieving metaData info for each file change and for each change input. This is safe for proof. fsforza
+* FrameworkExe: fixing proof on the maker. fsforza
+
+## 15-09-19
+* FrameworkExe: update sample list names. dbuesche
+
+## 15-09-20
+* CxAODMaker: remove 1 compilation warning. fsforza
+* CxAODTools: add LHValue property. fsforza
+* CxAODMaker, CxAODTools: adding prescaled ele triggers for MJ study in Wenu. No additional space used in default CxAOD as triggers not in default triggerlist. fsforza
+
+## 15-09-21
+* CxAODMaker: Testing electron trigger SF; Adding 25/50 ns configs; Fixing systematic loop for electrons. fsforza
+* CxAODTools: ele trigger SF at electron level. fsforza
+* FrameworkExe: bugfix in sample list in copy script. dbuesche
+* FrameworkExe: add switch for verbose mode. dbuesche
+* FrameworkExe: add W/Z Madgraph and Powheg samples in copy script. dbuesche
+
+
+
 

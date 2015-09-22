@@ -261,6 +261,15 @@
 * FrameworkExe: add W/Z Madgraph and Powheg samples in copy script. dbuesche
 * CxAODMaker, FrameworkExe: switch for including (or not) taus in the MET calculation. agbet
 
+## 15-09-22
+* FrameworkSub: yields for 14-00 production, dbuesche
+* FrameworkSub: new yields for Wlnu production in 2.3.26 and with all ele sys. Adding also one yield file for separate MJ production, needed for EWK subtraction. fsforza
+* FrameworkExe: explicitily adding 50ns flag (off by default), fsforza
+* FrameworkSub-00-14-01: update muon CP tools to 25ns recommendation, dbuesche
+* FrameworkSub: add packages to met muon CP recommendation for 25ns, dbuesche
+* FrameworkSub: change yields for those samples which excced AMI total number of events, thompson
+* CxAODMaker: Update truth matching for tau hanlder so works for other generators, esp. sherpa. gwilliam
+
 
 
 

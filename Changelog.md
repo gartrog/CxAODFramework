@@ -175,26 +175,103 @@
 * CxAODReader: added switches for applying lumi and PU weights; CXAOD-46. hannah
 
 ## 15-09-04
-CxAODMaker : Add official BosonTag tool to FatJetHandler and switch for fatjet mass calibration, jennis
-CxAODMaker : debug flag, benitezj
-CxAODMaker : fix Higgs tagger corrected momentum, benitezj
-CxAODReader : added switches for applying lumi and PU weights; CXAOD-46, hanar
-CxAODTools : Add boson substructure property for fatjets, jennis
-FrameworkExe : added switches for applying lumi and PU weights; CXAOD-46, hanar
-FrameworkSub : Added dijet and A->Zh, amehta
+* CxAODMaker : Add official BosonTag tool to FatJetHandler and switch for fatjet mass calibration, jennis
+* CxAODMaker : debug flag, benitezj
+* CxAODMaker : fix Higgs tagger corrected momentum, benitezj
+* CxAODReader : added switches for applying lumi and PU weights; CXAOD-46, hanar
+* CxAODTools : Add boson substructure property for fatjets, jennis
+* FrameworkExe : added switches for applying lumi and PU weights; CXAOD-46, hanar
+* FrameworkSub : Added dijet and A-\>Zh, amehta
 
 ## 15-09-06
-CxAODMaker : Implement possible workaround for CutBookkkeepers bug. CXAOD-89, nmorange
+* CxAODMaker : Implement possible workaround for CutBookkkeepers bug. CXAOD-89, nmorange
 
 ## 15-09-07
-CxAODMaker : add mu18_mu8noL1 and mu24_mu8noL1 triggers at Maker level to store on CxAODs, djamin
-CxAODMaker : CXAOD-45 updated TauHandler to run TauTruthMatchTool - needed for TauSmearingTool. Aparently this wont be neccessary when this gets run in the derivations. This fixes the problem stopping us moving to 2.3.25, haysjm
-CxAODTools : add mu18_mu8noL1 and mu24_mu8noL1 triggers at Maker level to store on CxAODs, djamin
-FrameworkExe : CXAOD-45 added a flag to the default config file to turn on running of the TauTruthMatchingTool in the TauHandler - should be tru by default otherwise tool will fail on current derivations, haysjm
-FrameworkSub : added missing checkout of JetSubStructureMomentTools needed to match version of JetSubStructureutils, haysjm
+* CxAODMaker, CxAODTools : add mu18\_mu8noL1 and mu24\_mu8noL1 triggers at Maker level to store on CxAODs, djamin
+* CxAODMaker : CXAOD-45 updated TauHandler to run TauTruthMatchTool - needed for TauSmearingTool. Aparently this wont be neccessary when this gets run in the derivations. This fixes the problem stopping us moving to 2.3.25, haysjm
+* FrameworkExe : CXAOD-45 added a flag to the default config file to turn on running of the TauTruthMatchingTool in the TauHandler - should be tru by default otherwise tool will fail on current derivations, haysjm
+* FrameworkSub : added missing checkout of JetSubStructureMomentTools needed to match version of JetSubStructureutils, haysjm
 
 ## 15-09-08
-FrameworkSub : adding madgraph xs FrameworkSub in mydevbranch, cwang
+* FrameworkSub : adding madgraph xs FrameworkSub in mydevbranch, cwang
+
+## 15-09-09
+* CxAODReader: do not write MVA job output stream if flag is off, fsforza
+* CxAODMaker: Added switch to turn of Xbb tagging. Disable this automatically for non-standard fatjet collections. jennis
+
+## 15-09-10
+* CxAODMaker: Removed error messages from FatJetHandler for lack of muon collection if Xbb tagger disabled, jennis
+
+## 15-09-11
+* CxAODTools: added switch to remove tau from OR - default is to remove (avoids change inbehaviour) - but config option added to default config file to switch off taus in OR CXAOD-90. haysjm
+* CxAODMaker: modified TauHandler to use new switch in TauAnalysisTools-00-01-09 to turn off truth match checking - this means we don't need to run truth matching - which wont work on our current derivations CXAOD-92 CXAOD-90. haysjm
+* FrameworkExe: added switches to the default config file to not run TauTruthMatching and to remove taus from the overlap removal CXAOD-90 CXAOD-92. haysjm
+* FrameworkSub: moved the release up to 2.3.25 and added checkout of TauAnalysisTools-00-01-09, CXAOD-92, CXAOD-90, CXAOD-45. haysjm
+
+## 15-09-14
+* CxAODMaker: Clean up code to turn of Xbb tag, jennis
+* CxAODMaker: Add switch to turn off accessing TruthEvents, jennis
+* FrameworkExe: pulled in GRL checker script from Tom CXAOD-48, haysjm
+* FrameworkSub: bootstrap updated ready to make FrameworkSub tag CXAOD-55, haysjm
+
+## 15-09-15
+* CxAODMaker, CxAODMaker\_VHbb: pass derivation name from AnalysisBase to EventInfoHandler; access HLT\_Jet/Photon information only in case of HIGG5D1 and HIGG5D3 derivations;CXAOD-84, hanar
+* FrameworkSub: removing pkg already in release, fsforza
+* CxAODMaker, FrameworkSub: Bump to 2.3.26: electron efficiency SF (looseLH, mediumLH, tightLH) updated to v02. CXAOD-94. nmorange
+* CxAODMaker: Hack 50ns GRL to include 50ns Run from Period D. Add Period D GRL. Add full 50ns ilumicalc file. CXAOD-64. nmorange
+* FrameworkSub: Update data lists to full 50ns dataset with latest derivations available. CXAOD-65. nmorange
+* CxAODReader\_VHbb: moved jet rescaling to function. hanar
+* FrameworkExe: Use the updated ilumicalc files. CXAOD-64. nmorange
+* CxAODReader\_VHbb: apply lepton sfs. hanar
+* CxAODReader\_VHbb: replace MET cut, by HT/sqrt(MET) - need to follow up: how is the top CR defined then?. hanar
+
+## 15-09-16
+* CxAODMaker: Remove muon trigger SF bits, that are now done at Reader level. fsforza
+
+## 15-09-17
+* CxAODMaker: remove unused header. fsforza
+* CxAODMaker: fix missing header file in Objecthandler.icc - possibly caused by upgrade to 2.3.26?. haysjm
+* FrameworkSub: update tags to pull in filx to missing header in CxAODMaker. haysjm
+* FrameworkSub: updated input files for MC - 50ns p2375 - includes Powheg and MadGraph V+jets samples p2411 CXAOD-65. haysjm
+* FrameworkExe: bump the vtag. haysjm
+* FrameworkSub: updated packages to final list for tag14. haysjm
+* Tag FrameworkSub 00-14-00. haysjm
+
+## 15-09-18
+* CxAODTools, FrameworkExe: added option (for the reader) to run with PU data SF variation. Default is 1.16. Option is commented in config file. fsforza
+* FrameworkSub: add slides for histSvc. dbuesche
+* FrameworkSub: remove duplicated sample lists. dbuesche
+* CxAODMaker: retrieving metaData info for each file change and for each change input. This is safe for proof. fsforza
+* FrameworkExe: fixing proof on the maker. fsforza
+
+## 15-09-19
+* FrameworkExe: update sample list names. dbuesche
+* Tag FrameworkSub 00-14-01. haysjm
+
+## 15-09-20
+* CxAODMaker: remove 1 compilation warning. fsforza
+* CxAODTools: add LHValue property. fsforza
+* CxAODMaker, CxAODTools: adding prescaled ele triggers for MJ study in Wenu. No additional space used in default CxAOD as triggers not in default triggerlist. fsforza
+
+## 15-09-21
+* CxAODMaker: Testing electron trigger SF; Adding 25/50 ns configs; Fixing systematic loop for electrons. fsforza
+* CxAODTools: ele trigger SF at electron level. fsforza
+* FrameworkExe: bugfix in sample list in copy script. dbuesche
+* FrameworkExe: add switch for verbose mode. dbuesche
+* FrameworkExe: add W/Z Madgraph and Powheg samples in copy script. dbuesche
+* CxAODMaker, FrameworkExe: switch for including (or not) taus in the MET calculation. agbet
+
+## 15-09-22
+* FrameworkSub: yields for 14-00 production, dbuesche
+* FrameworkSub: new yields for Wlnu production in 2.3.26 and with all ele sys. Adding also one yield file for separate MJ production, needed for EWK subtraction. fsforza
+* FrameworkExe: explicitily adding 50ns flag (off by default), fsforza
+* FrameworkSub-00-14-01: update muon CP tools to 25ns recommendation, dbuesche
+* FrameworkSub: add packages to met muon CP recommendation for 25ns, dbuesche
+* FrameworkSub: change yields for those samples which excced AMI total number of events, thompson
+* CxAODMaker: Update truth matching for tau hanlder so works for other generators, esp. sherpa. gwilliam
+
+
+
 
 ## 15-09-09
 CxAODMaker : Added switch to turn of Xbb tagging. Disable this automatically for non-standard fatjet collections, jennis

@@ -270,6 +270,19 @@
 * FrameworkSub: change yields for those samples which excced AMI total number of events, thompson
 * CxAODMaker: Update truth matching for tau hanlder so works for other generators, esp. sherpa. gwilliam
 
+## 15-09-23
+* FrameworkSub: add slides for CxAOD structure/reader. dbuesche
+* CxAODTools, CxAODReader, CxAODReader\_VHbb: update trigger tool with lepton pTs and muon SF+sys. djamin
+* CxAODMaker-00-01-13-branch: modified ObjectBaseHandler to add is50ns config switch and corresponding member variable m\_is50ns. Set to false by default. Then added code to use this in the ElectronHandler to use the correct Reco SF files and LHSelector config files for 25ns or 50ns running. haysjm
 
+## 15-09-24
+* Prepare for Tag FrameworkSub 14-01
+* Tag 15-00, intermediate snapshot
+* CxAODReader\_VHbb: b-tagging SF and fatjet safety checks. jhetherl
+* FrameworkSub: Added 25ns MC and data lists. rroehrig
+* CxAODMaker: updates according to CP group. agbet
+
+## 15-09-25
+* FrameworkSub: Update of 25ns MC lists. rroehrig
 
 

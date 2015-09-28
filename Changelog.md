@@ -307,5 +307,7 @@
 * FrameworkSub: Update of the Yields 0lep and 2lep selections for CxAOD production v14.1, arturos
 * FrameworkSub: adding DM monoWZ signal mc samples to 50ns mc15\_13TeV list, arturos
 * FrameworkSub: taking out samples 25ns into this file, sorry, arturos
-
+* CxAODTools, CxAODMaker: add new VBF+photon triggers, lshi
+* FrameworkSub: correct XS for Pythia8\_AU2CTEQ6L1\_ZH125\_nunubb, dsid 341101, cpandini
+* CxAODMaker: write jet shape variables for Nominal only, dbuesche
 

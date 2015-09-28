@@ -289,3 +289,23 @@
 ## 15-09-25
 * FrameworkSub: Update of 25ns MC lists. rroehrig
 
+## 15-09-26
+* CxAODReader\_VHbb: adding MVA tree for VBFHbb analyses, prose
+* FrameworkSub: Some new samples available, nmorange
+* CxAODMaker-00-01-13-branch: fixed typo in scale factor file name for 25ns running, haysjm
+* FrameworkSub-00-14-01-branch: updated yield files from 14-00/14-01 production for 0lep 1lep and 2lep, haysjm
+* FrameworkExe: Added GetXSection.py script to scripts directory to allow for the easy query of AMI with pyAMI API for the fixing/checking of the XSections file, meehan
+* FrameworkSub: Updated xsections file to correct errors in formatting that would break the manner in which histograms are named in HistNameSvc and also added new diboson, single top, and monoW/Z file cross sections, meehan
+
+## 15-09-27
+* FrameworkSub: fix min-\>minus in W powheg samples, fsforza
+* FrameworkSub: Remove duplications. Add DSIDs from Rev=3D691776. HVT DSIDs (301388 to 301396) are replaced by the Rev=3D691776. garabed
+* FrameworkSub: Fix Xsec of DSID 361008 and filtereff of DSID 361503 (replace by Rev=3D693679). garabed
+
+## 15-09-28
+* FrameworkSub: Update of 25ns MC and Data lists, rroehrig
+* FrameworkSub: Update of the Yields 0lep and 2lep selections for CxAOD production v14.1, arturos
+* FrameworkSub: adding DM monoWZ signal mc samples to 50ns mc15\_13TeV list, arturos
+* FrameworkSub: taking out samples 25ns into this file, sorry, arturos
+
+

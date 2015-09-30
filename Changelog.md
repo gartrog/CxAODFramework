@@ -311,3 +311,11 @@
 * FrameworkSub: correct XS for Pythia8\_AU2CTEQ6L1\_ZH125\_nunubb, dsid 341101, cpandini
 * CxAODMaker: write jet shape variables for Nominal only, dbuesche
 
+## 15-09-29
+* FrameworkSub: update SM VH cross-sections: include LHCHXS WG reference, fix sample names for gg-\>ZH samples (previously listed as qqZH), fix sample names for LO MC samples (previously reporting HNLO in the sample name), cpandini
+* CxAODMaker, CxAODTools: added hlt jet triggers to CommonProperties.h, grkeren
+* FrameworkSub: update to include yields of Zmumu\_Pw samples, arturos
+* CxAODTools: added in dimuon matching props, amontalb
+
+
+

@@ -317,5 +317,7 @@
 * FrameworkSub: update to include yields of Zmumu\_Pw samples, arturos
 * CxAODTools: added in dimuon matching props, amontalb
 
-
+## 15-09-30
+* FrameworkExe: adding missing ele SF sys, fsforza
+* FrameworkSub: adding WJets Madgraph, miochoa
 

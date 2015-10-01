@@ -208,6 +208,10 @@
 * FrameworkExe: added switches to the default config file to not run TauTruthMatching and to remove taus from the overlap removal CXAOD-90 CXAOD-92. haysjm
 * FrameworkSub: moved the release up to 2.3.25 and added checkout of TauAnalysisTools-00-01-09, CXAOD-92, CXAOD-90, CXAOD-45. haysjm
 
+## 15-09-12
+
+## 15-09-13
+
 ## 15-09-14
 * CxAODMaker: Clean up code to turn of Xbb tag, jennis
 * CxAODMaker: Add switch to turn off accessing TruthEvents, jennis
@@ -270,31 +274,48 @@
 * FrameworkSub: change yields for those samples which excced AMI total number of events, thompson
 * CxAODMaker: Update truth matching for tau hanlder so works for other generators, esp. sherpa. gwilliam
 
+## 15-09-23
+* FrameworkSub: add slides for CxAOD structure/reader. dbuesche
+* CxAODTools, CxAODReader, CxAODReader\_VHbb: update trigger tool with lepton pTs and muon SF+sys. djamin
+* CxAODMaker-00-01-13-branch: modified ObjectBaseHandler to add is50ns config switch and corresponding member variable m\_is50ns. Set to false by default. Then added code to use this in the ElectronHandler to use the correct Reco SF files and LHSelector config files for 25ns or 50ns running. haysjm
+
+## 15-09-24
+* Prepare for Tag FrameworkSub 14-01
+* Tag 15-00, intermediate snapshot
+* CxAODReader\_VHbb: b-tagging SF and fatjet safety checks. jhetherl
+* FrameworkSub: Added 25ns MC and data lists. rroehrig
+* CxAODMaker: updates according to CP group. agbet
+
+## 15-09-25
+* FrameworkSub: Update of 25ns MC lists. rroehrig
+
+## 15-09-26
+* CxAODReader\_VHbb: adding MVA tree for VBFHbb analyses, prose
+* FrameworkSub: Some new samples available, nmorange
+* CxAODMaker-00-01-13-branch: fixed typo in scale factor file name for 25ns running, haysjm
+* FrameworkSub-00-14-01-branch: updated yield files from 14-00/14-01 production for 0lep 1lep and 2lep, haysjm
+* FrameworkExe: Added GetXSection.py script to scripts directory to allow for the easy query of AMI with pyAMI API for the fixing/checking of the XSections file, meehan
+* FrameworkSub: Updated xsections file to correct errors in formatting that would break the manner in which histograms are named in HistNameSvc and also added new diboson, single top, and monoW/Z file cross sections, meehan
+
+## 15-09-27
+* FrameworkSub: fix min-\>minus in W powheg samples, fsforza
+* FrameworkSub: Remove duplications. Add DSIDs from Rev=3D691776. HVT DSIDs (301388 to 301396) are replaced by the Rev=3D691776. garabed
+* FrameworkSub: Fix Xsec of DSID 361008 and filtereff of DSID 361503 (replace by Rev=3D693679). garabed
+
+## 15-09-28
+* FrameworkSub: Update of 25ns MC and Data lists, rroehrig
+* FrameworkSub: Update of the Yields 0lep and 2lep selections for CxAOD production v14.1, arturos
+* FrameworkSub: adding DM monoWZ signal mc samples to 50ns mc15\_13TeV list, arturos
+* FrameworkSub: taking out samples 25ns into this file, sorry, arturos
+* CxAODTools, CxAODMaker: add new VBF+photon triggers, lshi
+* FrameworkSub: correct XS for Pythia8\_AU2CTEQ6L1\_ZH125\_nunubb, dsid 341101, cpandini
+* CxAODMaker: write jet shape variables for Nominal only, dbuesche
+
+## 15-09-29
+* FrameworkSub: update SM VH cross-sections: include LHCHXS WG reference, fix sample names for gg-\>ZH samples (previously listed as qqZH), fix sample names for LO MC samples (previously reporting HNLO in the sample name), cpandini
+* CxAODMaker, CxAODTools: added hlt jet triggers to CommonProperties.h, grkeren
+* FrameworkSub: update to include yields of Zmumu\_Pw samples, arturos
+* CxAODTools: added in dimuon matching props, amontalb
 
 
 
-## 15-09-09
-CxAODMaker : Added switch to turn of Xbb tagging. Disable this automatically for non-standard fatjet collections, jennis
-CxAODReader : do not write MVA job output stream if flag is off, fsforza
-
-## 15-09-10
-CxAODMaker : Removed error messages from FatJetHandler for lack of muon collection if Xbb tagger disabled, jennis
-
-## 15-09-11
-CxAODMaker : modified TauHandler to use new switch in TauAnalysisTools-00-01-09 to turn off truth match checking - this means we don't need to run truth matching - whic
-h wont work on our current derivations CXAOD-92 CXAOD-90, haysjm
-CxAODTools : added switch to remove tau from OR - default is to remove (avoids change in behaviour) - but config option added to default config file to switch off taus 
-in OR CXAOD-90, haysjm
-FrameworkExe : added switches to the default config file to not run TauTruthMatching and to remove taus from the overlap removal CXAOD-90 CXAOD-92, haysjm
-FrameworkSub : moved the release up to 2.3.25 and added checkout of TauAnalysisTools-00-01-09, CXAOD-92, CXAOD-90, CXAOD-45, haysjm
-
-## 15-09-12
-
-## 15-09-13
-	
-## 15-09-14
-CxAODMaker : Add switch to turn off accessing TruthEvents, jennis
-CxAODMaker : Clean up code to turn of Xbb tag, jennis
-FrameworkExe : pulled in GRL checker script from Tom CXAOD-48, haysjm
-FrameworkSub : bootstrap updated ready to make FrameworkSub tag CXAOD-55, haysjm
-FrameworkSub : really final update this time - at least for the package list. further updates for input samples expected CXAOD-55, haysjm

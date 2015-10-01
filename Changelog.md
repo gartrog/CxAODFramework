@@ -321,3 +321,6 @@
 * FrameworkExe: adding missing ele SF sys, fsforza
 * FrameworkSub: adding WJets Madgraph, miochoa
 
+## 15-10-01
+* FrameworkSub: fix ggA, ttbar and single top (yields files), thompson
+

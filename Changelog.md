@@ -324,3 +324,34 @@
 ## 15-10-01
 * FrameworkSub: fix ggA, ttbar and single top (yields files), thompson
 * CxAODTools: fix TriggerTool to not have warnings for event with PU weight rdmRunNumber 0 when we want to set the MC RunNumber in muon trigger SF, djamin
+* CxAODMaker: comment out unused m\_tauEfficiencyCorrections\_eveto, dbuesche
+* CxAODTools: run OR tool even if applyOR=false to write hasSharedTrack flag, dbuesche
+* CxAODTools, CxAODMaker: added trigger decoration for HLT\_j45\_bperf, grkeren
+
+## 15-10-02
+* CxAODMaker: remove ConeTruthLabelID from CxAOD for all jets, dbuesche
+* CxAODReader: CXAOD-32: use HadronConeExclTruthLabelID instead of ConeTruthLabelID, dbuesche
+* CxAODReader\_VHbb: CXAOD-32: consistently use TruthLabelID (which is a copy of HadronConeExclTruthLabelID), dbuesche
+* CxAODMaker: CXAOD-101: set useAFII property (hard coded to false), fix compiler warnings, dbuesche
+* CxAODMaker: CXAOD-100: set useAFII property (hard coded to false), dbuesche
+* KinematicFit: Remove dependencies on obsolete run1 packages. Switch to mode where no corrections are applied to the jets before kin fit  is run, amehta
+* CxAODMaker, CxAODMaker-00-01-13-branch, FrameworkExe-00-01-15-branch: Add GRL and ilumicalc files for 25ns running, nmorange
+* CxAODTools: CXAOD-113: fix crash when running w/o taus, dbuesche
+* FrameworkExe-00-01-15-branch: Update JES NP to 25ns, nmorange
+* CxAODReader: CXAOD-78: add switch in HistSvc for histogram filling, dbuesche
+* FrameworkExe: CXAOD-78: add writeHistograms=true, dbuesche
+* CxAODMaker, CxAODTools: added number of constituents for track jets, benitezj
+* FrameworkSub: Update of the 25ns list, rroehrig
+* FrameworkSub-00-14-01-branch: Use latest and greatest Yields and XSection files, nmorange
+* FrameworkSub-00-14-01-branch: Add of the 25ns lists, Data lists according to the latest GRL, MC must be updated, rroehrig
+* CxAODTools: TriggerTool : access electron trigger SF and syst from Maker, djamin
+* Weekly snapshot 15-01, haysjm
+
+## 15-10-03
+* CxAODReader\_VHbb: Baseline skeleton for Run2 HZvv, rriuppa
+
+## 15-10-04
+
+## 15-10-05
+* FrameworkSub: Small update of MC list, rroehrig
+

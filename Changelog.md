@@ -354,4 +354,5 @@
 
 ## 15-10-05
 * FrameworkSub: Small update of MC list, rroehrig
+* CxAODReader: PU tool needs to be initialized in any case, because trigger selection relies on it, hanar
 

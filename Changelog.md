@@ -323,4 +323,4 @@
 
 ## 15-10-01
 * FrameworkSub: fix ggA, ttbar and single top (yields files), thompson
-
+* CxAODTools: fix TriggerTool to not have warnings for event with PU weight rdmRunNumber 0 when we want to set the MC RunNumber in muon trigger SF, djamin

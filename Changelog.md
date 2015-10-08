@@ -355,4 +355,27 @@
 ## 15-10-05
 * FrameworkSub: Small update of MC list, rroehrig
 * CxAODReader: PU tool needs to be initialized in any case, because trigger selection relies on it, hanar
+* CxAODReader\_VHbb: removed unnecessary lines; added check on pointer validity, hanar
+
+## 15-10-06
+* CxAODTools: disabled execution of OR tool when 'applyOverlapRemoval' is set to false, grkeren
+* CxAODTools, CxAODReader, CxAODReader\_VHbb: optional b-tagging weight syst, jhetherl
+* FrameworkSub: Moving trunk to 2.3.30 configuration: version + extra-packages
+* FrameworkExe-00-01-15-branch: Update Reader configuration for tag 14-02, nmorange
+* FrameworkSub: Update of MC list: p2419, rroehrig
+* CxAODTools, CxAODMaker: added more HLT mu-jet triggers, grkeren
+* CxAODTools: make messaging level steerable from config, hanar
+* FrameworkSub: Update of MC list, removed running samples, rroehrig
+* FrameworkSub-00-14-01-branch: Final MC list, rroehrig
+* Tag 14-02, 25ns production
+
+## 15-10-07
+* CxAODTools: initializing msglevel, hanar
+* CxAODMaker-00-01-13-branch: Correct implementation of CutBookKeepers retrieval after the fix in derivations, nmorange
+* Tag 14-03, with fixed CBC
+* CxAODMaker-00-01-13-branch: Fix stupid bug. CXAOD-109, nmorange
+* Tag 14-03, with bugfix for CBC
+* CxAODMaker: Correct implementation of CutBookKeepers retrieval after the fix in derivations, ported from 14-01 branch. CXAOD-109, nmorange
+* CxAODMaker: CXAOD-101: set property Preselection to 16 for ElectronPhotonShowerShapeFudgeTool, dbuesche
+* FrameworkSub: yield files for v00-01-35 production. New MJ production with IBL cut and all triggers. NB: partially  buggy muons SF, fsforza
 

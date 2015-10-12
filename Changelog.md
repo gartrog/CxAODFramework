@@ -378,4 +378,4 @@
 * CxAODMaker: Correct implementation of CutBookKeepers retrieval after the fix in derivations, ported from 14-01 branch. CXAOD-109, nmorange
 * CxAODMaker: CXAOD-101: set property Preselection to 16 for ElectronPhotonShowerShapeFudgeTool, dbuesche
 * FrameworkSub: yield files for v00-01-35 production. New MJ production with IBL cut and all triggers. NB: partially  buggy muons SF, fsforza
-
+* CxAODMaker: fix of electron LH 25ns selection. Adding muon 50ns config loading if flag is set, fsforza

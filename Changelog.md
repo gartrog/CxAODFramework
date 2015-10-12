@@ -414,3 +414,6 @@
 
 ## 15-10-12
 * CxAODMaker, CxAODTools: add run1-like electron trigger for 50ns+matching / access muon trig SF+syst stored CxAOD / no di-lep triggers and update lepton thresholds, djamin
+* CxAODMaker: Write matchHLT variables only in Nominal. They are not calibration-dependent, nmorange
+* CxAODMaker\_VHbb: Do not write lepton quality variables in weight systematics, nmorange
+

@@ -377,5 +377,40 @@
 * Tag 14-03, with bugfix for CBC
 * CxAODMaker: Correct implementation of CutBookKeepers retrieval after the fix in derivations, ported from 14-01 branch. CXAOD-109, nmorange
 * CxAODMaker: CXAOD-101: set property Preselection to 16 for ElectronPhotonShowerShapeFudgeTool, dbuesche
+
+## 15-10-08
 * FrameworkSub: yield files for v00-01-35 production. New MJ production with IBL cut and all triggers. NB: partially  buggy muons SF, fsforza
 * CxAODMaker: fix of electron LH 25ns selection. Adding muon 50ns config loading if flag is set, fsforza
+* FrameworkSub: fix name of pohweg samples, fsforza
+* CxAODReader: check if m\_maxEvents is set, use m\_sampleAvailableEntries to scale weights when running on smaller stat MC, fsforza
+* FrameworkExe: saving metaData info about NAvailableEntries, fsforza
+* CxAODTools: CXAOD-54 Replace slow auxdecor with faster static AuxElement::Accessor, nmorange
+* FrameworkExe: Update framework-run based on latest 25ns production branch, nmorange
+* CxAODMaker: Tentative merging of LumiMetaData. Validation jobs running, fingers crossed. CXAOD-3, nmorange
+* FrameworkExe: update default MC/data file to p2419/p2425 25ns, dbuesche
+* FrameworkExe, CxAODMaker: CXAOD-53: remove 8 TeV switched, dbuesche
+* CxAODMaker: Grab track jet links from parent fat jet, lkaplan
+* FrameworkSub, FrameworkExe, CxAODMaker: Remove 8TeV lists, nmorange
+* CxAODReader: moving histName sample initialization at ChangeInput stage. Same result but a bit faster, fsforza
+
+## 15-10-09
+* CxAODTools: modified requirement for applying OR tool from checking 'applyOverlapRemoval' to checking the validity of the pointers to electrons, muons and jets, to allow execution of tool in the mode where 'applyOverlapRemoval' is false but 'writeSharedTrack' is true, grkeren
+* FrameworkSub: numbers consistent with mu-sf fixed production, fsforza
+* CxAODMaker: add getter for EventInfo variations, dbuesche
+* CxAODMaker: bug fix: retrieve variations also from event info for in event selector, dbuesche
+* CxAODTools: CXAOD-119: add OverlapRemovalToolLargeR, dbuesche
+* CxAODMaker, CxAODMaker\_VHbb, CxAODTools\_VHbb, CxAODReader, CxAODReader\_VHbb: CXAOD-50 add override keyword whenever possible, nmorange
+
+## 15-10-10
+* CxAODMaker\_VHbb: Replace deprecated getString by castString in  SampleHandler calls. Removes compilation warning, nmorange
+* CxAODReader: PLEASE STOP PASSING/RETURNING STRINGS BY VALUE, nmorange
+
+## 15-10-11
+* CxAODMaker: CXAOD-118 First pass at improving maker performance. Low hanging fruits. 240s->140s for 1000 ttbar events. More details in JIRA, nmorange
+* CxAODMaker: CXAOD-118 Second pass at improving maker performance. 140s->125s for 1000 ttbar events.  More details in JIRA, nmorange
+* CxAODMaker: CXAOD-118 Third pass at improving maker performance. 125s->110s for 1000 ttbar events.  More details in JIRA, nmorange
+* CxAODMaker: CXAOD-118 Fourth pass at improving maker performance. 110s->103s for 1000 ttbar events.  More details in JIRA, nmorange
+* CxAODMaker: CXAOD-118 Calibrate only muons that pass MCP selections, nmorange
+
+## 15-10-12
+

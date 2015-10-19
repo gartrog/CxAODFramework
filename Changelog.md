@@ -417,3 +417,39 @@
 * CxAODMaker: Write matchHLT variables only in Nominal. They are not calibration-dependent, nmorange
 * CxAODMaker\_VHbb: Do not write lepton quality variables in weight systematics, nmorange
 
+## 15-10-13
+* CxAODMaker : update decorrelationModel to 1NP_v1 for EgammaCalibrationAndSmearingTool, lshi
+* CxAODReader : Revert r699498 that introduced a bug for sample naming, nmorange
+* CxAODTools : CXAOD-35 Better workaround in BTaggingTool. Speedup x2 on execute() in benchamrk 100000 ttbar events 0 lepton selection, nmorange
+* FrameworkExe : add PH_EFF_Uncertainty for photon efficiency systematic, lshi
+
+## 15-10-14
+* CxAODMaker : Changed in default jesConfig 50ns to 25ns, abuzatu
+* CxAODReader_VHbb : vvqq-specific features added, losterzo
+* CxAODReader_VHbb : vvqq-specific features added, losterzo
+* FrameworkSub : JetCalibTools-00-04-55 is recommended, but AnalysisBase 2.3.31 has JetCalibTools-00-04-52, abuzatu
+
+## 15-10-15
+* CxAODMaker : fixed random seed for MET systematics, tnobe
+
+## 15-10-16
+* CxAODMaker : Access and initialize MuonEfficiencyCorrections package + update arguments of writeEventVariables to compute muon trig SF/systs at Maker, djamin
+* CxAODMaker : add new isolation working points for electron, lulu
+* CxAODTools : Added back in the required macro to make the OverlapRegister properly persistent. Added TMVA as a preload package which should fix the strange problem of the thread local storad hang in the JetRegression code. CXAOD-52 CXAOD-122, haysjm
+* CxAODTools : add new isolation working points for electron, lulu
+* CxAODTools : update arguments of writeEventVariables to compute muon trig SF/systs at Maker + update TriggerTool : protect events with RdmRunNumber==0 and proper el trig SF computation in 2lep events, djamin
+* CxAODTools_VHbb : update arguments of writeEventVariables to compute muon trig SF/systs at Maker + store muon trig SF/systs + add dependancy, djamin
+* FrameworkExe : Add muon trig SF variations in Maker config, djamin
+* FrameworkSub : use latest tag of MuonEfficiencyCorrections-03-01-17 to be able to handle events later than period D, for the moment these events have a SF of 1, not measured yet in official recommendations, djamin
+
+## 15-10-17
+* CxAODMaker : adjust outdated comment, dbuesche
+* CxAODMaker : fix compiler warnings, dbuesche
+* CxAODMaker : remove setting of CalibrationRelease property of MuonEfficiencyScaleFactors -> latest is used by default, dbuesche
+* CxAODMaker : Set TriggerTool property of TrigMuonMatching as recommended. Has no effect(?), dbuesche
+* CxAODTools : retrieve is50ns flag from config in TriggerTool, dbuesche
+
+## 15-10-18
+
+## 15-10-19
+* CxAODReader : CXAOD-46: skip lumi weight computation if applyLumiWeight=false in config, dbuesche

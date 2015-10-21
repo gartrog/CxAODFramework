@@ -9,6 +9,7 @@ class Tag:
         self.pack = pack
         self.rev = rev
         numbers = tag.rsplit('-',3)
+
         tagpack=numbers[0]
         if tagpack != pack:
             print "package doesn't match the tag"
@@ -85,7 +86,8 @@ def getTagList(client,package):
     for tagpath in taglistRaw:
         tag = tagpath[0].path.split('/')[-1]
         rev = tagpath[0].created_rev.number
-        if tag != 'tags':
+        nfields = len( tag.split('-') )
+        if tag != 'tags' and nfields == 4:
             taglist.append( Tag(package,tag,rev) )
     return taglist
 
@@ -185,7 +187,7 @@ def makeNewTag(client,pack,doTag=False):
         print '      ',urlsrc
         print '      ',urldst
         if doTag:
-            client.callback_get_log_message = lambda : (True,"Prep for tag 15-01")
+            client.callback_get_log_message = lambda : (True,"Prep for intermediate tag")
             newrev = client.copy(urlsrc,urldst)
             rev = newrev.number
     return Tag(pack,nextTag,rev)

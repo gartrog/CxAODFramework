@@ -453,3 +453,65 @@
 
 ## 15-10-19
 * CxAODReader : CXAOD-46: skip lumi weight computation if applyLumiWeight=false in config, dbuesche
+* CxAODTester: add this new package, dbuesche
+* CxAODMaker, CxAODTools: add a tau trigger in the EventInfoHandler, added bbtautau trigger list and a GRL file, agbet
+* CxAODTools: fix compiler warnings by making sort\_pt a member of EventSelection, dbuesche
+* CxAODMaker, CxAODTools: Add passTaggingReq for trackjets, garabed
+* CxAODReader, FrameworkExe: CXAOD-120: add the possibility to create shallow copies of input containers, dbuesche
+
+## 15-10-20
+* CxAODReader\_VHbb: fix compiler warnings, dbuesche
+* CxAODTools\_VHbb: remove deprecated comments, dbuesche
+* FrameworkExe: add comment regarding shallow copies, dbuesche
+* CxAODMaker: Add function to EventSelector to get selection back (needed e.g. for MMC), gwilliam
+* CxAODMaker\_VHbb: fix compiler warning, dbuesche
+* CxAODMaker, CxAODTools: remove photon EffSFError variables, lshi
+* CxAODMaker, CxAODTools, CxAODReader, CxAODReader\_VHbb, FrameworkExe: CXAOD-119: add switch applyOverlapRemovalLargeR, dbuesche
+* CxAODMaker-00-01-13-branch: Add new 25ns GRL with 1.4fb-1 of data, nmorange
+* FrameworkExe-00-01-15-branch: Update framework-run.cfg to use latest 1.4fb-1 25ns GRL, nmorange
+* FrameworkSub-00-14-01-branch: Add data lists for 2nd extention of 14-04 production: up to 1.4fb-1
+
+## 15-10-21
+* CxAODTools: Adapt to new interface of PU reweighting tool, nmorange
+* FrameworkSub: Bump AnalysisBase release to 2.3.32, nmorange
+* Tag 14-06 new tag with updated GRL for 1.4fb-1, haysjm
+* FrameworkSub: Added additional cross sections, primarily for monoW, monoZ, and monoH samples as outlined in @CXAOD-133 issue, meehan
+* CxAODTools, CxAODTools\_VHbb: re-adding simpler writeEventVariables initialization. Declared also as not-only virtual so different analyses can avoid the implementation, fsforza
+* CxAODMaker, CxAODTools: Tau trigger matching variables, gwilliam
+* Tag 15-02, intermediate tag, with 2.3.31, haysjm
+* CxAODMaker, CxAODMaker\_VHbb: bugfix: proper initialization of TruthParticleHandler, dbuesche
+* CxAODMaker: Adding protection against thinned electron variables needed by full hadronic bbtautau, carquin
+* CxAODTools: Adding ditau trigger decorator, carquin
+
+## 15-10-22
+* CxAODTools: FIX: adding tool check; make PileupWeight a float hanar
+* FrameworkSub: removed packages that are equal or outdated with respect to what is in the new release, hanar
+* CxAODMaker: ilumicalc for 1.41fb-1, thompson
+* CxAODTools: overwriting averageInteractionsPerCrossing only for data (if PU tool is used), hanar
+* CxAODTools: changes for dijet\_JZxW normalization merged to the trunk, changqia
+* CxAODTools: add PileupweightRecalc,averageInteractionsPerCrossingRecalc, compute if recomputePUWeight=true, dbuesche
+* CxAODReader: use PileupweightRecalc if recomputePUWeight=true, dbuesche
+* CxAODMaker: added latest grl (v69), grkeren
+
+## 15-10-23
+* FrameworkSub: Needed to add additional cross sections pertaining to @CxAOD-139, meehan
+
+## 15-10-24
+* CxAODMaker: adding isolation correction tool for photons, prose
+
+## 15-10-25
+* FrameworkSub: Add ttbar cross secions from twiki. WARNING: kfactor seem missing, contacted twiki resposible., dbuesche
+* CxAODReader: CXAOD-135: apply cut on m(ttbar) for inclusive Powheg ttbar sample if apply PowhegTruthMttCut = true, default is false, dbuesche
+* CxAODReader: CXAOD-135: more useful range for MttTruth histogram, dbuesche
+* CxAODTools, CxAODReader: set Props::averageInteractionsPerCrossingRecalc also for MC (equal to Props::averageInteractionsPerCrossing); add comments and error message, hanar
+* CxAODReader: FIX: did not actually retrieve corrected mu in data, since setEventWeight() (and applyPUWeight()) was only called for MC, hanar
+* CxAODReader: CXAOD-135: possiblity to mix powheg ttbar inclusive sample with slices, set in config e.g. float usePowhegInclFraction = 0.25, dbuesche
+* CxAODMaker: add IsolationCorrectionTool, lulu
+* CxAODTools: fix mismatch of type for PileupWeight, lulu
+
+## 15-10-26
+* CxAODTools: BTaggingTool: set OldConeFlavourLabel to false -> use HadronConeExclTruthLabelID, dbuesche
+* CxAODTools: add float sumOfWeightsProvider::getNEntries(int mc\_channel\_number), dbuesche
+* CxAODReader: proper init of m\_maxEvents, use m\_sumOfWeightsProvider-\>getNEntries for scaling in case of m\_maxEvents>0 (old method gave bugged answers), dbuesche
+* CxAODReader: add float AnalysisReader::computeBTagSFWeight(std::vector\<const xAOD::Jet*\> &signalJets), dbuesche
+

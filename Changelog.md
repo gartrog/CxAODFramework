@@ -514,4 +514,7 @@
 * CxAODTools: add float sumOfWeightsProvider::getNEntries(int mc\_channel\_number), dbuesche
 * CxAODReader: proper init of m\_maxEvents, use m\_sumOfWeightsProvider-\>getNEntries for scaling in case of m\_maxEvents>0 (old method gave bugged answers), dbuesche
 * CxAODReader: add float AnalysisReader::computeBTagSFWeight(std::vector\<const xAOD::Jet*\> &signalJets), dbuesche
+* CxAODTools: BTaggingTool: add Kenjis fix for tau track jet SFs (using non-default), dbuesche
+* CorrsAndSysts: Run1 CorrsAndSysts package: minor changes introduced to interface it with the CxAODReader, cpandini
+* CxAODMaker, CxAODTools: add HLT\_xe70 item, djamin
 

@@ -518,3 +518,58 @@
 * CorrsAndSysts: Run1 CorrsAndSysts package: minor changes introduced to interface it with the CxAODReader, cpandini
 * CxAODMaker, CxAODTools: add HLT\_xe70 item, djamin
 
+## 15-10-27
+* CxAODTools: fix mismatch of type for PileupWeight, lulu
+* CxAODReader: add getter methods, hanar
+* CxAODMaker: fix for missing links, relevant to a new feature in the TauAnalysisTools, agbet
+* FrameworkSub: Fix Wlnu yield files to account change in partial events running: Now only entries on ntuples are used.  NB: scaling is otherwise incorrect!, fsforza
+
+## 15-10-28
+* FrameworkSub: Updated JetSubStructureUtils-00-02-14 to JetSubStructureUtils-00-02-16, created last night, abuzatu
+* CxAODReader\_VHbb: Added VH histos for 2lep, jabdalla
+* CxAODTools: updated BTaggingTool, jhetherl
+* FrameworkSub: added newest xAODBTaggingEfficiency, jhetherl
+* FrameworkExe: added b-tagging syst options, jhetherl
+
+## 15-10-29
+* FrameworkSub: added CDI framework until next AnalysisBase, jhetherl
+* CxAODReader: skip b-tag SF calculation for data, dbuesche
+* CxAODTools, CxAODReader, CxAODReader\_VHbb: updated BTaggingTool systematic treatment, jhetherl
+* CxAODTools: minor fix to MC/MC SF and removed spaces in b-tagging systematics names, jhetherl
+* CxAODMaker, FrameworkExe: Adding PtReco, TruthWZ, reduce some mu/el info per Jet and FatJet, abuzatu
+* CxAODTools: fix 0 random run numbers to get proper muon trigger SF + remove useless protections in TriggerTool, djamin
+* CxAODTools: quick fix for b-tagging syst. names, jhetherl
+* CxAODReader: add some debug output, dbuesche
+
+## 15-10-30
+* CxAODMaker: added ghost associated heavy flavour hadrons to fat/track jets (JIRA: CXAOD-140), grkeren
+* CxAODReader: add some debug output, dbuesche
+* CxAODTools: BTaggingTool: reduce printout in init, dbuesche
+* CxAODTools: fix the random run number when it is greater than period D to avoid the numerous prints, djamin
+* CxAODTools: CXAOD-147: splitting the removeOverlap method into setORInputLabels, getOROutputLabels and the actual removeOverlap, dbuesche
+* CxAODTools: on-demand loading of b-tagging tools, jhetherl
+* CxAODTools: small bug fix for BTaggingTool (msgLevel), jhetherl
+* CxAODMaker: bugfix: muon-in-jet correction was crashing w/o electron-in-jet corr, dbuesche
+* CxAODMaker: bugfix: use correct container name in JERTool init, dbuesche
+* CxAODTools, CxAODReader: almost implemented b-tagging MC-to-MC corrections, jhetherl
+
+## 15-10-31
+* CxAODMaker: fixes for init/usage of JetSemileptonic, dbuesche
+* CxAODMaker: CXAOD-137: implement jet energy unc tools in FatJetHandler, use AntiKt4 config for testing. Systematics are disabled, needs fix of CXAOD-134 first., dbuesche
+* CxAODTools, CxAODReader, FrameworkExe: fixing lumi weight when running on a subset of events, dimicco
+* CxAODMaker: CXAOD-134: fix selection for element links in FatJetHandler, CXAOD-137: enable jet systs for fat jets, dbuesche
+* CxAODTools: fixing reading and position bug in sumOfWeightsProvider, dimicco
+* CxAODReader: set sample and mc\_channel only once for each input file (plus at the start), fsforza
+* CxAODReader: added methods in AnalysisReader so retrieve ghost associated heavy flavour labels (pt sorted), grkeren
+
+## 15-11-01
+* CxAODReader: use initializeChannel in the right place (but fix), fsforza
+* CxAODTools: harmonize some printout, dbuesche
+* FrameworkSub: update Wlnu MJ yield file to production 00-38 (with not-iso triggers) and with correct scaling if maxEvent, fsforza
+* CxAODTools: BTaggingTool: fix init of CDI for tau SFs, dbuesche
+* CxAODMaker: bugfix: use ROOTCOREBIN path in JetSemileptonic init, dbuesche
+* CxAODTools: BTaggingTool: add flag for out of range warnings, dbuesche
+
+## 15-11-02
+* CxAODMaker: Made FatJetHandler::matchTruthJets virtual to allow overloading, jennis
+

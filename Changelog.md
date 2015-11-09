@@ -572,4 +572,12 @@
 
 ## 15-11-02
 * CxAODMaker: Made FatJetHandler::matchTruthJets virtual to allow overloading, jennis
+* CxAODReader: make HistNameSvs::set\_sample() virtual, dbuesche
+* FrameworkSub: update to CT14 predicitions cross sections for Wlnu and Zll samples for W,Z SM analysis, chiarad
+* CorrsAndSysts: Fix compiler issues, amehta
+* CxAODMaker: changed output container names for MET systematic variations, tnobe
+* CxAODMaker\_VHbb: fix the jvt, cwang
+
+## 15-11-03
+* CxAODMaker: remove check on CoreFlags; CXAOD-150, hanar
 

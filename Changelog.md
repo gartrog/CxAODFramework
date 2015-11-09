@@ -580,4 +580,82 @@
 
 ## 15-11-03
 * CxAODMaker: remove check on CoreFlags; CXAOD-150, hanar
+* CxAODReader: Adding condor support and more configurability for Reader, sargyrop
+* FrameworkExe: Add isMJ in data/framework-run.cfg, garabed
+* CxAODMaker\_VHbb: Invert isolation if MJ, garabed
+* CxAODMaker\_VHbb: passWHSignalElectronIso(electron) --> ElectronHandler\_VHbb::passWHSignalElectronIso(electron) and passWHSignalMuonIso(muon) --> MuonHandler\_VHbb::passWHSignalMuonIso(muon)
+* CxAODTools\_VHbb: adding a new class for vvqq, cwang
+* CxAODMaker: CXAOD-137: hack ObjectHandler.icc to rename fatJet systs, dbuesche
+* CxAODTools: Removing PDF info properties, miochoa
+* CxAODMaker: reimplementing PDF info on TruthEventHandler and removing it from EventInfoHandler, miochoa
+* CxAODMaker: fixed problem with trying to access truth hadron flavour labels for data, grkeren
+* CxAODMaker\_VHbb: registering handler for truthEvents, miochoa
+
+## 15-11-04
+* CxAODTools, CxAODReader: first draft of b-tagging MC-to-MC integration, jhetherl
+* CxAODMaker: Changes for the regression in CxAODMaker: training/application separately for even and odd events and pt splitted (100 GeV), bug fix for the selection of tracks for regression, eschopf
+* CxAODTools: Changes for regression in CxAODTools: extended the TMVA training and application tool to write/applicate separately for even and odd events, eschopf
+* CxAODReader, CxAODReader\_VHbb: adding lepton charge to tree, hanar
+* FrameworkExe: Changed config values for regression in framework-run.cfg: even and odd as well as pt splitted application is default; changed the used weightfiles and methods accordingly, eschopf
+* CxAODReader: fixing the normalization problem, francav
+* CxAODMaker: fixed crash caused by not initialised Props::passTauSelector and Props::forMETRebuild, agbet
+* CxAODTools: made EventSelection::sort\_pt() public (was protected), grkeren
+* CxAODReader: added method for retrieving label of leading ghost ass. heavy flav. hadron in AnalysisReader, added method to set 'm\_useEventFlav' in HistNameSvc, grkeren
+* CxAODMaker: use IncompleteLumiBlocks if LumiBlocks not available, agbet
+* CxAODTools, CxAODReader, CxAODReader\_VHbb, FrameworkExe, FrameworkSub: include interface to CorrsAndSysts, cpandini
+* FrameworkExe: Add TruthEvents if PDF info exists in samples, nmorange
+* FrameworkExe: Bump already verion in framework-run to 16, nmorange
+* FrameworkExe: enable CxAOD merging, dbuesche
+* CxAODMaker: Remove outdated GRL/ilumicalc, nmorange
+* FrameworkSub: Add GRL and ilumicalc in FrameworkSub, nmorange
+* FrameworkExe: removing un-used functions, fsforza
+* FrameworkSub: Add prw file in FrameworkSub, nmorange
+* FrameworkExe: Point all PU-related paths to new location in FrameworkSub, nmorange
+* CxAODMaker: Remove PU-related files from CxAODMaker. Now use FrameworkSub, nmorange
+
+## 15-11-05
+* Tag 16-00
+* FrameworkSub: update MC list\_sample\_grid.mc15\_13TeV\_25ns.HIGGXXX.txt to include ttbar syst , singletop syst and more llqq vvqq signal samples, smwang
+* CxAODMaker: change where the forMETRebuild is set, so that it includes taus that have passed selection even when a dedicated handler is used., agbet
+* FrameworkSub: remove rucio tag, update some Sherpa V+jet from p2411 tp p2419, fill previously missing V+jet samples, include more HVT samples for 0-lep, smwang
+* FrameworkSub, FrameworkExe: Add new GRL/ilumicalc, nmorange
+* FrameworkSub: Update data lists to latest GRL, nmorange
+* CxAODMaker, CxAODMaker\_VHbb: Fixing bug when TruthWZ is not present for data, abuzatu
+* CxAODReader\_VHbb: fix: protection for data in fill\_jetSelectedHistos, cpandini
+
+## 15-11-06
+* CxAODMaker: updating muon, electron, photon isolation variables, amontalb
+* CxAODTools: tuple utilities, jhetherl
+* CorrsAndSysts: Add in an Njet reweight option, ahmeta
+* CxAODTools\_VHbb: updated jet cleaning; is it really necessary to redo it passSelection?; CXAOD-153, hanar
+
+## 15-11-07
+* FrameworkExe: turned on OverlapRegister in output, grkeren
+* CxAODReader: updating the AnalysisReader to update the name of the sample and the mChannelNumber at each event, francav
+* Tag 16-01
+
+## 15-11-08
+* CxAODTools: quick patch for BTaggingTool, jhetherl
+
+## 15-11-09
+* CxAODReader: add second getter method for eventFlavour, hanar
+* CxAODTools, CxAODTools\_VHbb: introduce passJetCleaning method; CXAOD-153, hanar
+* FrameworkSub: Remove duplications in list\_sample\_grid.mc15\_13TeV\_25ns.HIGG5D2.txt, garabed
+* CorrsAndSysts: Don't exit if sample is unknown as now we have many unknow signal samples, ahmeta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

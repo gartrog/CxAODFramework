@@ -187,7 +187,7 @@ def makeNewTag(client,pack,doTag=False):
         print '      ',urlsrc
         print '      ',urldst
         if doTag:
-            client.callback_get_log_message = lambda : (True,"Prep for intermediate tag")
+            client.callback_get_log_message = lambda : (True,"Prep for tag 16")
             newrev = client.copy(urlsrc,urldst)
             rev = newrev.number
     return Tag(pack,nextTag,rev)

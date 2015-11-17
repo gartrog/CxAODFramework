@@ -643,19 +643,59 @@
 * FrameworkSub: Remove duplications in list\_sample\_grid.mc15\_13TeV\_25ns.HIGG5D2.txt, garabed
 * CorrsAndSysts: Don't exit if sample is unknown as now we have many unknow signal samples, ahmeta
 
+## 15-11-10
 
+* CxAODReader_VHbb : add BDT weight file for vbfa analysis, lshi
+* CxAODReader_VHbb : add readMVA to vbfa analysis, merge with trunk, lshi
+* CxAODReader_VHbb : fixed long type for EasyTree, jhetherl
+* CxAODReader_VHbb : new EasyTree and Reader restructuring, jhetherl
+* CxAODReader_VHbb : svn update issues, jhetherl
+* CxAODTools : added fast string comparison class for better map performance, jhetherl
+* CxAODTools : fix a crash in initializing overlapRemovalToolVBFGamma when running on debug mode, lshi
+* CxAODTools : store all possibles muon trigger SFs at Maker, djamin
+* CxAODTools_VHbb : store all possibles muon trigger SFs at Maker, djamin
+* FrameworkExe : output job dataset name fixes : prune _CT10 and store the first s-tag for MC, djamin
+* FrameworkSub : add cross-section and yield for 341078 ZbbjjaQCD sample, lshi
 
+## 15-11-11
 
+* CxAODMaker : update on muon trigger SF : use loose lepton quality, djamin
+* CxAODTools : update on lepton trigger SF : use loose lepton quality, djamin
+* CxAODTools_VHbb : adding track and fat jets to the selection result; CXAOD-156, hanar
+* FrameworkSub : updated yields file, amontalb
 
+## 15-11-12
+* CxAODMaker : adding data15 lowest unprescaled trigger conditions, dimicco
+* CxAODMaker : add some el/mu triggers and matching, djamin
+* CxAODMaker : Fixing a bug when TruthWZ is not found in some events, abuzatu
+* CxAODReader : adding  data15 lowest unprescaled trigger, dimicco
+* CxAODReader : removing leftover debug line in setEventWeight, dimicco
+* CxAODTools : adding data15 lowest unprescaled trigger conditions, dimicco
+* CxAODTools : add some el/mu triggers and matching, djamin
+* FrameworkExe : adding TriggerMenu flag in framework-read.cfg, dimicco
+* FrameworkSub : update xsec and yield for ZGamma 341078, lshi
+* FrameworkSub : update yields to fix position problem, lshi
 
+## 15-11-13
+* CxAODReader_VHbb : update vbfa BDT weights, lshi
+* FrameworkExe : Use latest GRL/ilumicalc, nmorange
+* FrameworkSub : New final GRL, ilumicalc, and updated data lists. WARNING: one run still missing in derivtions ?, nmorange
 
+## 15-11-14
+* CxAODMaker : add again the histos*root, abuzatu
+* CxAODMaker : Add PtReco from b Parton, besides TruthWZ; code reorganised, abuzatu
+* CxAODMaker : delete temporarily the histos*root, abuzatu
+* CxAODMaker : Fix a crash when applyJetSemileptonic=False; not save Regression state any more for FatJet; added PtReco when both muon and electron present, abuzatu
+* CxAODMaker : Fix a crash when applyJetSemileptonic=False; not save Regression state any more for FatJet; added PtReco when both muon and electron present, abuzatu
+* CxAODMaker : Fix a crash when applyJetSemileptonic=False; not save Regression state any more for FatJet; added PtReco when both muon and electron present, abuzatu
+* CxAODMaker_VHbb : Fix a crash when applyJetSemileptonic=False; not save Regression state any more for FatJet; added PtReco when both muon and electron present, abuzatu
+* FrameworkExe : Add PtReco from b Parton, besides TruthWZ; code reorganised, abuzatu
+* FrameworkExe : Revert to previous format; changed by mistake, abuzatu
 
+## 15-11-15
+* CxAODMaker : Replace PtReco histograms from vvbb of 16k events to llbb of 66k events, abuzatu
 
-
-
-
-
-
-
-
-
+## 15-11-16
+* CxAODMaker : update event cleaning cuts, tnobe
+* CxAODReader : write cutflow from event selection in AnalysisReader::finalize(), dbuesche
+* CxAODTools_VHbb : Add more bins in PreselectionCutFlow histogram, sargyrop

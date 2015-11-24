@@ -699,3 +699,89 @@
 * CxAODMaker : update event cleaning cuts, tnobe
 * CxAODReader : write cutflow from event selection in AnalysisReader::finalize(), dbuesche
 * CxAODTools_VHbb : Add more bins in PreselectionCutFlow histogram, sargyrop
+
+## 15-11-17
+* CxAODMaker : changed one of the tau triggers in the matching, agbet
+* CxAODTools : changed one of the tau triggers in the matching, agbet
+* FrameworkSub : update ttbar systs, amontalb
+
+## 15-11-18
+* CxAODMaker : update iso effSF; update iso working points, lulu
+* CxAODMaker : updates to photon isolation WPs, prose
+* CxAODMaker_VHbb : update to vbf loose photon selection, prose
+* CxAODReader_VHbb : adding struct lepton; adding method setLeptonVariables; using both in fill_2Lep, hanar
+* CxAODReader_VHbb : move HT computation to method, hanar
+* CxAODTools : extra property isFixedCutTightCaloOnlyIso for new photon isolation WP, prose
+* CxAODTools : update iso effSF; update iso working points, lulu
+* FrameworkExe : final fix for s-tag in output dataset job name, djamin
+* FrameworkSub : Added JetSubStructureUtils-00-02-17 and BoostedJetTaggers-00-00-12 to update FatJet CP, abuzatu
+* FrameworkSub : fix broken yield for Wenu, fsforza
+* FrameworkSub : Update of V+jets cross sections to 25ns values as explained in @CxAOD-160, thompson
+* FrameworkSub : update release-trunk to 2.3.34, haysjm
+* FrameworkSub : Xsections: add more mass points for A->ZH->llbb, dbuesche
+
+## 15-11-19
+* CxAODMaker : comment out isoCorr for the moment to avoid crash; debugging ..., lulu
+* CxAODMaker : uncomment isolation correction, lulu
+* CxAODReader : call copyConeTruthLabels also for track and fat jets;CXAOD-155;CXAOD-32, hanar
+* CxAODReader_VHbb : adding Jet struct, method to get corrected jets (default OneMuon), method to set jet variables; used in 2 lep analysis, hanar
+* CxAODReader_VHbb : move region definition in 2lep upstream; remove mBB cut in topemuCR; add missing if, hanar
+* CxAODReader_VHbb : removed deprecated MET cut, hanar
+* CxAODReader_VHbb : removed duplicated checks of truth label id; CXAOD-155, hanar
+* CxAODReader_VHbb : removed mBB cut in emu top CR, hanar
+* CxAODReader_VHbb : updated mLL cut in SR, rm cut in topCR; moved to method, hanar
+* CxAODReader_VHbb : wrapped up 2lep trigger selection, hanar
+* CxAODTools : big changes in TriggerTool to make it working with tag14, tag16 and next CxAOD tag samples, djamin
+* FrameworkExe : update the TriggerMenu strings in reader config, djamin
+* FrameworkSub : I learn from Jose that JetSubStructureUtils-00-02-17 has a bug, so revert to JetSubStructureUtils-00-02-16, abuzatu
+* FrameworkSub : Updated after a bug fix to JetSubStructureUtils-00-02-18, abuzatu
+
+## 15-11-20
+* CxAODMaker : Change of interface due to 2.3.35 and new MuonSelector:
+* CxAODMaker : CXAOD-164: large jet resolution uncertainties: JER, JMS and D2R as custom methods, dbuesche
+* CxAODMaker : update electron recoEffSF, idEffSF, isoEffSF, lulu
+* CxAODMaker : Xbb variables, benitezj
+* CxAODReader : add EL_CHECK, hanar
+* CxAODReader : no truth label on fat jets, don't call copyConeTruthLabels..., hanar
+* CxAODReader_VHbb : disentangle b-jet selection and pT cut on leading selected jet; get rid of isTruthTagged flag; CXAOD-166, hanar
+* CxAODReader_VHbb : require opposite charge for topemuCR, hanar
+* CxAODTools : clean the data15 TriggerMenu, djamin
+* CxAODTools : fix default TriggerMenu value to CxAODtag16, djamin
+* CxAODTools : get rid of isTruthTagged flag, hanar
+* CxAODTools : Xbb variables, benitezj
+* FrameworkExe : clean the data15 TriggerMenu string in reader config, djamin
+* FrameworkSub : Remove JetSubStructureUtils-00-02-18 as now we use AnalysisBase 2.3.35 which has it, abuzatu
+* FrameworkSub : updated release tag to 2.3.35, haysjm
+
+## 15-11-21
+* CxAODMaker : update electron trigEffSF, lulu
+* CxAODTools : add variables for electron effSF, lulu
+* CxAODTools : update electron trigEffSF, lulu
+* FrameworkSub : Added the 410006 DSID to the cross sections file and fixed naming conventions for the ttbar samples meant as variations for systematic uncertainty studies., meehan
+
+## 15-11-22
+* CxAODMaker : CXAOD-164: reduce FATJET_JER smearing from 10% to 5%, dbuesche
+* CxAODMaker : Instead of the muons from CxAOD, have my own muonEventSelector inside JetSemileptonic, to be able to move from loose to medium muons. Also add debug and msgLevel members., abuzatu
+* CxAODTools_VHbb : ugly patch to avoid verbose errors in muon trigger sf tool appearing in 2.3.35, fsforza
+* FrameworkSub : update nominal production to 00-01-40 (also minor bkg). Update MJ to 00-01-42-MJ which should have all support triggers, fsforza
+
+## 15-11-23
+* CxAODMaker : adding TTVA SF and new isolation SF for muon WP, fsforza
+* CxAODMaker : CXAOD-172: implement JetUncertaintiesTool for WZ and Hbb tagging. Hbb has WZ config for now (Hbb not available yet)., dbuesche
+* CxAODReader : added jet author to b-tagging systs, jhetherl
+* CxAODReader_VHbb : added jet author to b-tagging systs, jhetherl
+* CxAODReader_VHbb : introduced inMbbWindow method; changed name of JetCorrTLV to getJetCorrTLV; in 2 lepton channel: changing order of cuts; add cutflow; minor clean-up, hanar
+* CxAODReader_VHbb : need to use tagcatIncl and tagcatExcl for now, hanar
+* CxAODReader_VHbb : removed return statement in 2 lepton trigger selection when dealing with syst - need to check with David Jamin, hanar
+* CxAODReader_VHbb : remove return in 2 lepton selection if there are more than 2 b-tagged jets, hanar
+* CxAODTools : adding TTVA SF and new isolation SF for muon WP, fsforza
+* FrameworkExe : adding TTVA SF sys, fsforza
+* FrameworkSub : add JetUncertainties-00-09-31, dbuesche
+* FrameworkSub : fix of MuonEfficiency crash on muons with negative pT, fsforza
+
+## 15-11-24
+* CxAODMaker : Introduced new PtReco using Bukin and Gauss fits. They use llbb, OneMu, Parton. Also not compute the PtReco for FatJet anymore, to save time. Also added the Regression training weights for SM., abuzatu
+* CxAODReader_VHbb : Removing mis-placed cut for 2lep analysis that affected cutflow results, sargyrop
+ - Moved d0 and z0 calculation to decorateOriginParticle, fsforza
+ - Muon selector variables moved from decorateOriginParticle 
+ to decorate because the tool needs momentum calibrated muons

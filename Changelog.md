@@ -645,23 +645,23 @@
 
 ## 15-11-10
 
-* CxAODReader_VHbb : add BDT weight file for vbfa analysis, lshi
-* CxAODReader_VHbb : add readMVA to vbfa analysis, merge with trunk, lshi
-* CxAODReader_VHbb : fixed long type for EasyTree, jhetherl
-* CxAODReader_VHbb : new EasyTree and Reader restructuring, jhetherl
-* CxAODReader_VHbb : svn update issues, jhetherl
+* CxAODReader\_VHbb : add BDT weight file for vbfa analysis, lshi
+* CxAODReader\_VHbb : add readMVA to vbfa analysis, merge with trunk, lshi
+* CxAODReader\_VHbb : fixed long type for EasyTree, jhetherl
+* CxAODReader\_VHbb : new EasyTree and Reader restructuring, jhetherl
+* CxAODReader\_VHbb : svn update issues, jhetherl
 * CxAODTools : added fast string comparison class for better map performance, jhetherl
 * CxAODTools : fix a crash in initializing overlapRemovalToolVBFGamma when running on debug mode, lshi
 * CxAODTools : store all possibles muon trigger SFs at Maker, djamin
-* CxAODTools_VHbb : store all possibles muon trigger SFs at Maker, djamin
-* FrameworkExe : output job dataset name fixes : prune _CT10 and store the first s-tag for MC, djamin
+* CxAODTools\_VHbb : store all possibles muon trigger SFs at Maker, djamin
+* FrameworkExe : output job dataset name fixes : prune \_CT10 and store the first s-tag for MC, djamin
 * FrameworkSub : add cross-section and yield for 341078 ZbbjjaQCD sample, lshi
 
 ## 15-11-11
 
 * CxAODMaker : update on muon trigger SF : use loose lepton quality, djamin
 * CxAODTools : update on lepton trigger SF : use loose lepton quality, djamin
-* CxAODTools_VHbb : adding track and fat jets to the selection result; CXAOD-156, hanar
+* CxAODTools\_VHbb : adding track and fat jets to the selection result; CXAOD-156, hanar
 * FrameworkSub : updated yields file, amontalb
 
 ## 15-11-12
@@ -677,7 +677,7 @@
 * FrameworkSub : update yields to fix position problem, lshi
 
 ## 15-11-13
-* CxAODReader_VHbb : update vbfa BDT weights, lshi
+* CxAODReader\_VHbb : update vbfa BDT weights, lshi
 * FrameworkExe : Use latest GRL/ilumicalc, nmorange
 * FrameworkSub : New final GRL, ilumicalc, and updated data lists. WARNING: one run still missing in derivtions ?, nmorange
 
@@ -688,7 +688,7 @@
 * CxAODMaker : Fix a crash when applyJetSemileptonic=False; not save Regression state any more for FatJet; added PtReco when both muon and electron present, abuzatu
 * CxAODMaker : Fix a crash when applyJetSemileptonic=False; not save Regression state any more for FatJet; added PtReco when both muon and electron present, abuzatu
 * CxAODMaker : Fix a crash when applyJetSemileptonic=False; not save Regression state any more for FatJet; added PtReco when both muon and electron present, abuzatu
-* CxAODMaker_VHbb : Fix a crash when applyJetSemileptonic=False; not save Regression state any more for FatJet; added PtReco when both muon and electron present, abuzatu
+* CxAODMaker\_VHbb : Fix a crash when applyJetSemileptonic=False; not save Regression state any more for FatJet; added PtReco when both muon and electron present, abuzatu
 * FrameworkExe : Add PtReco from b Parton, besides TruthWZ; code reorganised, abuzatu
 * FrameworkExe : Revert to previous format; changed by mistake, abuzatu
 
@@ -698,7 +698,7 @@
 ## 15-11-16
 * CxAODMaker : update event cleaning cuts, tnobe
 * CxAODReader : write cutflow from event selection in AnalysisReader::finalize(), dbuesche
-* CxAODTools_VHbb : Add more bins in PreselectionCutFlow histogram, sargyrop
+* CxAODTools\_VHbb : Add more bins in PreselectionCutFlow histogram, sargyrop
 
 ## 15-11-17
 * CxAODMaker : changed one of the tau triggers in the matching, agbet
@@ -708,9 +708,9 @@
 ## 15-11-18
 * CxAODMaker : update iso effSF; update iso working points, lulu
 * CxAODMaker : updates to photon isolation WPs, prose
-* CxAODMaker_VHbb : update to vbf loose photon selection, prose
-* CxAODReader_VHbb : adding struct lepton; adding method setLeptonVariables; using both in fill_2Lep, hanar
-* CxAODReader_VHbb : move HT computation to method, hanar
+* CxAODMaker\_VHbb : update to vbf loose photon selection, prose
+* CxAODReader\_VHbb : adding struct lepton; adding method setLeptonVariables; using both in fill\_2Lep, hanar
+* CxAODReader\_VHbb : move HT computation to method, hanar
 * CxAODTools : extra property isFixedCutTightCaloOnlyIso for new photon isolation WP, prose
 * CxAODTools : update iso effSF; update iso working points, lulu
 * FrameworkExe : final fix for s-tag in output dataset job name, djamin
@@ -724,13 +724,13 @@
 * CxAODMaker : comment out isoCorr for the moment to avoid crash; debugging ..., lulu
 * CxAODMaker : uncomment isolation correction, lulu
 * CxAODReader : call copyConeTruthLabels also for track and fat jets;CXAOD-155;CXAOD-32, hanar
-* CxAODReader_VHbb : adding Jet struct, method to get corrected jets (default OneMuon), method to set jet variables; used in 2 lep analysis, hanar
-* CxAODReader_VHbb : move region definition in 2lep upstream; remove mBB cut in topemuCR; add missing if, hanar
-* CxAODReader_VHbb : removed deprecated MET cut, hanar
-* CxAODReader_VHbb : removed duplicated checks of truth label id; CXAOD-155, hanar
-* CxAODReader_VHbb : removed mBB cut in emu top CR, hanar
-* CxAODReader_VHbb : updated mLL cut in SR, rm cut in topCR; moved to method, hanar
-* CxAODReader_VHbb : wrapped up 2lep trigger selection, hanar
+* CxAODReader\_VHbb : adding Jet struct, method to get corrected jets (default OneMuon), method to set jet variables; used in 2 lep analysis, hanar
+* CxAODReader\_VHbb : move region definition in 2lep upstream; remove mBB cut in topemuCR; add missing if, hanar
+* CxAODReader\_VHbb : removed deprecated MET cut, hanar
+* CxAODReader\_VHbb : removed duplicated checks of truth label id; CXAOD-155, hanar
+* CxAODReader\_VHbb : removed mBB cut in emu top CR, hanar
+* CxAODReader\_VHbb : updated mLL cut in SR, rm cut in topCR; moved to method, hanar
+* CxAODReader\_VHbb : wrapped up 2lep trigger selection, hanar
 * CxAODTools : big changes in TriggerTool to make it working with tag14, tag16 and next CxAOD tag samples, djamin
 * FrameworkExe : update the TriggerMenu strings in reader config, djamin
 * FrameworkSub : I learn from Jose that JetSubStructureUtils-00-02-17 has a bug, so revert to JetSubStructureUtils-00-02-16, abuzatu
@@ -741,10 +741,10 @@
 * CxAODMaker : CXAOD-164: large jet resolution uncertainties: JER, JMS and D2R as custom methods, dbuesche
 * CxAODMaker : update electron recoEffSF, idEffSF, isoEffSF, lulu
 * CxAODMaker : Xbb variables, benitezj
-* CxAODReader : add EL_CHECK, hanar
+* CxAODReader : add EL\_CHECK, hanar
 * CxAODReader : no truth label on fat jets, don't call copyConeTruthLabels..., hanar
-* CxAODReader_VHbb : disentangle b-jet selection and pT cut on leading selected jet; get rid of isTruthTagged flag; CXAOD-166, hanar
-* CxAODReader_VHbb : require opposite charge for topemuCR, hanar
+* CxAODReader\_VHbb : disentangle b-jet selection and pT cut on leading selected jet; get rid of isTruthTagged flag; CXAOD-166, hanar
+* CxAODReader\_VHbb : require opposite charge for topemuCR, hanar
 * CxAODTools : clean the data15 TriggerMenu, djamin
 * CxAODTools : fix default TriggerMenu value to CxAODtag16, djamin
 * CxAODTools : get rid of isTruthTagged flag, hanar
@@ -760,20 +760,20 @@
 * FrameworkSub : Added the 410006 DSID to the cross sections file and fixed naming conventions for the ttbar samples meant as variations for systematic uncertainty studies., meehan
 
 ## 15-11-22
-* CxAODMaker : CXAOD-164: reduce FATJET_JER smearing from 10% to 5%, dbuesche
+* CxAODMaker : CXAOD-164: reduce FATJET\_JER smearing from 10% to 5%, dbuesche
 * CxAODMaker : Instead of the muons from CxAOD, have my own muonEventSelector inside JetSemileptonic, to be able to move from loose to medium muons. Also add debug and msgLevel members., abuzatu
-* CxAODTools_VHbb : ugly patch to avoid verbose errors in muon trigger sf tool appearing in 2.3.35, fsforza
+* CxAODTools\_VHbb : ugly patch to avoid verbose errors in muon trigger sf tool appearing in 2.3.35, fsforza
 * FrameworkSub : update nominal production to 00-01-40 (also minor bkg). Update MJ to 00-01-42-MJ which should have all support triggers, fsforza
 
 ## 15-11-23
 * CxAODMaker : adding TTVA SF and new isolation SF for muon WP, fsforza
 * CxAODMaker : CXAOD-172: implement JetUncertaintiesTool for WZ and Hbb tagging. Hbb has WZ config for now (Hbb not available yet)., dbuesche
 * CxAODReader : added jet author to b-tagging systs, jhetherl
-* CxAODReader_VHbb : added jet author to b-tagging systs, jhetherl
-* CxAODReader_VHbb : introduced inMbbWindow method; changed name of JetCorrTLV to getJetCorrTLV; in 2 lepton channel: changing order of cuts; add cutflow; minor clean-up, hanar
-* CxAODReader_VHbb : need to use tagcatIncl and tagcatExcl for now, hanar
-* CxAODReader_VHbb : removed return statement in 2 lepton trigger selection when dealing with syst - need to check with David Jamin, hanar
-* CxAODReader_VHbb : remove return in 2 lepton selection if there are more than 2 b-tagged jets, hanar
+* CxAODReader\_VHbb : added jet author to b-tagging systs, jhetherl
+* CxAODReader\_VHbb : introduced inMbbWindow method; changed name of JetCorrTLV to getJetCorrTLV; in 2 lepton channel: changing order of cuts; add cutflow; minor clean-up, hanar
+* CxAODReader\_VHbb : need to use tagcatIncl and tagcatExcl for now, hanar
+* CxAODReader\_VHbb : removed return statement in 2 lepton trigger selection when dealing with syst - need to check with David Jamin, hanar
+* CxAODReader\_VHbb : remove return in 2 lepton selection if there are more than 2 b-tagged jets, hanar
 * CxAODTools : adding TTVA SF and new isolation SF for muon WP, fsforza
 * FrameworkExe : adding TTVA SF sys, fsforza
 * FrameworkSub : add JetUncertainties-00-09-31, dbuesche
@@ -785,18 +785,18 @@
 * CxAODMaker : Introduced new PtReco using Bukin and Gauss fits. They use llbb, OneMu, Parton. Also not compute the PtReco for FatJet anymore, to save time. Also added the Regression training weights for SM., abuzatu
 * CxAODMaker : store electron trigger MC eff, djamin
 * CxAODMaker : update photon track iso variable from ptvarcone20 to ptcone20, lshi
-* CxAODMaker_VHbb : add isGoodOQ cut for photon, lshi
-* CxAODReader_VHbb : consistent hist naming, hanar
-* CxAODReader_VHbb : feed only selected fat jets to plotting, hanar
-* CxAODReader_VHbb : Implementing bit flag for cutflow and event categorization. Fully implemented only for the 2lep analysis for the moment. Minor changes to tagjet_selection function and setJetVariables to allow the code to run with the above modifications. Optional print statement to check event weights, sargyrop
-* CxAODReader_VHbb : Removing mis-placed cut for 2lep analysis that affected cutflow results, sargyrop
-* CxAODReader_VHbb : switch order in cutflow, hanar
-* CxAODReader_VHbb : undo accidental commit, hanar
+* CxAODMaker\_VHbb : add isGoodOQ cut for photon, lshi
+* CxAODReader\_VHbb : consistent hist naming, hanar
+* CxAODReader\_VHbb : feed only selected fat jets to plotting, hanar
+* CxAODReader\_VHbb : Implementing bit flag for cutflow and event categorization. Fully implemented only for the 2lep analysis for the moment. Minor changes to tagjet\_selection function and setJetVariables to allow the code to run with the above modifications. Optional print statement to check event weights, sargyrop
+* CxAODReader\_VHbb : Removing mis-placed cut for 2lep analysis that affected cutflow results, sargyrop
+* CxAODReader\_VHbb : switch order in cutflow, hanar
+* CxAODReader\_VHbb : undo accidental commit, hanar
 * CxAODTools : access electron trigger MC eff and use them in TriggerTool to deal properly the 2 el events trigger weight, djamin
 * CxAODTools : modify electron trigger SF names accessed in TriggerTool to follow latest EOYE recommendations, djamin
 * CxAODTools : remove period D protections for muon trigger SF, it is useless now as they have are computed for all data15, djamin
-* CxAODTools_VHbb : pkgs with fixs for muon-Trigger sf, fsforza
-* CxAODTools_VHbb : Updating leptonSF in 1 and 2lep selections to include TTVA, reco and iso SF, sargyrop
+* CxAODTools\_VHbb : pkgs with fixs for muon-Trigger sf, fsforza
+* CxAODTools\_VHbb : Updating leptonSF in 1 and 2lep selections to include TTVA, reco and iso SF, sargyrop
 * FrameworkExe : run.cfg: add large jet uncertainties, dbuesche
 * FrameworkExe : Switch to final GRL, nmorange
 * FrameworkExe : Update vtag to 18, nmorange
@@ -804,50 +804,50 @@
 * FrameworkSub : pkgs with fixs for muon-Trigger sf and and, fsforza
 * FrameworkSub : Removed BoostedJetTaggers, as actually we don't use it in CxAODFramework, abuzatu
 * FrameworkSub : Update data lists to use full 2015 luminosity, nmorange
-* FrameworkSub : Update GRL, ilumicalc, and add mc15b_prw, nmorange
+* FrameworkSub : Update GRL, ilumicalc, and add mc15b\_prw, nmorange
 * FrameworkSub : updates to packages and release ready for tag18, haysjm
 * FrameworkSub : update to JetUncertainties-00-09-32, dbuesche
 
 ## 15-11-25
 * CxAODReader : better MC-to-MC index checks in b-tagging tool, jhetherl
 * CxAODReader : improved b-tagging MC-to-MC index deduction, jhetherl
-* CxAODReader_VHbb : 2 lepton channel: reset histNameSvc description; remove return if less than 2 signal jets; fill histos only if event belongs to defined region; fill easy tree if there are at least 2 signal jets, hanar
-* CxAODReader_VHbb : 2 lepton: resolved mixup, compute_jetSelectedQuantities doesn't belong to the histos, but the trees...histo filling relies on the jet selected quantities being stored in the easy tree, need to account for that, hanar
-* CxAODReader_VHbb : changed cut AtLeast1B, need to check if it is still correct, hanar
-* CxAODReader_VHbb : Change in 2lep selection: OS leptons for top CR only, sargyrop
-* CxAODReader_VHbb : move filling HVec and bbjVec (re-naming to be consistent) outside of compute_jetSelectedQuantities in order to allow the building using corrected jets, hanar
-* CxAODReader_VHbb : some more re-ordering for better readability, hanar
-* CxAODReader_VHbb : some re-ordering for better readability, hanar
-* CxAODReader_VHbb : update 2lep call of tagjet_selection, amontalb
-* CxAODReader_VHbb : update tagjet_selection function - and its calls in 0lepton and 1lepton selections, cpandini
+* CxAODReader\_VHbb : 2 lepton channel: reset histNameSvc description; remove return if less than 2 signal jets; fill histos only if event belongs to defined region; fill easy tree if there are at least 2 signal jets, hanar
+* CxAODReader\_VHbb : 2 lepton: resolved mixup, compute\_jetSelectedQuantities doesn't belong to the histos, but the trees...histo filling relies on the jet selected quantities being stored in the easy tree, need to account for that, hanar
+* CxAODReader\_VHbb : changed cut AtLeast1B, need to check if it is still correct, hanar
+* CxAODReader\_VHbb : Change in 2lep selection: OS leptons for top CR only, sargyrop
+* CxAODReader\_VHbb : move filling HVec and bbjVec (re-naming to be consistent) outside of compute\_jetSelectedQuantities in order to allow the building using corrected jets, hanar
+* CxAODReader\_VHbb : some more re-ordering for better readability, hanar
+* CxAODReader\_VHbb : some re-ordering for better readability, hanar
+* CxAODReader\_VHbb : update 2lep call of tagjet\_selection, amontalb
+* CxAODReader\_VHbb : update tagjet\_selection function - and its calls in 0lepton and 1lepton selections, cpandini
 * CxAODTools : better MC-to-MC index checks in b-tagging tool, jhetherl
 * CxAODTools : fixed MC-to-MC index safety check in b-tagging tool, jhetherl
 * CxAODTools : improved b-tagging MC-to-MC index deduction, jhetherl
 * FrameworkSub : Add MC lists for tag 18, nmorange
 * FrameworkSub : Hopefully final update of V+jets cross sections.  The 25ns Pt>280 GeV samples are scaled by extra 1.1 to account for different ptV cross section. The 50ns/low pt values are also updated @CxAOD-160, thompson
-* FrameworkSub : update Sherpa diboson k-factor to 0.91 following PMG's recommendations https://twiki.cern.ch/twiki/bin/view/AtlasProtected/DibosonTaskforce#Theoretical_cross_sections, cpandini
+* FrameworkSub : update Sherpa diboson k-factor to 0.91 following PMG's recommendations https://twiki.cern.ch/twiki/bin/view/AtlasProtected/DibosonTaskforce#Theoretical\_cross\_sections, cpandini
 
 ## 15-11-26
-* CxAODMaker : adding HLT_g120_loose in trigger list, xulou
+* CxAODMaker : adding HLT\_g120\_loose in trigger list, xulou
 * CxAODReader : CXAOD-176: empty AnalysisReader::setObjectsForOR(), throw error on call, dbuesche
 * CxAODReader : fixed BTaggingTool MC-to-MC index in data, jhetherl
 * CxAODReader : make attaching of jet author to b-tag systs optional, dbuesche
-* CxAODReader_VHbb : 2 lep: adding histograms; clean-up existing ones, hanar
-* CxAODReader_VHbb : 2 lep: more wrapping up, hanar
-* CxAODReader_VHbb : adding whole bunch of quantities to easy tree, hanar
-* CxAODReader_VHbb : fixing compiler errors from previous commits - sorry, hanar
-* CxAODReader_VHbb : remove check, hanar
-* CxAODReader_VHbb : some more cleaning...also 0 and 2lep, hanar
-* CxAODReader_VHbb : some more cleaning..., hanar
-* CxAODReader_VHbb : use m_physicsMeta to store information on number of (b)-jets; add nbJets to tree, hanar
-* CxAODTools : apply HLT_g120_loose trigger in 0lep, xulou
+* CxAODReader\_VHbb : 2 lep: adding histograms; clean-up existing ones, hanar
+* CxAODReader\_VHbb : 2 lep: more wrapping up, hanar
+* CxAODReader\_VHbb : adding whole bunch of quantities to easy tree, hanar
+* CxAODReader\_VHbb : fixing compiler errors from previous commits - sorry, hanar
+* CxAODReader\_VHbb : remove check, hanar
+* CxAODReader\_VHbb : some more cleaning...also 0 and 2lep, hanar
+* CxAODReader\_VHbb : some more cleaning..., hanar
+* CxAODReader\_VHbb : use m\_physicsMeta to store information on number of (b)-jets; add nbJets to tree, hanar
+* CxAODTools : apply HLT\_g120\_loose trigger in 0lep, xulou
 * CxAODTools : apply photons to overlap removal, xulou
 * CxAODTools : b-tagging temporary work-around, jhetherl
 
 ## 15-11-27
-* CxAODMaker_VHbb : Add in check in WHSignalMuon for tight quality and passing ID cuts, amontalb
-* CxAODReader_VHbb : bug fix: filling acutal mVH quantities, hanar
-* CxAODReader_VHbb : exclude cut on number of b-tagged jets from region definitions; add information on trigger selection to easy tree, hanar
+* CxAODMaker\_VHbb : Add in check in WHSignalMuon for tight quality and passing ID cuts, amontalb
+* CxAODReader\_VHbb : bug fix: filling acutal mVH quantities, hanar
+* CxAODReader\_VHbb : exclude cut on number of b-tagged jets from region definitions; add information on trigger selection to easy tree, hanar
 
 ## 15-11-28
 * CxAODMaker : FatJets: move substructure calculation to decorateOriginParticle (-> fix D2 for JetUnc tool), do D2 smearing directly on D2 instead ECF2, dbuesche
@@ -856,51 +856,51 @@
 
 ## 15-11-30
 * CxAODReader : added 0-lepton VH merged analysis options for naming, cmaiani
-* CxAODReader_VHbb : added AnalysisReader_BoostedVHbb and MVATree_BoostedVHbb classes for running 0-lepton VH merged analysis, cmaiani
-* CxAODReader_VHbb : Fix in fill_2lepCutflow function, sargyrop
-* CxAODReader_VHbb : reorganised flags for boosted analysis, cmaiani
+* CxAODReader\_VHbb : added AnalysisReader\_BoostedVHbb and MVATree\_BoostedVHbb classes for running 0-lepton VH merged analysis, cmaiani
+* CxAODReader\_VHbb : Fix in fill\_2lepCutflow function, sargyrop
+* CxAODReader\_VHbb : reorganised flags for boosted analysis, cmaiani
 * FrameworkExe : addition of config flags and samples for VH boosted analysis, cmaiani
 * FrameworkExe : fixing a typo in previous commit in hsg5frameworkReadCxAOD.cxx, cmaiani
 * FrameworkSub : added new ggA signal cross-sections for VH boosted resonance search in 0lep channel, cmaiani
 * FrameworkSub : removed mc15b sample that sneaked into mc15a lists, hanar
 
 ## 15-12-01
-* CxAODReader_VHbb : Adding merged analysis for the 2lep channel only. Merged analysis is not run by default, sargyrop
+* CxAODReader\_VHbb : Adding merged analysis for the 2lep channel only. Merged analysis is not run by default, sargyrop
 
 * CxAODMaker : CXAOD-172: add safety checks when calling the JetUncTool -> fix crash for unsupported collections, dbuesche
-* CxAODReader_VHbb : 2 lep: rm stuff needed for optimization, hanar
-* CxAODTools : Updated TriggerTool: Enabled setting m_compute_muTrigSF from config, added initialization for all member fields, fixed compiler warning in TriggerTool (commented out unused parameter 'met' in getTriggerDecision()), grkeren
+* CxAODReader\_VHbb : 2 lep: rm stuff needed for optimization, hanar
+* CxAODTools : Updated TriggerTool: Enabled setting m\_compute\_muTrigSF from config, added initialization for all member fields, fixed compiler warning in TriggerTool (commented out unused parameter 'met' in getTriggerDecision()), grkeren
 * FrameworkExe : hackyy scripts for yields, thompson
 * FrameworkExe : Made GEDriver use nFilesPerJob and submitFlags from config., fmueller
 * FrameworkExe : write out DxAOD in rather than out for yields calc, thompson
 
 ## 15-12-02
-* CxAODReader_VHbb : adding method to decide whether region should be blinded; apply blinding in 2lep, hanar
-* CxAODReader_VHbb : adding/removing comments, hanar
-* CxAODReader_VHbb : add n-jets histograms, hanar
-* CxAODReader_VHbb : store w/ and w/o PU weight applied as systematic variation, respectively, depending on default setting; write PU weight to tree, hanar
-* CxAODReader_VHbb : updated tree / histogram filling: cleaning-up, adding variables, using flat tree variables to fill histos, removed non-used argument from fill_jetSelectedHistos; 2 lep: might crash for resolved+merged, hanar
+* CxAODReader\_VHbb : adding method to decide whether region should be blinded; apply blinding in 2lep, hanar
+* CxAODReader\_VHbb : adding/removing comments, hanar
+* CxAODReader\_VHbb : add n-jets histograms, hanar
+* CxAODReader\_VHbb : store w/ and w/o PU weight applied as systematic variation, respectively, depending on default setting; write PU weight to tree, hanar
+* CxAODReader\_VHbb : updated tree / histogram filling: cleaning-up, adding variables, using flat tree variables to fill histos, removed non-used argument from fill\_jetSelectedHistos; 2 lep: might crash for resolved+merged, hanar
 * FrameworkExe : change the ouput name if testing DxAOD yields, thompson
 * FrameworkExe : CT10 no longer in Sherpa V+jets name, thompson
 * FrameworkExe : flag any datasets from the submission list not found, thompson
 * FrameworkSub : updated packages for intermediate tag, haysjm
 
 ## 15-12-03
-* CxAODReader_VHbb : added new property for linking track jets to fat jets, jhetherl
-* CxAODReader_VHbb : add trigger cut for vbfa analysis in reader, lshi
-* CxAODReader_VHbb : applyCS() function update: treat njet>3 as njet=3 for CorrsAndSysts systematics, cpandini
-* CxAODReader_VHbb : clean old BDT weight file, lshi
-* CxAODReader_VHbb : Fixing el/mu cutflow for 2lep analysis, sargyrop
-* CxAODReader_VHbb : implement k-fold for vbfa analysis, lshi
+* CxAODReader\_VHbb : added new property for linking track jets to fat jets, jhetherl
+* CxAODReader\_VHbb : add trigger cut for vbfa analysis in reader, lshi
+* CxAODReader\_VHbb : applyCS() function update: treat njet>3 as njet=3 for CorrsAndSysts systematics, cpandini
+* CxAODReader\_VHbb : clean old BDT weight file, lshi
+* CxAODReader\_VHbb : Fixing el/mu cutflow for 2lep analysis, sargyrop
+* CxAODReader\_VHbb : implement k-fold for vbfa analysis, lshi
 * CxAODTools : added new property for linking track jets to fat jets, jhetherl
 * CxAODTools : skip trigger matching for vbfa, as it always fails due to a trigger bug in 50 ns MC sample, lshi
-* CxAODTools_VHbb : clean trigger pre-selection, lshi
+* CxAODTools\_VHbb : clean trigger pre-selection, lshi
 * FrameworkExe : update to copy PowHeg diboson, thompson
 
 ## 15-12-04
-* CxAODMaker_VHbb : Store muonQuality in CxAOD. Needed for implementing merged selection as done in VH resonance analyses, sargyrop
+* CxAODMaker\_VHbb : Store muonQuality in CxAOD. Needed for implementing merged selection as done in VH resonance analyses, sargyrop
 * CxAODReader : Changing HistNameSvc njet and ptv binning according to convention for fit inputs, sargyrop
-* CxAODReader_VHbb : 2lep: adding histos; moving to PtRecollbbOneMuPartonBukinNew in v18, hanar
+* CxAODReader\_VHbb : 2lep: adding histos; moving to PtRecollbbOneMuPartonBukinNew in v18, hanar
 * FrameworkExe : adapting to current trunk output; enable blinding of mBB and mVH for ggA500; merge regions, hanar
 * FrameworkExe : removed reference to TupleBDT and updated to interface change in passing the config to the TupleMaker, haysjm
 * FrameworkExe : some more powheg diboson, thompson
@@ -912,20 +912,41 @@
 
 ## 15-12-07
 * CxAODMaker : keep consistent information on number of vertices with at least 2 tracks; CXAOD-183, hanar
-* CxAODMaker_VHbb : add photon cleaning cut according to recommendation, lshi
+* CxAODMaker\_VHbb : add photon cleaning cut according to recommendation, lshi
 * CxAODReader : Add HistFastSvc, nmorange
 * CxAODReader : CXAOD-128: add check for duplicated events in AnalysisReader, dbuesche
 * CxAODReader : fix to call only once the get random run number, djamin
-* CxAODReader_VHbb : Add example regNaming class with VHRes naming conventions, nmorange
-* CxAODReader_VHbb : adjust comments, hanar
-* CxAODReader_VHbb : Fix 2 lep: correct cuflow for merged; typo, hanar
-* CxAODReader_VHbb : fix to call only once the get random run number, djamin
-* CxAODReader_VHbb : make jet correction type stearable by config, hanar
-* CxAODReader_VHbb : Restructuring and fixed of 2lep function to allow for a better integration of merged analysis with resolved one. Possibility to run either one standalone or combined based on ptV, sargyrop
-* CxAODReader_VHbb : rm some commented code, hanar
+* CxAODReader\_VHbb : Add example regNaming class with VHRes naming conventions, nmorange
+* CxAODReader\_VHbb : adjust comments, hanar
+* CxAODReader\_VHbb : Fix 2 lep: correct cuflow for merged; typo, hanar
+* CxAODReader\_VHbb : fix to call only once the get random run number, djamin
+* CxAODReader\_VHbb : make jet correction type stearable by config, hanar
+* CxAODReader\_VHbb : Restructuring and fixed of 2lep function to allow for a better integration of merged analysis with resolved one. Possibility to run either one standalone or combined based on ptV, sargyrop
+* CxAODReader\_VHbb : rm some commented code, hanar
 * CxAODTools : add possibility to switch off large-R jet - small-R jet OR, hanar
 * CxAODTools : rm NVtx3Trks;  CXAOD-183, hanar
 * CxAODTools : undo previous commit, need to keep NVtx3Trks a little longer; CXAOD-183, hanar
 * FrameworkExe : add options; set sensible defaults, hanar
 * FrameworkExe : make jet correction type stearable by config, hanar
 * FrameworkSub : add missing ggA samples, thompson
+* CxAODReader\_VHbb, FrameworkExe : make jet correction type stearable by config, hanar
+* CxAODReader: CXAOD-128: add check for duplicated events in AnalysisReader, dbuesche
+* CxAODMaker\_VHbb: add photon cleaning cut according to recommendation, lshi
+* CxAODTools: add possibility to switch off large-R jet - small-R jet OR, hanar
+* CxAODReader\_VHbb: Fix 2 lep: correct cuflow for merged; typo, hanar
+* FrameworkExe: add options; set sensible defaults, hanar
+* CxAODMaker: keep consistent information on number of vertices with at least 2 tracks; CXAOD-183, hanar
+* CxAODTools: rm NVtx3Trks;  CXAOD-183, hanar
+* CxAODReader\_VHbb: rm some commented code, hanar
+* CxAODReader\_VHbb: adjust comments, hanar
+* CxAODReader: Add HistFastSvc, nmorange
+* CxAODReader\_VHbb: Add example regNaming class with VHRes naming conventions, nmorange
+* CxAODTools: undo previous commit, need to keep NVtx3Trks a little longer; CXAOD-183, hanar
+* CxAODReader, CxAODReader\_VHbb: fix to call only once the get random run number, djamin
+* CxAODReader\_VHbb: Fixing fatJetCorrType was not read properly from the config file (stray character?). Also adding fix for 2Lep merged selection: exactly 2-btags in fat-jet, sargyrop
+* CxAODReader\_VHbb: Fix for 2Lep analysis: exactly 2 b-jets (doing it correctly this time)
+* CxAODReader\_VHbb: add photon isolation cut at Reader level, lshi
+* CxAODReader\_VHbb: separating setJetVariables for small-R and fat jets; introduced setFatJetVariables, fat jet objects; cleaning of the 2 lep code accordingly, hanar
+* FrameworkSub: adding diboson XSec for PwPy8EG, hanar
+* FrameworkSub: correct WWlvlv xsec, hanar
+

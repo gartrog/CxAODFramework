@@ -867,3 +867,65 @@
 ## 15-12-01
 * CxAODReader_VHbb : Adding merged analysis for the 2lep channel only. Merged analysis is not run by default, sargyrop
 
+* CxAODMaker : CXAOD-172: add safety checks when calling the JetUncTool -> fix crash for unsupported collections, dbuesche
+* CxAODReader_VHbb : 2 lep: rm stuff needed for optimization, hanar
+* CxAODTools : Updated TriggerTool: Enabled setting m_compute_muTrigSF from config, added initialization for all member fields, fixed compiler warning in TriggerTool (commented out unused parameter 'met' in getTriggerDecision()), grkeren
+* FrameworkExe : hackyy scripts for yields, thompson
+* FrameworkExe : Made GEDriver use nFilesPerJob and submitFlags from config., fmueller
+* FrameworkExe : write out DxAOD in rather than out for yields calc, thompson
+
+## 15-12-02
+* CxAODReader_VHbb : adding method to decide whether region should be blinded; apply blinding in 2lep, hanar
+* CxAODReader_VHbb : adding/removing comments, hanar
+* CxAODReader_VHbb : add n-jets histograms, hanar
+* CxAODReader_VHbb : store w/ and w/o PU weight applied as systematic variation, respectively, depending on default setting; write PU weight to tree, hanar
+* CxAODReader_VHbb : updated tree / histogram filling: cleaning-up, adding variables, using flat tree variables to fill histos, removed non-used argument from fill_jetSelectedHistos; 2 lep: might crash for resolved+merged, hanar
+* FrameworkExe : change the ouput name if testing DxAOD yields, thompson
+* FrameworkExe : CT10 no longer in Sherpa V+jets name, thompson
+* FrameworkExe : flag any datasets from the submission list not found, thompson
+* FrameworkSub : updated packages for intermediate tag, haysjm
+
+## 15-12-03
+* CxAODReader_VHbb : added new property for linking track jets to fat jets, jhetherl
+* CxAODReader_VHbb : add trigger cut for vbfa analysis in reader, lshi
+* CxAODReader_VHbb : applyCS() function update: treat njet>3 as njet=3 for CorrsAndSysts systematics, cpandini
+* CxAODReader_VHbb : clean old BDT weight file, lshi
+* CxAODReader_VHbb : Fixing el/mu cutflow for 2lep analysis, sargyrop
+* CxAODReader_VHbb : implement k-fold for vbfa analysis, lshi
+* CxAODTools : added new property for linking track jets to fat jets, jhetherl
+* CxAODTools : skip trigger matching for vbfa, as it always fails due to a trigger bug in 50 ns MC sample, lshi
+* CxAODTools_VHbb : clean trigger pre-selection, lshi
+* FrameworkExe : update to copy PowHeg diboson, thompson
+
+## 15-12-04
+* CxAODMaker_VHbb : Store muonQuality in CxAOD. Needed for implementing merged selection as done in VH resonance analyses, sargyrop
+* CxAODReader : Changing HistNameSvc njet and ptv binning according to convention for fit inputs, sargyrop
+* CxAODReader_VHbb : 2lep: adding histos; moving to PtRecollbbOneMuPartonBukinNew in v18, hanar
+* FrameworkExe : adapting to current trunk output; enable blinding of mBB and mVH for ggA500; merge regions, hanar
+* FrameworkExe : removed reference to TupleBDT and updated to interface change in passing the config to the TupleMaker, haysjm
+* FrameworkExe : some more powheg diboson, thompson
+* FrameworkSub : The boosted Sherpa V+jets cross sections/k-factors are different, thompson
+
+## 15-12-05
+
+## 15-12-06
+
+## 15-12-07
+* CxAODMaker : keep consistent information on number of vertices with at least 2 tracks; CXAOD-183, hanar
+* CxAODMaker_VHbb : add photon cleaning cut according to recommendation, lshi
+* CxAODReader : Add HistFastSvc, nmorange
+* CxAODReader : CXAOD-128: add check for duplicated events in AnalysisReader, dbuesche
+* CxAODReader : fix to call only once the get random run number, djamin
+* CxAODReader_VHbb : Add example regNaming class with VHRes naming conventions, nmorange
+* CxAODReader_VHbb : adjust comments, hanar
+* CxAODReader_VHbb : Fix 2 lep: correct cuflow for merged; typo, hanar
+* CxAODReader_VHbb : fix to call only once the get random run number, djamin
+* CxAODReader_VHbb : make jet correction type stearable by config, hanar
+* CxAODReader_VHbb : Restructuring and fixed of 2lep function to allow for a better integration of merged analysis with resolved one. Possibility to run either one standalone or combined based on ptV, sargyrop
+* CxAODReader_VHbb : rm some commented code, hanar
+* CxAODTools : add possibility to switch off large-R jet - small-R jet OR, hanar
+* CxAODTools : rm NVtx3Trks;  CXAOD-183, hanar
+* CxAODTools : undo previous commit, need to keep NVtx3Trks a little longer; CXAOD-183, hanar
+* FrameworkExe : add options; set sensible defaults, hanar
+* FrameworkExe : make jet correction type stearable by config, hanar
+* FrameworkSub : add missing ggA samples, thompson

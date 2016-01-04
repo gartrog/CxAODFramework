@@ -911,23 +911,7 @@
 ## 15-12-06
 
 ## 15-12-07
-* CxAODMaker : keep consistent information on number of vertices with at least 2 tracks; CXAOD-183, hanar
-* CxAODMaker\_VHbb : add photon cleaning cut according to recommendation, lshi
-* CxAODReader : Add HistFastSvc, nmorange
-* CxAODReader : CXAOD-128: add check for duplicated events in AnalysisReader, dbuesche
-* CxAODReader : fix to call only once the get random run number, djamin
-* CxAODReader\_VHbb : Add example regNaming class with VHRes naming conventions, nmorange
-* CxAODReader\_VHbb : adjust comments, hanar
-* CxAODReader\_VHbb : Fix 2 lep: correct cuflow for merged; typo, hanar
-* CxAODReader\_VHbb : fix to call only once the get random run number, djamin
-* CxAODReader\_VHbb : make jet correction type stearable by config, hanar
 * CxAODReader\_VHbb : Restructuring and fixed of 2lep function to allow for a better integration of merged analysis with resolved one. Possibility to run either one standalone or combined based on ptV, sargyrop
-* CxAODReader\_VHbb : rm some commented code, hanar
-* CxAODTools : add possibility to switch off large-R jet - small-R jet OR, hanar
-* CxAODTools : rm NVtx3Trks;  CXAOD-183, hanar
-* CxAODTools : undo previous commit, need to keep NVtx3Trks a little longer; CXAOD-183, hanar
-* FrameworkExe : add options; set sensible defaults, hanar
-* FrameworkExe : make jet correction type stearable by config, hanar
 * FrameworkSub : add missing ggA samples, thompson
 * CxAODReader\_VHbb, FrameworkExe : make jet correction type stearable by config, hanar
 * CxAODReader: CXAOD-128: add check for duplicated events in AnalysisReader, dbuesche

@@ -1079,4 +1079,27 @@
 ## 16-01-04
 * FrameworkExe: fix the name of systematic PH\_Iso\_DDonoff, lshi
 
+## 16-01-05
+* CxAODMaker, CxAODTools: add photon MC Classifier info, lshi
+* CxAODMaker, CxAODTools: add photon conversionType, lshi
+* CxAODMaker, CxAODTools: add photon isEM value, lshi
+
+## 16-01-07
+* CxAODReader\_VHbb: Modify the arguments of getJetCorrTLV for better understanding in 0 lepton, ddelgove
+* CxAODReader\_VHbb: Proper systematic variation for muon in jet in 0 lepton, ddelgove
+* CxAODReader\_VHbb: update resolved 0 lepton selection, ddelgove
+* CxAODTools: Fix in TriggerTool that affects top CR: restores previous behavior of the code, allowing subleading leptons in emu events to go down to 7 GeV., sargyrop
+* FrameworkExe: add two options for 0 lepton selection, ddelgove
+
+## 16-01-09
+* CxAODReader: fixed b-tagging syst names with jet author, jhetherl
+* FrameworkExe: Commented out due to crash at Maker run time string tauContainer             = TauJet, abuzatu
+
+## 16-01-10
+* CxAODReader: additional fix on b-tag sys naming;CXAOD-191, hanar
+* CxAODReader\_VHbb: 2 lep: propagate jet corrections to jet syst variations, hanar
+
+## 16-01-11
+* CxAODMaker, CxAODTools: correct VBF+photon trigger name, lshi
+* CxAODReader\_VHbb: correcting printout, hanar
 

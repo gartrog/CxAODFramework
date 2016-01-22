@@ -1102,4 +1102,34 @@
 ## 16-01-11
 * CxAODMaker, CxAODTools: correct VBF+photon trigger name, lshi
 * CxAODReader\_VHbb: correcting printout, hanar
+* CxAODReader_VHbb : 2 lep: add Z mass constraint to mumu channel, hanar
+* FrameworkSub : Higgs WW->lvqq signal (commented), arturos
+
+## 16-01-12
+* CxAODReader_VHbb : 2 lep: bug fix - use track jet author for btag syst in merged regime, hanar
+* CxAODReader_VHbb : fix compiler warning, hanar
+* CxAODTools : small fix on truth tagging for Leading2SignalJets, hanar
+
+## 16-01-13
+
+## 16-01-14
+* CxAODMaker : added protection: only copy hasSharedTrack flag if OR tool is run, hanar
+* CxAODReader : added protection against missing container, hanar
+* CxAODReader_VHbb : added tau veto to the 0lep boosted code, not applied by default, cmaiani
+* CxAODReader_VHbb : Fix for 2lep merged analysis: calculate b-tag SF for merged region based on track-jets associated to leading fat-jet only, sargyrop
+
+## 16-01-15
+* CorrsAndSysts : New Run2 corrections for W, Z ttbar. Just for testing at the moment., amehta
+* CorrsAndSysts : New Run2 corrections for W, Z ttbar. Just for testing at the moment., amehta
+* CxAODMaker : Removed line in ElectronHandler which erased the first 4 characters of the trigger name for trigger matching since Trig::TrigEgammaMatchTool does not (as of 2.3.38) prepend 'HTL_' to the trigger name passed to it, grkeren
+
+## 16-01-16
+* CxAODMaker : Using cluster->etaBE(2) instead of cluster->eta() to be in sync with AsgElectronEfficiencyCorrectionTool. Edge case encountered where the two values were on each side of 2.47, causing a seg. fault. in TElectronEfficiencyCorrectionTool::calculate(), grkeren
+
+## 16-01-17
+
+## 16-01-18
+20* CxAODReader : migrated EasyTree to common Reader, jhetherl
+20* CxAODReader_VHbb : migrated EasyTree to common Reader, jhetherl
+20* CxAODTools : updated CDI file for b-tagging, jhetherl
 

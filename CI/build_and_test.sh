@@ -28,6 +28,8 @@ rc build
 for deriv in HIGG5D1 HIGG5D2 HIGG2D4
 do
 
+  # Run once with event selection and OR
+
   # need to hack the config file to replace the selectionName :-((((
   if [ $deriv = "HIGG5D1" ]
   then
@@ -37,6 +39,7 @@ do
   else
     selName=2lep
   fi
+
   sed '/string selectionName/c\string selectionName = ${selName}' FrameworkExe/data/framework-run.cfg > config_${deriv}.cfg
 
   hsg5framework --sampleIn $SAMPLE/${deriv}/ --submitDir $RESULTSDIR/$TODAY/${deriv} --config config_${deriv}.cfg
@@ -44,4 +47,11 @@ do
   root -b -l -q "FrameworkExe/validation/CompareCxAODs.C(\"${RESULTSDIR}/${AGAINST}/${deriv}/data-CxAOD/CxAOD.root\", \"${RESULTSDIR}/${TODAY}/${deriv}/data-CxAOD/CxAOD.root\", \"${PLOTSDIR}/${TODAY}/${deriv}\")"
 
 done
+
+# Run once WITHOUT event selection and OR. It's ok if it's done only for 1 derivation then
+sed '/bool applyEventSelection/c\bool applyEventSelection = false'  config_${deriv}.cfg > tmp.cfg
+sed '/bool applyOverlapRemoval/c\bool applyOverlapRemoval = false'  tmp.cfg > config_nosel.cfg
+hsg5framework --sampleIn $SAMPLE/${deriv}/ --submitDir $RESULTSDIR/$TODAY/NoSelections --config config_nosel.cfg
+mkdir -vp ${PLOTSDIR}/${TODAY}/NoSelections
+root -b -l -q "FrameworkExe/validation/CompareCxAODs.C(\"${RESULTSDIR}/${AGAINST}/NoSelections/data-CxAOD/CxAOD.root\", \"${RESULTSDIR}/${TODAY}/NoSelections/data-CxAOD/CxAOD.root\", \"${PLOTSDIR}/${TODAY}/NoSelections\")"
 

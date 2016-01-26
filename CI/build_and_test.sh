@@ -35,6 +35,7 @@ do
   then
     selName=0lep
   elif [ $deriv = "HIGG5D2" ]
+  then
     selName=1lep
   else
     selName=2lep

@@ -1129,7 +1129,79 @@
 ## 16-01-17
 
 ## 16-01-18
-20* CxAODReader : migrated EasyTree to common Reader, jhetherl
-20* CxAODReader_VHbb : migrated EasyTree to common Reader, jhetherl
-20* CxAODTools : updated CDI file for b-tagging, jhetherl
+* CxAODReader : migrated EasyTree to common Reader, jhetherl
+* CxAODReader_VHbb : migrated EasyTree to common Reader, jhetherl
+* CxAODTools : updated CDI file for b-tagging, jhetherl
+
+## 16-01-19
+* CxAODMaker : Compute SF starting from 7GeV for electrons, nmorange
+* CxAODReader : fixed AZh boosted naming, cmaiani
+* CxAODReader : New Muon Overlap Removal, sjiggins
+* CxAODReader_VHbb : 2 lep: change name of top CR to match limit input convention, hanar
+* CxAODReader_VHbb : added boosted AZh 0lep analysis to the _VHbb code, cmaiani
+* CxAODReader_VHbb : adding new property; removing not used one; add new 2 lepton cut, hanar
+* CxAODReader_VHbb : adjusted compute_fatjetTags to harmonized fat jet - track jet association: only use leading track jets to define the number of b-tags; 2 lep: allow fat jets with only one track jet; use new btag definition; add variables to tree, hanar
+* CxAODTools : 1st fix for offline el quality for trig SF, djamin
+* CxAODTools : New Muon Overlap Removal, sjiggins
+* FrameworkExe : small updates related to A->Zh 0lep boosted analysis, cmaiani
+* FrameworkSub : 2.3.40 not yet on cvmfs..., nmorange
+* FrameworkSub : added W'->WH samples, cmaiani
+* FrameworkSub : Bump AnalysisBase release to 2.3.40, nmorange
+* FrameworkSub : ggA sample names adjusted to follow limit input conventions; renaming old ggA samples to be able to differentiate, hanar
+* FrameworkSub : remove _ from single top sample names to match limit input convention, also for syt samples, hanar
+* FrameworkSub : renaming SM ZH samples to correctly match limit input convention also for vv, hanar
+* FrameworkSub : renaming SM ZH samples to correctly match limit input convention, hanar
+* FrameworkSub : renaming SM ZH samples to match limit input convention; removing DC14 samples, hanar
+## 16-01-20
+* CxAODMaker : added switch to turn off tau calibration and efficiency corrections but pass through taus to the output, haysjm
+* CxAODMaker : Don't compute PtReco with Gauss fit any more, abuzatu
+* CxAODMaker : fixed misplaced comma in TauHandler, haysjm
+* CxAODMaker : Keep in CxAOD only OneMu, PtReco, Regression, remove AllMu, OneMuNu and AllMuNu, abuzatu
+* CxAODMaker : Keep in CxAOD only XbbTagger, remove OneMu, AllMu, OneMuNu, AllMuNu, abuzatu
+* CxAODReader : Correct MET binning for AZh 0 lepton resolved, ddelgove
+* CxAODReader_VHbb : Micro optimization (more readable) to getJetCorrTLV, nmorange
+* CxAODReader_VHbb : Propagate modification of hist name svc in 0 lepton resolved fill function, ddelgove
+* CxAODReader_VHbb : Reader optimization: don't fill C&S hists if variation is < 10^-6, nmorange
+* FrameworkExe : turned the tau handler back on, added flag to turn off tau calibration and efficiency corrections to work-around problem of missing truth matching in the current derivations. This should go away when we switch to the next set of derivations... CXAOD-195, haysjm
+* FrameworkSub : use latest AssociationUtils tag, nmorange
+
+## 16-01-21
+* CxAODMaker : updated configuration for TST MET systematics, tnobe
+* CxAODReader_VHbb : 2 lep: add medium quality to tree, hanar
+* CxAODReader_VHbb : Fix for 2lep analysis: add low mll cut for ttbar CR and remove tau veto, sargyrop
+* CxAODReader_VHbb : Fix for 2lep only: remove blinding at the level of fit inputs, sargyrop
+* CxAODTools : prepare function in triggertool for MET trigger SF and systs, djamin
+* FrameworkSub : Release 2.3.40 is finally available on cvmfs, nmorange
+
+## 16-01-22
+* CxAODReader : Add 23jet region in HistNameSvc, sargyrop
+* CxAODReader_VHbb : 2lep analysis: add fat-jet mass rescaling and fix event weight print-out for cutflow, sargyrop
+* CxAODReader_VHbb : 2lep analysis: add low, high and outer mBB control regions, sargyrop
+* CxAODReader_VHbb : 2lep analysis: allow to merge different mBB side-band regions into one using the doMergeCR flag, sargyrop
+* CxAODReader_VHbb : 2lep analysis: fix outer mbb definition - was not done correctly in my previous commit, sargyrop
+* CxAODReader_VHbb : 2lep analysis: make fat-jet mass rescaling steerable from config file. Default is to not apply rescaling., sargyrop
+* CxAODReader_VHbb : Add flag to allow merging the 2jet and 3jet regions. Default is to not merge, sargyrop
+* CxAODReader_VHbb : Change cut for 2lep analysis: move mBB window to 110-140 GeV, sargyrop
+* CxAODReader_VHbb : Changes for 2lep: rearrangement of code to allow for proper implementation of new resolved/merged combination strategies, sargyrop
+* CxAODReader_VHbb : Cleanup 2lep code, sargyrop
+* CxAODReader_VHbb : Cleanup: remove deprecated option m_doMbbWindow; was not used anywhere in the code, sargyrop
+* CxAODReader_VHbb : Fixes to remove some of the compiler warnings, sargyrop
+* CxAODReader_VHbb : Update 2lep merged analysis cut: require both leptons above 25 GeV in all regions, sargyrop
+* CxAODReader_VHbb : Update 2lep merged analysis cut: use at least 2 track-jets associated to leading fat-jet in all regions, sargyrop
+* CxAODReader_VHbb : updated usage of CorrsAndSysts - example in fill_0Lep(), cpandini
+* FrameworkSub : MC15 samples for VH V->jj, H->mumu, amehta
+
+## 16-01-23
+* CxAODReader_VHbb : Fix constructor inizialitation list: use bools to initialize bools not strings, sargyrop
+* CxAODReader_VHbb : Update 2lep cut: add opposite charge requirement for muons in resolved and merged analysis - all regions, sargyrop
+* CxAODReader_VHbb : Update cut for 2lep: move fat-jet mass window to 76-146 GeV, sargyrop
+* CxAODReader_VHbb : Updating 2lep cutflows to include OSLeptons cut, sargyrop
+
+## 16-01-24
+* CxAODReader_VHbb : Fixes for 2lep analysis: remove tau veto from top CR and correctly fill OS leptons cut, sargyrop
+* CxAODReader_VHbb : Minor fixes for plotting for 2Lep analysis only, sargyrop
+
+## 16-01-25
+* CxAODReader_VHbb : 2lep analysis: fix condition for applying m(mumu) rescaling, sargyrop
+* FrameworkSub : adding some graviton samples, cwang
 

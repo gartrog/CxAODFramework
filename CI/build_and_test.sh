@@ -22,6 +22,8 @@ cd /tmp/nmorange
 mkdir CxAOD
 cd CxAOD
 svn co svn+ssh://svn.cern.ch/reps/atlasoff/PhysicsAnalysis/HiggsPhys/Run2/Hbb/CxAODFramework/FrameworkSub/trunk FrameworkSub
+export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
 source FrameworkSub/bootstrap/setup-trunk.sh
 rc build
 
@@ -41,18 +43,18 @@ do
     selName=2lep
   fi
 
-  sed '/string selectionName/c\string selectionName = ${selName}' FrameworkExe/data/framework-run.cfg > config_${deriv}.cfg
+  sed '/string selectionName/c\string selectionName = '"${selName}"'' FrameworkExe/data/framework-run.cfg > FrameworkExe/data/config_${deriv}.cfg
 
-  hsg5framework --sampleIn $SAMPLE/${deriv}/ --submitDir $RESULTSDIR/$TODAY/${deriv} --config config_${deriv}.cfg
+  hsg5framework --sampleIn $SAMPLE/${deriv}/ --submitDir $RESULTSDIR/$TODAY/${deriv} --config data/FrameworkExe/config_${deriv}.cfg
   mkdir -vp ${PLOTSDIR}/${TODAY}/${deriv}
   root -b -l -q "FrameworkExe/validation/CompareCxAODs.C(\"${RESULTSDIR}/${AGAINST}/${deriv}/data-CxAOD/CxAOD.root\", \"${RESULTSDIR}/${TODAY}/${deriv}/data-CxAOD/CxAOD.root\", \"${PLOTSDIR}/${TODAY}/${deriv}\")"
 
 done
 
 # Run once WITHOUT event selection and OR. It's ok if it's done only for 1 derivation then
-sed '/bool applyEventSelection/c\bool applyEventSelection = false'  config_${deriv}.cfg > tmp.cfg
-sed '/bool applyOverlapRemoval/c\bool applyOverlapRemoval = false'  tmp.cfg > config_nosel.cfg
-hsg5framework --sampleIn $SAMPLE/${deriv}/ --submitDir $RESULTSDIR/$TODAY/NoSelections --config config_nosel.cfg
+sed '/bool applyEventSelection/c\bool applyEventSelection = false'  FrameworkExe/data/config_${deriv}.cfg > tmp.cfg
+sed '/bool applyOverlapRemoval/c\bool applyOverlapRemoval = false'  tmp.cfg > FrameworkExe/data/config_nosel.cfg
+hsg5framework --sampleIn $SAMPLE/${deriv}/ --submitDir $RESULTSDIR/$TODAY/NoSelections --config data/FrameworkExe/config_nosel.cfg
 mkdir -vp ${PLOTSDIR}/${TODAY}/NoSelections
 root -b -l -q "FrameworkExe/validation/CompareCxAODs.C(\"${RESULTSDIR}/${AGAINST}/NoSelections/data-CxAOD/CxAOD.root\", \"${RESULTSDIR}/${TODAY}/NoSelections/data-CxAOD/CxAOD.root\", \"${PLOTSDIR}/${TODAY}/NoSelections\")"
 

@@ -1241,7 +1241,7 @@
 * FrameworkSub: Modified the monoHbb signal samples by changing the cross sections to all be identically 1.0 such that the fits are more stable without having to do scaling specific for each sample., meehan
 * FrameworkSub: updating yields file, amontalb
 
-## 2016-01-29
+## 16-01-29
 * CxAODMaker: Minor changes related to CP check for photons, added IEGammaAmbiguityTool and isAmbiguity decoration for photons, jpasner
 * CxAODMaker: Store OneMu once again, as in the end we use it and not XbbTagger, abuzatu
 * CxAODReader\_VHbb: Add cut in 2lep analysis: |eta|<2.5 cut for muons in merged analysis. Also remove some old junk, sargyrop
@@ -1254,7 +1254,7 @@
 * FrameworkSub: prep for intermediate tag 19-01, haysjm
 * FrameworkSub: typo in packages.txt, haysjm
 
-## 2016-01-30
+## 16-01-30
 * CxAODMaker: Storing jet variable Props::SumPtTrkPt500PV, abuzatu
 * CxAODReader: adding virtual function executePreEvtSel() called before EventSelection, arnaez
 * CxAODReader\_VHbb: 2 lep: adding switch using NVtx2Trks if available in inputs (new) otherwise NVtx3Trks (old); adding infos on track jets to tree, hanar
@@ -1262,16 +1262,62 @@
 * CxAODTools: fixed bug in variable cone OR, grkeren
 * FrameworkExe: correct settings for large jet OR, hanar
 
-## 2016-01-31
+## 16-01-31
 * CxAODReader\_VHbb: Updates in 2lep cutflow, sargyrop
 * CxAODTools: Corrected VaribaleConeOverlapRemoval logic (minor), sjiggins
 * CxAODTools: Implemented VariableConeOverlapRemoval added ORInputLabelCheck, sjiggins
 * CxAODTools: Minor fix in sumOfWeightsProvider: use correct name of class in the Error messages (was printing out XSectionProvider before), sargyrop
 * CxAODTools: fix in variable cone OR, grkeren
 
-## 2016-02-01
+## 16-02-01
 * CxAODMaker: Small fix for recording of TruthEvents, pottgen
 * CxAODTools: VariableConeOverlapRemoval correction, sjiggins
 * FrameworkExe: Improvement to script to draw CI plots, nmorange
 * FrameworkSub: modified monoHbb cross sections to add missing DSD 304035, meehan
 * FrameworkSub: updating yields, amontalb
+
+## 16-02-02
+* CxAODMaker : Added PtReco in Run I style (PtRecollbbOneMuTruthWZNoneOld), to evaluate the improvement with Run II style (PtRecollbbOneMuPartonBukinNew), abuzatu
+* CxAODReader_VHbb : 2 lep BUG fix: correctly fill third fat and track jet, hanar
+* CxAODReader_VHbb : 2 lep: correct usage of CorrsAndSyst, following Carlo's implementation in the 0 lepton channel, hanar
+* CxAODReader_VHbb : 2 lep: fixing compiling errors - thanks Wei for reporting, hanar
+* CxAODTools : add a flag of met trigger SF, wangwe
+* CxAODTools : VariableConeOverlapRemoval - logic statement correction for OROutputLabel initialisation, sjiggins
+* FrameworkExe : add a flag of met trigger SF, wangwe
+* FrameworkExe : Added applyVarOR = true to run and read config, abuzatu
+* FrameworkSub : Bump to AnalysisBase 2.3.42, nmorange
+
+## 16-02-03
+* CxAODReader_VHbb : 2 lep fix: use leading signal jets for dR and dPhi in CorrsAndSyst; changing format, hanar
+* CxAODReader_VHbb : Updating 2lep selection: mll window, sargyrop
+* FrameworkExe : added flag deciding whether to put all systematics in one folder or not (needed to run fit), cmaiani
+* FrameworkExe : moved the sys folder flag to a more suitable place, cmaiani
+* FrameworkSub : Replacing yields file for 2lep with correct mc15a yields from 18-00 production (was overwritten with mc15b yields before), sargyrop
+
+## 16-02-04
+* CxAODReader_VHbb : fixed b-tag syst for 0-lep boosted in VHbb, cmaiani
+* CxAODReader_VHbb : remove xsectionprovider re-instantiation in corrsandsysts initialization (not necessary), cpandini
+* CxAODTools_VHbb : Add track jets to VBFHbbEvtSelection result so that we can veto on soft-qcd activity, prose
+
+## 16-02-05
+* CxAODReader_VHbb : 2Lep analysis: add splitting into 0 and 1+ additional b-tagged track-jets to merged selection, sargyrop
+* CxAODReader_VHbb : Fix for 2lep: Adding |eta|<2.5 cut for both muons in merged analysis, sargyrop
+* CxAODReader_VHbb : Fixing AnalysisReader_VHbb::initializeSumOfWeights so that correct yields file is picked up when using mc15b, sargyrop
+* CxAODTools_VHbb : Change  0 lepton preselection to 140GeV for Moriond production, nmorange
+* FrameworkSub : prep for tag 19-03, haysjm
+* FrameworkSub : updating yields, amontalb
+* FrameworkSub : updating yields, amontalb
+
+## 16-02-06
+CxAODReader_VHbb : 2Lep: excluding some more histos with doReduceFillHistos option, sargyrop
+CxAODReader_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to write out only a reduced set of histograms, sargyrop
+
+## 16-02-07
+
+## 16-02-08
+* CxAODMaker : refixing the isBjet variable, agbet
+* CxAODMaker : reverting isBjet type., agbet
+* CxAODReader : FIX: only use mc15b yields file if the analysis type is 1 lepton, hanar
+* CxAODReader_VHbb : FIX: remove cout debug statement, hanar
+* FrameworkExe : Add master continuous integration script, nmorange
+* FrameworkExe : Add script to create webpages, nmorange

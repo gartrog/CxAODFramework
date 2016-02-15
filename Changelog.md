@@ -1321,3 +1321,50 @@ CxAODReader_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to 
 * CxAODReader_VHbb : FIX: remove cout debug statement, hanar
 * FrameworkExe : Add master continuous integration script, nmorange
 * FrameworkExe : Add script to create webpages, nmorange
+
+## 16-02-09
+* CxAODReader : added protection: only retrieve random runnumber from PU tool if one wants to explicitely recompute the muon trigger SF; if so it is mandatory to also recompute the PU weight, hanar
+* CxAODReader : revert FIX: don't use anaylsis type info here, breaks DB FW; implement FIX in VH reader, hanar
+* CxAODReader_VHbb : add initializeIsMC to override methods, hanar
+* CxAODReader_VHbb : Change in 2Lep: do not rescale mbb mass for emu events, sargyrop
+* CxAODReader_VHbb : fix       , hanar
+* CxAODReader_VHbb : FIX: override initializeIsMC; use only mc15b XSec if running 1 lep anaylsis, hanar
+* CxAODReader_VHbb : removing the cout affecting the boosted 0 lepton analysis, francav
+* CxAODReader_VHbb : removing the cout affecting the boosted 0 lepton analysis in Azh, francav
+* FrameworkExe : Add log files in webpages, nmorange
+* FrameworkExe : Prepare framework-run for tag, nmorange
+* FrameworkSub : added WH_lvqq samples for every available mass point in 0lep mc15a samples list, cmaiani
+* FrameworkSub : added WH samples mc15a yields for 0lep channel, cmaiani
+* FrameworkSub : Update packages tags, nmorange
+* FrameworkSub : Upload of the MC lists for CxAOD production v20. To be used: list_sample_grid.mc15*_only_13TeV_25ns_HIGG*_09feb16.txt, arturos
+
+## 16-02-10
+* CxAODReader_VHbb : 2 lep bug fix: properly compute m_physicsMeta.nAddBTrkJets; was previously number of fat jets -1, hanar
+* CxAODReader_VHbb : 2 lep bug fix: store actually number of b-tagged track jets in tree, hanar
+* CxAODReader_VHbb : fixed use of PUw tool for setting up the triggertool in the ^Clep boosted channel, cmaiani
+* FrameworkExe : set the submit bool to true because often overlooked. Add data file lists back, thompson
+* FrameworkSub : some of the VHmumu are mc15b, thompson
+
+## 16-02-11
+* CxAODReader : added function to get correct muon-in-jet correction for systematic variations of the jet, grkeren
+* CxAODReader_VHbb : 2Lep merged analysis: merge topaddbjetcr and noaddbjetsr in the merged analysis to keep things simple (based on Hannah's studies), sargyrop
+* CxAODReader_VHbb : fixed bug on FatJet sys in 0-lepton related to muon-in-jet correction, cmaiani
+* CxAODTools : add in qcd isolation variables, amontalb
+* FrameworkExe : put in comments on what fat jet OR variables are, amehta
+
+## 16-02-12
+* CxAODReader_VHbb : New option in 2lep: doMergeJetBins: will only write out 2pjet bin. Replaces doMerge23Jets. Default value is false, sargyrop
+
+## 16-02-13
+* CorrsAndSysts : pT(ttbar) systematic included in CorrsAndSysts, cpandini
+* CxAODReader_VHbb : change to the CorrsAndSysts interface to correctly retrieve the pT(ttbar) systematic, cpandini
+* FrameworkExe : add Z sherpa v22  and eos directory for prod20, thompson
+
+## 16-02-14
+* CxAODReader_VHbb : fix in setup of random number in trigger tool, cmaiani
+* CxAODReader_VHbb : update to 0lepton selection, update 0lepton cutflow, cpandini
+* FrameworkExe : default configuration for inputs 0Lepton (mc15a) - see here for list of modeling systematics CorrsAndSysts, cpandini
+* FrameworkExe : updated list of experimental systematics in default config framework-read.cfg, cpandini
+
+## 16-02-15
+* CxAODReader_VHbb : fix for yield file, cmaiani

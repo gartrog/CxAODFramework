@@ -1441,3 +1441,62 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 * CxAODMaker, CxAODTools: add photon author and OQ, lshi
 * FrameworkSub: adding bbA missing XS mA=380,460GeV, cpandini
 * FrameworkSub: fix Sherpa v22 cross sections, k-factors etc., add Ztautau more updates likely, including W+jets, thompson
+
+## 16-03-01
+* CxAODMaker : Fixed bug on TruthWZ match to jet and fatJet; bool DR -> double DR, abuzatu
+* CxAODTools : Adding matchHLT_tau80_medium1_tracktwo_L1TAU60 flag to common props, carquin
+
+## 16-03-03
+* CxAODMaker : check duplicates for systematics, fix memory leak problem in JIRA CxAOD-200, lshi
+* CxAODReader : removing mc15b flag because v20 1lep now exists, amontalb
+* CxAODTools : adding new analysis type for dilep ttbar b-tag calibration, miochoa
+
+## 16-03-04
+* CxAODReader_VHbb : removing mc15b flag because v20 1lep now exists, amontalb
+* CxAODTools : debug bbtautau OR, agbet
+
+## 16-03-07
+* CxAODMaker : Added new PtReco estimation more stats and improved binning, abuzatu
+* CxAODMaker : Remove old PtReco files used for Moriond, abuzatu
+* CxAODMaker : Update new PtReco, abuzatu
+* CxAODReader_VHbb : Appended getJetCorrTLV to be able to retrieve the Nominal as well, abuzatu
+* FrameworkExe : fixes in namings of some samples, cmaiani
+
+## 16-03-08
+* CxAODMaker : Moved the JetRegression helpers JetRegressionVarHelper.h and JetRegressionVars_t.h from CxAODMaker/Root/ to CxAODMaker/CxAODMaker/ and adapted the includes in JetRegression.h accordingly, eschopf
+* CxAODMaker : Updated Jet CP from JES_MC15Prerecommendation_April2015.config to JES_2015dataset_recommendation_Feb2016.config, abuzatu
+* CxAODReader_VHbb : Fixed bug in mBBJ, not filled before because bbj instead of bbjVec, abuzatu
+* CxAODTools : adapted PU rew tool to interface change in the underlying CP tool, grkeren
+* CxAODTools : fix to variable cone OR concerning Tau-Jet OR, grkeren
+* CxAODTools : fix to variable cone OR concerning Tau-Jet OR, grkeren
+* FrameworkExe : fixed Split.py macro samples naming and missing signal masses, cmaiani
+* FrameworkExe : Improved configuration of sample list in the reader., fmueller
+* FrameworkSub : added JetSubStructureUtils-00-02-19 as not in AnalysisBase, abuzatu
+* FrameworkSub : adding HH bbtautau hadhad graviton xsections, kgrimm
+* FrameworkSub : Bump release to 2.3.46, nmorange
+
+## 16-03-09
+* FrameworkExe : fixes from v20 production, thompson
+* FrameworkSub : Added cross section for ttbar allhad (mtt) and RS G->hh->bbbb., fmueller
+* FrameworkSub : Add Sherpa v2.2 W+jets, thompson
+
+## 16-03-10
+* CxAODReader : added lower MET bin for 2lep CUT setup, cmaiani
+* CxAODReader : prepared Vpt binning for SM Hbb analysis, cmaiani
+* CxAODReader_VHbb : small changes for easy setup of SM Hbb analysis, cmaiani
+* CxAODTools : updated BTaggingTool with recent CDI file, jhetherl
+* FrameworkExe : small updates to setup for SM Hbb analysis, added links to current sps inputs, set PUreweighting to default, cmaiani
+
+## 16-03-11
+* CxAODReader : restore using mc15b yields file if flag is set to true in config; don't override initializeIsMC in VHbb reader anylonger
+, hanar
+* CxAODReader_VHbb : restore using mc15b yields file if flag is set to true in config; don't override initializeIsMC in VHbb reader anylonger, hanar
+* FrameworkSub : added MC list for job sumbission, chiarad
+* FrameworkSub : updated data VHF list with correct STDM4 derivation, chiarad
+
+## 16-03-12
+* FrameworkSub : corrected MC list STDM4 MC15b, chiarad
+* FrameworkSub : p2436 for 3 runs missing in p2425, fsforza
+
+## 16-03-14
+* CxAODMaker : add some debug output in METHandler, dbuesche

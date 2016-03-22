@@ -1500,3 +1500,28 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 
 ## 16-03-14
 * CxAODMaker : add some debug output in METHandler, dbuesche
+
+## 16-03-15
+* CxAODMaker_VHbb : updated JVT cut to follow latest recommendation, grkeren
+* CxAODTools : fix truth tagging code for other strategies; not validated, hanar
+* CxAODTools : fix truth tagging code for other strategies; not validated, hanar
+* FrameworkSub : Added in addtional H->mumu cross sections and included gg->ZH in the qq->ZH as there will not be a dedicated sample, amehta
+* FrameworkSub : fix duplicate for noosted Sherpa v2.2 Ztautau, thompson
+
+## 16-03-17
+* CxAODReader : fixed pTV binning for SM analysis in HistNameSvc, cmaiani
+* FrameworkSub : updated yields VHF for new CxAOD production, chiarad
+
+## 16-03-18
+* CxAODReader_VHbb : added full cutflow histogram for 0-lep SM VHbb analysis, cmaiani
+* CxAODReader_VHbb : adding plots for VHbb 0-lep Resolved analysis, small fix to 0-lep res cutflow, cmaiani
+
+## 16-03-19
+* FrameworkSub : updated yields because of Wlnu problem, chiarad
+
+## 16-03-20
+* FrameworkSub : updated VHF yileds for mc15b, chiarad
+
+## 16-03-21
+* CxAODMaker : add truth event, khramov
+* CxAODReader_VHbb : 0-lep SM analysis: fixed muon-in-jet correction for 2LeadingSignal b-tag strategy, cmaiani

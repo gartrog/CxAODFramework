@@ -55,7 +55,8 @@ packages=['CxAODMaker',
           'FrameworkExe_VHbb',
 #          'TupleMaker',
 #          'TupleReader',
-          'FrameworkSub']
+          'FrameworkSub',
+          'CorrsAndSysts']
 
 # get all log records between two pysvn.Revisions
 def getLogRecordSVNRevision(client,package,rev1,rev2):
@@ -187,7 +188,7 @@ def makeNewTag(client,pack,doTag=False):
         print '      ',urlsrc
         print '      ',urldst
         if doTag:
-            client.callback_get_log_message = lambda : (True,"Prep for tag 16")
+            client.callback_get_log_message = lambda : (True,"Intermediate 19-03")
             newrev = client.copy(urlsrc,urldst)
             rev = newrev.number
     return Tag(pack,nextTag,rev)

@@ -1525,3 +1525,52 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 ## 16-03-21
 * CxAODMaker : add truth event, khramov
 * CxAODReader_VHbb : 0-lep SM analysis: fixed muon-in-jet correction for 2LeadingSignal b-tag strategy, cmaiani
+
+## 16-03-22
+* FrameworkSub : Some Sherpa v22 W samples had old filter efficiencies and k-factor, thompson
+
+## 16-03-23
+* CxAODReader_VHbb : small fix to fill mBB with corrected value in 0-lep resolved, cmaiani
+
+## 16-03-24
+* CorrsAndSysts : EFT VpT reweighting for SM VH signals added as VpT corrections, cpandini
+* CxAODMaker : adding JVT systematics, miochoa
+* CxAODReader_VHbb : EFT VpT reweighting for SM VH signals added as VpT corrections in applyCS() function - CorrsAndSysts interface, cpandini
+* CxAODReader_VHbb : vpt truth splitting for the SM signals in the 0 lept, changqia
+* CxAODTools : adding new JVT decorators for jets, miochoa
+* FrameworkExe : EFT VpT reweighting for SM VH signals added as VpT corrections in applyCS() function - CorrsAndSysts interface, cpandini
+* FrameworkSub : updated VHF yields with missing WenuC file, chiarad
+
+## 16-03-29
+* CxAODMaker : Fixed heavy flavour ghosted-association (using parent, ungroommed jet), added ghost-associated higgs boson., fmueller
+
+## 16-03-30
+* CxAODTools : updated for FlatBEff in BTaggingTool, jhetherl
+
+## 16-04-01
+* FrameworkSub : updated SM VHF yields with missing 4 derivations, chiarad
+
+## 16-04-04
+* CxAODMaker : update tightLH to v10, with eff loss fix, lulu
+
+## 16-04-05
+* FrameworkSub : adding Alpgen STDM derivations for inclusive samples, fsforza
+
+## 16-04-07
+* CxAODReader_VHbb : Implementing mcPeriod string for switching between mc15a/b/c, sargyrop
+* CxAODTools : Implementing mcPeriod string for switching between mc15a/b/c, sargyrop
+* FrameworkExe : Implementing mcPeriod string for switching between mc15a/b/c, sargyrop
+* FrameworkExe : updating Tuple calls, keeping as default as FALSE, arturos
+
+## 16-04-08
+* FrameworkExe : Adding mcPeriod to framework-run.cfg, sargyrop
+
+## 16-04-10
+* FrameworkExe : Re-introducing option to run over specific files in Reader executable, sargyrop
+
+## 16-04-11
+* CxAODMaker_VHbb : Updating VBF+photon signal photon selection: raise pT threshol to 26 GeV and require TightCaloOnlyIso, prose
+* CxAODReader_VHbb : Added KinematicFit for 2 lepton, ckato
+* CxAODReader_VHbb : add Run1 mva for 0lep, changqia
+* CxAODTools : updated common properties for newly introduced variables in V+HF analysis: topoetcone30 and 40 for electron isolation, chiarad
+* FrameworkSub : Added KinematicFit trunk, ckato

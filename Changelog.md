@@ -1574,3 +1574,25 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 * CxAODReader_VHbb : add Run1 mva for 0lep, changqia
 * CxAODTools : updated common properties for newly introduced variables in V+HF analysis: topoetcone30 and 40 for electron isolation, chiarad
 * FrameworkSub : Added KinematicFit trunk, ckato
+
+## 16-04-12
+* CxAODMaker_VHbb : adding in topoetcone variables, amontalb
+* CxAODReader_VHbb : KF monitor hist binning 1->5 GeV, ckato
+
+## 16-04-13
+* CxAODReader_VHbb : adding preliminary 0-lepton SM VH tmva training macro, cdelport
+* CxAODReader_VHbb : Add MVA inputs for the 0 lepton channel, cdelport
+
+## 16-04-14
+* CxAODMaker : adding trigerSF e17 for LooseIso, agbet
+* CxAODReader_VHbb : added an external function for some truth studies in 0-lep channel, cmaiani
+* CxAODReader_VHbb : removed MPT cut from 2 tag in 0-lep, fixed the cutflow accordingly, cmaiani
+* CxAODReader_VHbb : small fix to mpt change, cmaiani
+* CxAODTools : add trigger SF e17 IsoLoose prop, agbet
+* FrameworkSub : updating 0lepton yield files, cmaiani
+
+## 16-04-18
+* CxAODMaker : fix the EventNumber type, changqia
+* CxAODReader : fix the EventNumber type, changqia
+* CxAODReader_VHbb : fix the EventNumber type, changqia
+* FrameworkExe : Implementing modelType flag (possible values for now AZh, HVT) to allow to change between different analyses in AnalysisReader_VHbb, sargyrop

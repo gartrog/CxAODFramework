@@ -1596,3 +1596,33 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 * CxAODReader : fix the EventNumber type, changqia
 * CxAODReader_VHbb : fix the EventNumber type, changqia
 * FrameworkExe : Implementing modelType flag (possible values for now AZh, HVT) to allow to change between different analyses in AnalysisReader_VHbb, sargyrop
+
+## 16-04-19
+* CxAODReader : Container for truthParticles added., cvittori
+* CxAODTools : Container for truthParticles added., cvittori
+* FrameworkSub : list of packages to svn co corrected, cvittori
+* FrameworkSub : revert previous commit to generic setu, fsforza
+
+	## 16-04-20
+* FrameworkSub : Adding improved Sherpa diboson samples (mc15b), carquin
+* FrameworkSub : add VV_improved, ckato
+
+## 16-04-21
+* CxAODReader : Major update of the 1-lepton code in AnalysisReader_VHbb., fmueller
+* CxAODReader_VHbb : Major update of the 1-lepton code in AnalysisReader_VHbb., fmueller
+* CxAODTools : add resolution property, ckato
+* FrameworkExe : Binding call to AnalysisReader_BoostedVHbb with 0lep analysis - a more elegant fix should be made after the framework discussion, sargyrop
+* FrameworkSub : Add Sherpa DY, gwilliam
+* FrameworkSub : Erase 1 of 2 existing VV_improved afetr asking carquin. Ami says 361091 cross section is .024885, ckato
+
+## 16-04-22
+* CxAODMaker : add resolution variavle if doResolution=true in the config file, ckato
+
+## 16-04-25
+* CxAODMaker : copy systematics variations of pileup weight to output CxAOD, grkeren
+* CxAODMaker : fixed compiler warnings for missing 'override's, grkeren
+* CxAODMaker : fix names of MET systematics in OverlapRegister, grkeren
+* CxAODReader_VHbb : Introducing modelType options in 2lep analysis with the possibility of switching between AZh and HVT analyses., sargyrop
+* CxAODTools : Added new btagging strategy. cf. BTaggingTool::truth_tag_jets and the functions it calls, stchan
+* CxAODTools : added pileup systematics and switch to set 'DefaultChannel', grkeren
+* FrameworkSub : Bump to 2.3.48, nmorange

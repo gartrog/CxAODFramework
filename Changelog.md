@@ -1626,3 +1626,63 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 * CxAODTools : Added new btagging strategy. cf. BTaggingTool::truth_tag_jets and the functions it calls, stchan
 * CxAODTools : added pileup systematics and switch to set 'DefaultChannel', grkeren
 * FrameworkSub : Bump to 2.3.48, nmorange
+
+## 16-04-25
+* CxAODMaker : copy systematics variations of pileup weight to output CxAOD, grkeren
+* CxAODMaker : fixed compiler warnings for missing 'override's, grkeren
+* CxAODMaker : fix names of MET systematics in OverlapRegister, grkeren
+* CxAODReader_VHbb : Introducing modelType options in 2lep analysis with the possibility of switching between AZh and HVT analyses., sargyrop
+* CxAODTools : Added new btagging strategy. cf. BTaggingTool::truth_tag_jets and the functions it calls, stchan
+* CxAODTools : added pileup systematics and switch to set 'DefaultChannel', grkeren
+* CxAODTools : fix for OverlapRgister dictionary generation pulled from devbranch, haysjm
+* CxAODTools : Replaced BTagging::count with STL std::count; Note: for reader to run truth tagging must also be performed on track jets (uncomment e.g. l. 3082 in CxAODReader_VHbb/Root/AnalysisReader_VHbb.cxx, stchan
+* FrameworkSub : Bump to 2.3.48, nmorange
+
+## 16-04-26
+* CxAODMaker : new default JES config files for fat jets, hanar
+* CxAODMaker : Updating electron and muon trigger matching to new tool, amontalb
+* CxAODReader_VHbb : new KF inetrface, ckato
+* FrameworkExe : switched off PU systs until they are in working order, grkeren
+* FrameworkExe : update JES config files and systematics for fat jets, hanar
+* FrameworkSub : Add bbtautau 2HDM samples (lephad), gwilliam
+
+## 16-04-27
+* CxAODMaker : removing TrigEgammaMatchingTool and TrigMuonMatching dependencies, amontalb
+* CxAODMaker : update photon trigger matching to new tool, lshi
+* CxAODReader_VHbb : fixes to 0-lep plots filling for SM analysis, small changes in MVA tree, cmaiani
+* CxAODTools : added check of return code when resetting systematics, grkeren
+* CxAODTools : fixed printouts in PUReweightingTool, grkeren
+* FrameworkExe : disabling doPUsysts again - will investigate further..., grkeren
+* FrameworkExe : enabling PU systematics again, grkeren
+* FrameworkExe : enabling pu systs after fixing pu tool, grkeren
+* FrameworkExe : return to proper default, hanar
+
+## 16-04-28
+* CxAODMaker : Adding 'setAllObjectsFail()' to OverlapRemover.  This is used instead of 'removeOverlap()' for the vbf+photon analysis when there is no primary vertex, since the nominal overlap removal fails in these cases, prose
+* CxAODMaker_VHbb : Adding isBTag decoration to isVBF(Signal)Jets, which is needed to give preference to b-tagged jets in the OR, prose
+* CxAODReader : Adding 'get_analysisType()' to HistNameSvc.h which had been used in AnalysisReader_VHbb, but not yet implemented here, prose
+* CxAODReader_VHbb : add HT soft calculation to analysisreader_vbfhbb, prose
+* CxAODReader_VHbb : adding additional per-channel classes, to progressively replace the AnalysisReader_VHbb fill methods, cmaiani
+* CxAODReader_VHbb : fix a typo for jet width for vbf+photon, lshi
+* CxAODReader_VHbb : Removing printf debug statements from HT soft calculation for vbf + photon, prose
+* CxAODReader_VHbb : updates to reader to support ht soft for vbf + photon, prose
+* CxAODTools : Updating vbf+photon OR procedure to use the new OR recommendations and tool, prose
+* FrameworkExe : adding additional per-channel classes, to progressively replace the AnalysisReader_VHbb fill methods, in the main function, cmaiani
+* FrameworkExe : preparation for 2.4.X; xAOD access mode is set to _class to avoid crash, tnobe
+* FrameworkExe : revise back to branch access. it is safe after p2613, tnobe
+* FrameworkSub : Bump to 2.3.49, nmorange
+
+## 16-04-29
+* CxAODMaker_VHbb : update WHsignal lepton qualities, amontalb
+
+## 16-04-30
+* CxAODTools : Updated BTaggingTool truth tagging---untagged jets now get continuous b-tag weight (e.g. MV2c20J3 now possible with truth tagging), stchan
+
+## 16-05-01
+* CxAODReader_VHbb : new KF interface, ckato
+* CxAODReader_VHbb : new KF interface, ckato
+* CxAODReader_VHbb : new KF interface, ckato
+
+## 16-05-03
+* FrameworkSub : Added JetSubStructureMomentTools-00-01-26, as in AnalysisBase 2.3.49 we have -23, abuzatu
+* FrameworkSub : Added JetUncertainties-00-09-40, as in AnalysisBase 2.3.49 we have -39, abuzatu

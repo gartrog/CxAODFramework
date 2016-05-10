@@ -1686,3 +1686,39 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 ## 16-05-03
 * FrameworkSub : Added JetSubStructureMomentTools-00-01-26, as in AnalysisBase 2.3.49 we have -23, abuzatu
 * FrameworkSub : Added JetUncertainties-00-09-40, as in AnalysisBase 2.3.49 we have -39, abuzatu
+
+## 16-05-03
+* CxAODMaker : adapted to change in interface of OverlapRegisterAccessor which includes adding fatjets, grkeren
+* CxAODMaker : =add new MET defs, schae
+* CxAODMaker : add TA mass and ElClusterEta, tnobe
+* CxAODMaker : add TA mass and ElClusterEta, tnobe
+* CxAODMaker : =fix MET crash for MC, schae
+* CxAODMaker : for jet corrections store correction minus nominal, instead of the correction 4-vector, abuzatu
+* CxAODMaker : increased msg level of calib tool to error to silence the tool when jets are not decorated with 'TrackSumMass', added checks to see if Track Assisted Mass variables exist before decoratingand copying them, grkeren
+* CxAODReader : Reader to get jet energy corrections from difference with respect to Nominal, abuzatu
+* CxAODReader : Reader to get jet energy corrections from difference with respect to Nominal, abuzatu
+* CxAODReader_VHbb : Reader to get jet energy corrections from difference with respect to Nominal, abuzatu
+* CxAODReader_VHbb : Reader to get jet energy corrections from difference with respect to Nominal, abuzatu
+* CxAODTools : =add btag as an overlap option, schae
+* CxAODTools : =add new MET defs, schae
+* CxAODTools : add TA mass and ElClusterEta, tnobe
+* CxAODTools : updated OverlapRegister to include fatjets - includes change of interface in OverlapRegisterAccessor, grkeren
+* FrameworkExe : Reader to get jet energy corrections from difference with respect to Nominal, abuzatu
+* FrameworkSub : Added JetSubStructureMomentTools-00-01-26, as in AnalysisBase 2.3.49 we have -23, abuzatu
+* FrameworkSub : Added JetUncertainties-00-09-40, as in AnalysisBase 2.3.49 we have -39, abuzatu
+
+## 16-05-04
+* CxAODReader : Added OverlapRegister to Reader, can be switched on/off with 'bool useOverlapRegister = true/false' in config file, with default value being 'false' for now, still needs to be tested, grkeren
+* CxAODTools : added 'const' in front of xAOD containers in OverlapRegisterAccessor to allow usage in Reader, grkeren
+* CxAODTools : Add Props to store properties of Overlap Removed jet closest to tau for HHbbtt analysis, thsteven
+* FrameworkSub : add temporary mc15c pile-up file done from mc15_13TeV.410022.Sherpa_CT10_ttbar_SingleLeptonP_MEPS_NLO.merge.DAOD_HIGG5D1.e3959_a766_a818_r7676_p2613, djamin
+
+## 16-05-05
+* CxAODMaker : reduced the trigger list, agbet
+* CxAODTools : Add Props for MMC 4vect for HHbbtt analysis, thsteven
+
+## 16-05-07
+* CxAODMaker : Adding option to store low pt track jets via config item 'TrackJet::UseLowPt', prose
+
+## 16-05-09
+* CxAODTools : updated instructions for OverlapRegisterAccessor, grkeren

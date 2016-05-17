@@ -1722,3 +1722,169 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 
 ## 16-05-09
 * CxAODTools : updated instructions for OverlapRegisterAccessor, grkeren
+
+## 16-05-10
+* CxAODMaker : added nr of truth jets in MC, abuzatu
+* CxAODMaker : checked event cleaning - up to date, hanar
+* CxAODMaker : =depricating the flag writeFlagForEleMuOR. Now set by applyNewToolOR, schae
+* CxAODMaker_VHbb : added nr of truth jets in MC, abuzatu
+* CxAODReader : added nr of truth jets in MC, abuzatu
+* CxAODReader_VHbb : added nr of truth jets in MC, abuzatu
+* CxAODTools : added nr of truth jets in MC, abuzatu
+* CxAODTools : =add option applyNewToolOR to use the new overlap removal tool. defaulted to off, schae
+* CxAODTools : =depricating the flag writeFlagForEleMuOR. Now set by applyNewToolOR, schae
+* CxAODTools : update jet cleaning to latest recommendation, hanar
+* CxAODTools_VHbb : added nr of truth jets in MC, abuzatu
+* FrameworkExe : added nr of truth jets in MC, abuzatu
+* FrameworkExe : =add flag for the new overlap removal. defaulted to off, schae
+* FrameworkExe : =depricating the flag writeFlagForEleMuOR. Now set by applyNewToolOR, schae
+
+## 16-05-11
+* CxAODMaker : 30 GeV instead of 20 GeV for nr truth jets MC, abuzatu
+* CxAODMaker : add 2016 MET triggers to Maker, wangwe
+* CxAODMaker : add m_derivation20_7 flag to compute properly isMC and deal with bookkeeping, djamin
+* CxAODMaker : =add met soft term, schae
+* CxAODMaker : fix to duplicated fat jet systematics, grkeren
+* CxAODMaker : =register the MJ MET definitions, schae
+* CxAODMaker : Reverted back to 20 GeV, recommendation Paul Thompson., abuzatu
+* CxAODMaker_VHbb : =register the MJ MET definitions, schae
+* CxAODMaker_VHbb : updating WH signal lepton isolation definitions, amontalb
+* CxAODReader_VHbb : 2LEP MAJOR CHANGE: move to per-channel class implementation, hanar
+* CxAODReader_VHbb : 2lep: move methods to per-channel class, hanar
+* CxAODReader_VHbb : fixed small bug introduced in 0lep code, cmaiani
+* CxAODReader_VHbb : merged HVT and AZH/SM code for 0-lepton channel, cmaiani
+* CxAODReader_VHbb : small fixes to work with HVT in new 0-lep code, cmaiani
+* CxAODTools : add 2016 MET triggers to Maker, wangwe
+* CxAODTools : fix truth tagging weight for Leading2SignalJets, zaidan
+* CxAODTools_VHbb : fixing typo, amontalb
+* CxAODTools_VHbb : update lepton SFs to new definitions and include switch for inverted isolation SFs, amontalb
+* FrameworkExe : add mc15c pu file, djamin
+* FrameworkExe : =add MET MJ defs. set off by default, schae
+* FrameworkExe : =add met soft term, schae
+* FrameworkExe : merged HVT and AZH/SM code for 0-lepton channel, boosted class is not used anymore, cmaiani
+* FrameworkExe : set jetCorrectionOld to true to work with CxAOD-20 production; remove private path replace with eos; go to 2 lep and mc15b - working plus consistent, hanar
+* FrameworkExe : use ttbar as test sample, hanar
+
+## 16-05-12
+* CxAODMaker : add 2016 lepton triggers 0.5-1.2, ckato
+* CxAODMaker : add 2016 lepton triggers 0.5-1.2, ckato
+* CxAODMaker : Add HLT_mu24_ivarloose_L1MU15 because mu24 without _L1MU15 was not in 20.7 ttbar 410022 p2613 HOGG2D4, ckato
+* CxAODMaker : Add HLT_mu24_ivarloose_L1MU15 because mu24 without _L1MU15 was not in 20.7 ttbar 410022 p2613 HOGG2D4, ckato
+* CxAODMaker : add more MET triggers for study, wangwe
+* CxAODMaker : For data, do not compute and store nr TruthJets, abuzatu
+* CxAODMaker : removing compilation warnings: inizialization order and using  ClassDefOverride, fsforza
+* CxAODMaker : Storing nr TruthWZ for 20 and 30 GeV instead of only 20 GeV., abuzatu
+* CxAODReader : =flags for MET recalculation & reading OR labels, schae
+* CxAODReader : removing compilation warnings: using  ClassDefOverride, fsforza
+* CxAODReader : truth selection, cvittori
+* CxAODReader_VHbb : 1lep: fix small bug, hanar
+* CxAODReader_VHbb : 2lep: move KF stuff to method; clean-up, hanar
+* CxAODReader_VHbb : creating isSL property for jets; moving setting it to setJetVariables; some cleaning up, hanar
+* CxAODReader_VHbb : revert previous change by Stephen J who is aware, hanar
+* CxAODReader_VHbb : Version 0 SM VH & HVT Merge, sjiggins
+* CxAODReader_VHbb : Version 0 SM VH & HVT Merge, sjiggins
+* CxAODTools : add 2016 lepton triggers 0.5-1.2, ckato
+* CxAODTools : Add HLT_mu24_ivarloose_L1MU15 because mu24 without _L1MU15 was not in 20.7 ttbar 410022 p2613 HOGG2D4, ckato
+* CxAODTools : Adding variables for truth selection at dressed level and SelectionContainers for truth objects, cvittori
+* CxAODTools : add more MET triggers for study, wangwe
+* CxAODTools : =add tool for reader level MET changes, schae
+* CxAODTools : created by mistake, alibrari
+* CxAODTools : removing compilation warnings: inizialization order and using  ClassDefOverride, fsforza
+* CxAODTools : removing contents of extra trunk, haysjm
+* CxAODTools : Storing nr TruthWZ for 20 and 30 GeV instead of only 20 GeV., abuzatu
+* CxAODTools : =turn writing share track flag off when reading it, schae
+* FrameworkExe : 2lep: missing piece when moving to per-channel class, hanar
+* FrameworkExe : Updated to GRL for 20.7, abuzatu
+* FrameworkExe : Updated to GRL for 20.7, abuzatu
+* FrameworkSub : 2015 GRL with 20.7, tnobe
+* FrameworkSub : 2015 GRL with 20.7, tnobe
+* FrameworkSub : update ilumicalc file, tnobe
+
+## 16-05-13
+* CxAODMaker : added 2016 triggers for matching, amontalb
+* CxAODMaker : Added fat jet properties to store number of ghost-associated B- and prompt C-Hadrons, Taus and Higgs-Bosons for the ungroomed jet., fmueller
+* CxAODMaker : adding 2016 single lepton triggers for matching, amontalb
+* CxAODMaker : adding quality flags, fsforza
+* CxAODMaker : add MV2c100 and MV2cl100 tagger, lulu
+* CxAODMaker : add new VBF+photon triggers for data16 and mc15c, lshi
+* CxAODMaker : exception to not write out MJ MET for systematics, amontalb
+* CxAODMaker : fix compiler warning, hanar
+* CxAODMaker : removing cut-based ele selector, fsforza
+* CxAODMaker : removing dilepton triggers from matching list, amontalb
+* CxAODMaker : removing electron triggers based on run1 cuts, amontalb
+* CxAODMaker : Updated jesConfig to Moriond recommendation, abuzatu
+* CxAODMaker_VHbb : adding back in mediumLH/tightLH props for electrons, amontalb
+* CxAODMaker_VHbb : remove compiler warning: adding override, fsforza
+* CxAODMaker_VHbb : removing LH props for electrons; present in handler, amontalb
+* CxAODReader : added temporary fix in form of the method applyRtrkUncertFix() in AnalysisReader for bug in fat jet Rtrk uncertainties, grkeren
+* CxAODReader : cleaning up HistNameSvc settings, hanar
+* CxAODReader : =read met soft term, schae
+* CxAODReader : small modification so that no changes for non-VH analyses are needed, hanar
+* CxAODReader : upload HistNameSvc changes; CXAOD-221, hanar
+* CxAODReader_VHbb : 0lep: adapt to HistNameSvc changes; CXAOD-221, hanar
+* CxAODReader_VHbb : 0lep: adapt to HistNameSvc changes; CXAOD-221, hanar
+* CxAODReader_VHbb : 2lep: adapt to HistNameSvc changes; CXAOD-221, hanar
+* CxAODReader_VHbb : 2lep: some more cleaning on hist naming, hanar
+* CxAODReader_VHbb : add MVA to model enum, hanar
+* CxAODReader_VHbb : cleaned up 0lep code, removed unwanted warnings, cmaiani
+* CxAODReader_VHbb : fixes for compiler warnings in AnalysisReader_VBFHbb, prose
+* CxAODReader_VHbb : remove compiler warning: adding override, fsforza
+* CxAODReader_VHbb : removed vvqq and lvqq code (1), cmaiani
+* CxAODReader_VHbb : set other model types too; remove restriction of HVT analysis to merged regime, hanar
+* CxAODReader_VHbb : small fixes related to 0lep, removing boosted 0lep class, cmaiani
+* CxAODReader_VHbb : VBF: adapt to HistNameSvc changes; CXAOD-221, hanar
+* CxAODTools : Added fat jet properties to store number of ghost-associated B- and prompt C-Hadrons, Taus and Higgs-Bosons for the ungroomed jet., fmueller
+* CxAODTools : adding 2016 trigger matching props, amontalb
+* CxAODTools : add MV2c100 and MV2cl100, lulu
+* CxAODTools : add new VBF+photon triggers for data16 and mc15c, lshi
+* CxAODTools : no need to set default channel number for PU rew anylonger; correct one gets picked up via mcPeriod; functionality still persists though, hanar
+* CxAODTools : =read met soft term, schae
+* CxAODTools : removed vvqq and lvqq code (3), cmaiani
+* CxAODTools : removing dilepton triggers matching props, amontalb
+* CxAODTools_VHbb : Commenting out unused passTrigger(Pre)Selection in VBFHbbEvtSelection to fix compiler warnings, prose
+* CxAODTools_VHbb : removed vvqq and lvqq code (2), cmaiani
+* CxAODTools_VHbb : tightening CxAOD event preselection: ask for at least 2 signal jets; CXAOD-232, hanar
+* FrameworkExe : added diboson improved samples to list, added new namings to the HVT Split macro, cmaiani
+* FrameworkExe : cleaned up config file, removing 0-lep outdated flags, cmaiani
+* FrameworkExe : for running MJ template with inverted isolation, amontalb
+* FrameworkExe : no need to set default channel number for PU rew anylonger; correct one gets picked up via mcPeriod; functionality still persists though, hanar
+* FrameworkExe : turned on new OR by default in config, haysjm
+* FrameworkExe : updated framework-run-MJ.cfg with changes also made to nominal config file, haysjm
+* FrameworkExe : update JES uncertainty config, tnobe
+* FrameworkSub : added diboson improved to mc15b 0lep yields file, cmaiani
+* FrameworkSub : added missing KinematicFit from packages file, haysjm
+* FrameworkSub : adding Alpgen V+HF slices, STDM derivations are now complete, fsforza
+* FrameworkSub : adding the data, and resolving some double counting of samples, francav
+* FrameworkSub : adding the list for 20.7 MC15c with the available samples, francav
+* FrameworkSub : updated tag packages and release, haysjm
+
+## 16-05-14
+* CxAODMaker : Added debug statements for Regression derivation; warning in data 20.7 at least the correction factor from Regression is exactly 1, abuzatu
+* CxAODMaker : Changed 4-vec of jet corrections to MeV from GeV, to be consistent with jet Nominal, but also to Muons, other objects, abuzatu
+* CxAODMaker : It was a false alarm; b-jet energy corrections were in MeV; just we were storing the difference to Nominal, that is why they had small values; added more debug statements about these corrections, abuzatu
+* CxAODMaker : pulling pv fix from devbranch - allows protection against missing PV, haysjm
+
+## 16-05-15
+* CxAODReader : Updating CxAODTools to enable AnalysisReader_Vhbb1lep.cxx, sjiggins
+* CxAODReader_VHbb : Updating CxAODReader_VHbb to enable AnalysisReader_Vhbb1lep.cxx, sjiggins
+* CxAODTools : Updating CxAODTools to enable AnalysisReader_Vhbb1lep.cxx, sjiggins
+* CxAODTools_VHbb : Updating CxAODTools_VHbb to enable AnalysisReader_Vhbb1lep.cxx, sjiggins
+* FrameworkExe : more config changes, haysjm
+* FrameworkExe : updated config file with update to tag, haysjm
+* FrameworkExe : updated default vtag, haysjm
+* FrameworkExe : updated mcperiod to mc15c, haysjm
+* FrameworkSub : fixed packages file for r20.1, haysjm
+* FrameworkSub : fixed tag of ElectronEfficiencyCorrection, haysjm
+* FrameworkSub : prep for tag v21-2, haysjm
+* FrameworkSub : updated FrameworkExe tag, haysjm
+* FrameworkSub : updated mcperiod in default config file, haysjm
+
+## 16-05-16
+* CxAODMaker : added TruthElectrons/Muons/Neutrinos Handlers for dressed truth-analysis, fsforza
+* CxAODMaker : Removed the argument of applyJetRegression() since it is not needed anymore and caused a compiler warning, eschopf
+* CxAODMaker : Removing old weight files of the jet regression, eschopf
+* CxAODReader_VHbb : move the 1 lepton code to pre channel class, yama
+* FrameworkExe : move the 1 lepton code to pre channel class, yama
+
+## 16-05-17
+* FrameworkSub : updated STDM4 MC list with missing sherpa 2.2 derivations, chiarad

@@ -1888,3 +1888,46 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 
 ## 16-05-17
 * FrameworkSub : updated STDM4 MC list with missing sherpa 2.2 derivations, chiarad
+
+## 16-05-17
+* CorrsAndSysts : correct array sizes in CorrsAndSysts, haysjm
+* CorrsAndSysts : fixed compiler warnings, haysjm
+* CorrsAndSysts : missed an usused variable - now commented out, haysjm
+* CxAODMaker : commented out code causing compiler warnings - will be needed in the future so not removed, haysjm
+* CxAODReader_VHbb : added stephen truth tagging to 0-lep channel, cmaiani
+* CxAODTools : fixed initializer ordering in TriggerTool to remove compiler warning, haysjm
+* CxAODTools : update to BTaggingTool to bypass deprecated calls to getTaggerCutValueFromEfficiency, jhetherl
+* FrameworkExe : added switch for stephen's truth tagging in 0-lep, cmaiani
+* FrameworkExe : fixed warnings about deprecated use of scanDir and setMetaString, haysjm
+* TupleMaker : fixed some incorrect includes and updated scanDir etc to remove compielr warnings, haysjm
+
+## 16-05-18
+* CxAODMaker : copyIfExists for NTruthWZJets20., agbet
+* CxAODReader_VHbb : 2Lep: move regime decision to method, hanar
+* CxAODReader_VHbb : added code to read xml in 0 lep, from Charles, cmaiani
+* FrameworkSub : - added some XSec for the had-had parts, hfox
+
+## 16-05-19
+* CxAODMaker : Add ability to vary lower anti-tau BDT cut as a systematic, gwilliam
+* CxAODMaker : Add TAU efficiencies to list of those for event info, gwilliam
+* CxAODMaker : forgot to add truth handler getters in selection, fsforza
+* CxAODReader_VHbb : Bug fix for 2lep: clear histogram description early in the code. Since the region is initialized to SR and the if statements are incomplete, this led to events being categorized as SR while they weren't passing the SR cuts, sargyrop
+* CxAODTools : BDTCut syst, gwilliam
+* FrameworkExe : Added Powheg Herwig++ Diboson samples for systematics, with PwHerwigppEGnloME, abuzatu
+* FrameworkExe : add possibility to configure queue, hanar
+* FrameworkExe : add queue setting for LSF driver; add mc15c PU file, hanar
+* FrameworkExe : Arranged output in nice columns, abuzatu
+* FrameworkSub : latest 2lep yields file, hanar
+* FrameworkSub : latest 2lep yields file (mc15a), hanar
+
+## 16-05-20
+* CxAODReader_VHbb : 2Lep Reader: Update flavor labeling for fat-jets. Use heaviest flavor to categorize fat-jet when using only 1 flavor label (Zb,Zc,Zl). Previously the leading track-jet flavor was used. For the moment use this for HVT model, and use 2 labels for AZh model. Option to be reconsidered, sargyrop
+* CxAODReader_VHbb : update vbf+photon BDT weight files: 15 vars, mc15b CxAOD April production, Reader21-01 + mjj>800 + passVBF18 + pTBB>100, lshi
+* FrameworkExe : Added separated _improved for dibosons, for ex WW_improved, same WZ, and ZZ., abuzatu
+* FrameworkExe : updated plotting macro for 0lep: adding sensitivity computation, correct reading of sys from one folder, blinding, ..., cmaiani
+* FrameworkExe : Updated to 00-21-03 default values, abuzatu
+
+## 16-05-23
+* FrameworkExe : Switch to class access mode when running tuplemaker. Needed for systematics, thsteven
+* TupleMaker : Fix loop over systematics in Tuplemaker to pass variations struct correctly, thsteven
+* TupleMaker : Fix systematics for TupleMaker and add functionality to include event level selection, thsteven

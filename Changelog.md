@@ -1931,3 +1931,39 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 * FrameworkExe : Switch to class access mode when running tuplemaker. Needed for systematics, thsteven
 * TupleMaker : Fix loop over systematics in Tuplemaker to pass variations struct correctly, thsteven
 * TupleMaker : Fix systematics for TupleMaker and add functionality to include event level selection, thsteven
+* TupleMaker : Add missing files for TupleMaker, thsteven
+
+## 16-05-24
+* CxAODReader_VHbb : Update to AnalysisReader_VHbb1lep.cxx analysis code, sjiggins
+* CxAODTools : Adding MET trigger for high ptW muon events for HVT (1lep is commented out), amontalb
+* FrameworkExe : upload GRL for data16 and corresponding ilumicalc file, tnobe
+* FrameworkSub : updated samples list mc15b VHF STDM4 with recommended diboson samples, chiarad
+* FrameworkSub : upload GRL for data16 and corresponding ilumicalc file, tnobe
+
+## 16-05-26
+* CxAODReader : indent    , fsforza
+* CxAODReader : MAJOR CHANGE: run ONLY NOMINAL if nominalOnly is set to true (until now b-tagging and CorrsAndSyst histos were still filled if vectors not disabled in config); make code abort if both nominalOnly and all syst options are set to false), hanar
+* CxAODReader_VHbb : compute also truth tagging for fat jets even if not used; avoid code from crashing, hanar
+* CxAODReader_VHbb : fix: proper commit, hanar
+* CxAODReader_VHbb : MAJOR CHANGE: run ONLY NOMINAL if nominalOnly is set to true (until now b-tagging and CorrsAndSyst histos were still filled if vectors not disabled in config); make code abort if both nominalOnly and all syst options are set to false), hanar
+* CxAODReader_VHbb : remove OS requirement in merged AZh analysis; resolved will follow soon, hanar
+* CxAODTools : Updated truth tagging with systematics and ConfigStore callable options added--truth_tag_jets NO LONGER RETRUNS A WEIGHT; cf computeEventWeight_truthTag and Reader devbranches/stchan, stchan
+* FrameworkExe : add flag to config to merge jet categories, hanar
+
+## 16-05-27
+* CxAODMaker : Fix issue with writeFlagForEleMuOR flag for VBFGamma OR, prose
+* CxAODReader : Truth taggging SF handling implemented via ConfigStore, stchan
+* CxAODReader_VHbb : BUG FIX: at least 2 track jets in lead fat jet for AZh, hanar
+* CxAODReader_VHbb : Compilation with new truth tagging method resolved; note that compute_truthTagging for new method is DEPRECATED; use compute_TRF_tagging and new behavior of CxAODReader::computeBTagSFWeight instead, stchan
+* CxAODReader_VHbb : Fixed bug for direct tagging case (compute_btagging() wasn't enabled in the 2lep example), stchan
+* CxAODReader_VHbb : TEMPORARY FIX to remove compiler error..., hanar
+
+## 16-05-29
+* FrameworkSub : Updated to ICHEP recommendations JetCalibTools-00-04-66 and JetUncertainties-00-09-42, abuzatu
+
+## 16-05-30
+* CxAODMaker : update MET recommendtion, tnobe
+* FrameworkExe : Changed default local test sample to be mc15c ttbar to work with the default settings, abuzatu
+* FrameworkSub : add METUtilities-00-02-27 for the latest MET recommendation, tnobe
+* FrameworkSub : SM Vbb yields with data,top, Z and dibosons, fsforza
+* FrameworkSub : Update to JetUncertainties-00-09-43, new recommendation after a bug fix, abuzatu

@@ -1980,6 +1980,7 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 * FrameworkSub : CorrsAndSysts now depends on PMGTools for Sherpa v2.2 reweight, thompson
 * FrameworkSub : updated VHF yields to reflect current VHF-00-09 production in svn - only files missing listed in https://indico.cern.ch/event/537606/contributions/2185350/attachments/1282290/1905585/VHF_Analysis_Meeting_Introduction_20160531.pdf, chiarad
 * FrameworkSub : Update to AnalysisBase 2.4.9, abuzatu
+
 ## 16-06-01
 * CorrsAndSysts : fix njet reweight, thompson
 * CxAODMaker : Added number of ghost-matched (prompt) C-/B-Hadrons and Higgs-Bosons to TrackJets, analogous to FatJetHandler., fmueller
@@ -1990,6 +1991,7 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 * FrameworkSub : cross sections and k-factors for ALPGEN+Pythia6 samples, inclusive and massive-HF K-factors to NNLO calculated taking into account all the samples and the HFOR(DR>0.4) efficiency By Marco Lisboa Leite and Jose La Rosa Navarro, fsforza
 * FrameworkSub : removed spourious line, fsforza
 * FrameworkSub : updated yields of VHF analysis to reflect full VHF-00-09 production, chiarad
+
 ## 16-06-02
 * CxAODReader : add possibility to have number of subjets as additional category; default is unchanged, hanar
 * CxAODReader : update set_sample function to include shape2.2 w+jets sample, yama

@@ -1967,3 +1967,68 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 * FrameworkSub : add METUtilities-00-02-27 for the latest MET recommendation, tnobe
 * FrameworkSub : SM Vbb yields with data,top, Z and dibosons, fsforza
 * FrameworkSub : Update to JetUncertainties-00-09-43, new recommendation after a bug fix, abuzatu
+* KinematicFit : shorter TF name, ckato
+* KinematicFit : shorter TF name, ckato
+
+## 16-05-31
+* CorrsAndSysts : CorrsAndSysts now depends on PMGTools for Sherpa v2.2 reweight, thompson
+* CxAODReader : include jat jets; CXAOD-252, hanar
+* CxAODReader_VHbb : add setHiggsCandidate method (only used in 2 lep so far); 2 lep: move rescaling of muons here; should move setter method to 2 lep code, hanar
+* CxAODReader_VHbb : comment out KF, ckato
+* CxAODReader_VHbb : introduce two new structs: Higgs and VHCand; and setter method, hanar
+* CxAODReader_VHbb : restructure and clean-up code, hanar
+* FrameworkSub : CorrsAndSysts now depends on PMGTools for Sherpa v2.2 reweight, thompson
+* FrameworkSub : updated VHF yields to reflect current VHF-00-09 production in svn - only files missing listed in https://indico.cern.ch/event/537606/contributions/2185350/attachments/1282290/1905585/VHF_Analysis_Meeting_Introduction_20160531.pdf, chiarad
+* FrameworkSub : Update to AnalysisBase 2.4.9, abuzatu
+## 16-06-01
+* CorrsAndSysts : fix njet reweight, thompson
+* CxAODMaker : Added number of ghost-matched (prompt) C-/B-Hadrons and Higgs-Bosons to TrackJets, analogous to FatJetHandler., fmueller
+* CxAODMaker : Fixing problem with infinite loops in W+b samples in IsChild method., fmueller
+* CxAODReader_VHbb : move checkMbbWindow to 2 lep code; could be used by all channels but isn't..., hanar
+* CxAODReader_VHbb : move checkMllCut to 2 lep code, hanar
+* CxAODTools : updated to new CDI file, jhetherl
+* FrameworkSub : cross sections and k-factors for ALPGEN+Pythia6 samples, inclusive and massive-HF K-factors to NNLO calculated taking into account all the samples and the HFOR(DR>0.4) efficiency By Marco Lisboa Leite and Jose La Rosa Navarro, fsforza
+* FrameworkSub : removed spourious line, fsforza
+* FrameworkSub : updated yields of VHF analysis to reflect full VHF-00-09 production, chiarad
+## 16-06-02
+* CxAODReader : add possibility to have number of subjets as additional category; default is unchanged, hanar
+* CxAODReader : update set_sample function to include shape2.2 w+jets sample, yama
+* CxAODReader_VHbb : add possibility to receive HVT and AZh results in one go by addind additional subjet category; default is unchanged, hanar
+* CxAODReader_VHbb : move DiLeptonCuts namespace to 2 lep code, hanar
+
+## 16-06-03
+* CxAODMaker : fix bug and picking the correct SF for control region., agbet
+* CxAODMaker : Providing PileupReweightingTool for MuonEfficiencyScaleFactors as required in 2.4.9., fmueller
+* CxAODReader_VHbb : change HVT flavour labelling: use 2 labels if 2 track jets available, 1 if 1, hanar
+* CxAODReader_VHbb : implement mass-dependent cuts; usage optional, default old cuts, hanar
+* CxAODReader_VHbb : move setLeptonVariables method to 2-lep class, hanar
+* CxAODReader_VHbb : move to common method for jet 4-vector correction; CXAOD-218, hanar
+* CxAODTools : =fix functionality for largeR jets to old prescription, schae
+* CxAODTools : Providing PileupReweightingTool for MuonEfficiencyScaleFactors as required in 2.4.9., fmueller
+
+## 16-06-05
+* CxAODReader : BUG FIX: correct retrieval of corrected jet p4 for new correction method; thanks to Chikuma for spotting; CXAOD-251, hanar
+* CxAODReader : revert accidental commit, hanar
+* CxAODReader_VHbb : increase mVH range up to 6000; comment unweighted histos, hanar
+* CxAODReader_VHbb : test      , yama
+* CxAODReader_VHbb : update 1 lepton resolved code, yama
+* CxAODReader_VHbb : update 1 lepton resolved code, yama
+* CxAODReader_VHbb : update namespace OneLeptonResolvedCuts, yama
+* CxAODReader_VHbb : update the function of fill_1lepResolvedCutFlow, yama
+* CxAODReader_VHbb : update the function of fill_TLV, yama
+* FrameworkExe : update 2016 GRL, tnobe
+* FrameworkSub : update 2016 GRL, tnobe
+
+## 16-06-06
+* CxAODMaker : adding 2 trigger, fixing one bug, adding muon quality in output, dimicco
+* CxAODMaker : add new mET triggers, tnobe
+* CxAODMaker : removing isMC check to have all the decorations, fsforza
+* CxAODReader : add getter method for pTV, hanar
+* CxAODReader : add long long int and vector in, hanar
+* CxAODReader_VHbb : run KF for 2 jet & jet_onemu pT > 1 GeV, ckato
+* CxAODTools : addinglep-jet trigger flags in Properties, dimicco
+* CxAODTools : add new mET triggers, tnobe
+* FrameworkExe : bool doResolution = false # true for 2 lepton, ckato
+* FrameworkExe : updated OverlapRemoval flags for 21-04 production prep., haysjm
+* FrameworkSub : 2 lepton mc15c yields file, copied from eos, hanar
+* FrameworkSub : updated bootstrap for 21-04, haysjm

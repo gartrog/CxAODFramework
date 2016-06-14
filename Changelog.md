@@ -2034,3 +2034,91 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 * FrameworkExe : updated OverlapRemoval flags for 21-04 production prep., haysjm
 * FrameworkSub : 2 lepton mc15c yields file, copied from eos, hanar
 * FrameworkSub : updated bootstrap for 21-04, haysjm
+
+## 16-06-06
+* CxAODMaker : adding 2 trigger, fixing one bug, adding muon quality in output, dimicco
+* CxAODMaker : add new mET triggers, tnobe
+* CxAODMaker : removing isMC check to have all the decorations, fsforza
+* CxAODReader : add getter method for pTV, hanar
+* CxAODReader : add long long int and vector in, hanar
+* CxAODTools : addinglep-jet trigger flags in Properties, dimicco
+* CxAODTools : add new mET triggers, tnobe
+* FrameworkExe : bool doResolution = false # true for 2 lepton, ckato
+* FrameworkExe : updated OverlapRemoval flags for 21-04 production prep., haysjm
+* FrameworkSub : 2 lepton mc15c yields file, copied from eos, hanar
+* FrameworkSub : updated bootstrap for 21-04, haysjm
+
+## 16-06-07
+* CxAODMaker : add 5 new electron trigger, ckato
+* CxAODMaker : HLT_mu20_iloose_L1MU15 was written twice, ckato
+* CxAODMaker : sort lepton triggers, ckato
+* CxAODMaker : update to release 20.7 electron IDs, lulu
+* CxAODTools : add 5 new electron trigger, ckato
+* FrameworkSub : Adding further graviton samples., fmueller
+
+## 16-06-08
+* CorrsAndSysts : eventType for inclusive W and Z added, losterzo
+* CxAODMaker : Added number of ghost-matched (prompt) C-/B-Hadrons and Higgs-Bosons to small-R Jets, analogous to FatJetHandler., fmueller
+* CxAODMaker : fixing == bug in trigger map assignment, dimicco
+* CxAODMaker : fixing wrong commit due to additional files in previous one, dimicco
+* CxAODMaker : mu trigger for 2016, agbet
+* CxAODMaker : removing useless comments, dimicco
+* CxAODMaker_VHbb : JVT hard coded replaced with Props::PassJvtMedium.get(jet), abuzatu
+* CxAODReader_VHbb : fix bug in opt cuts, hanar
+* CxAODReader_VHbb : fixed typo, abuzatu
+* CxAODReader_VHbb : Harmonized config options to be more human readable---useNewTTMethod set to true will now actually invoke the new truth tagging method in AnalysisReader_VHbb::compute_TRF_tagging, stchan
+* CxAODReader_VHbb : remove debug statement, hanar
+* CxAODReader_VHbb : use same definition as in HistNameSvc, hanar
+* CxAODTools : flag part fo the code that is only relevant to the new tools, agbet
+* CxAODTools : JVT cuts update in the initialisation of the tool, abuzatu
+* CxAODTools : JVT hard coded replaced with Props::PassJvtMedium.get(jet), abuzatu
+* FrameworkExe : Added the exclusiveTruthTagging bool to framework-read.cfg for truth tagging, stchan
+* FrameworkSub : Bump to 2.4.10, nmorange
+
+## 16-06-09
+* CxAODMaker : adding complete selection flags, it will make easier to use muons with |eta|>2.5, fsforza
+* CxAODMaker : removing failure on missing id-track, fsforza
+* CxAODReader_VHbb : added reading of Charles BDT, with latest xml files, for VHbb0lep, and implemented stephen's truth tagging in 0lep code, cmaiani
+* CxAODReader_VHbb : bug fix: correct mll window cuts, hanar
+* CxAODReader_VHbb : bug fix: used resolved instead of merged mVH, hanar
+* CxAODReader_VHbb : store resolved and merged mBB and mVH separately, hanar
+* FrameworkExe : corrected minor issue in reader config file, cmaiani
+* FrameworkExe : small updates in reader config file, cmaiani
+* FrameworkSub : Added SM signal and some bkg samples, abuzatu
+* FrameworkSub : rm packages from list that are either now in the new release or are even outdated (METUtilities), hanar
+* KinematicFit : read the same PtReco file from CxAOD 20-00 moriond production, ckato
+
+## 16-06-10
+* CxAODMaker : CP updates to photon handler configs, prose
+* CxAODMaker : fixing bug, fsforza
+* CxAODMaker_VHbb : Added check if JvtMedium exists, abuzatu
+* CxAODMaker_VHbb : update to jet decoration for vbf+photon analysis, prose
+* CxAODReader : bug fix: allow to run also on weight syst only..., hanar
+* CxAODReader_VHbb : Updates to Reader for VBF+photon analysis, prose
+* CxAODTools : Added check if JvtMedium exists, abuzatu
+* FrameworkExe : Update to support new Reader for VBF+photon analysis, prose
+* FrameworkSub : updating packages-trunk for recommended package tags not included in release, prose
+
+## 16-06-11
+* CxAODMaker : muon resolution is ready, ckato
+* FrameworkExe : Added scripts keepOnlyGoodRuns.py and runKeepOnlyGoodRuns.sh to avoid running on bad data runs that give zero events selected anyway, abuzatu
+* FrameworkExe : add the latest 2016 GRL (2.6fb-1), tnobe
+* FrameworkExe : add the latest 2016 GRL (2.6fb-1), tnobe
+* FrameworkExe : Commented out systematics as not needed for test runs, to be turned on for official ICHEP production, abuzatu
+* FrameworkExe : list of sherpa2.2 V+jets samples, cpandini
+* FrameworkExe : remove list of sherpa2.2 V+jets samples, cpandini
+* FrameworkSub : add the latest 2016 GRL (2.6fb-1), tnobe
+* FrameworkSub : Commented out bad data runs from data15 samples from 13May16 using script I introduced in FrameworkExe/scripts, abuzatu
+* KinematicFit : fix eta phi, ckato
+* KinematicFit : TF made from CxAOD 21-04, ckato
+
+## 16-06-13
+* CxAODReader_VHbb : 2Lep Reader: cut on Ntrackjets was accidentally changed with previous commit. Undoing accidental changes, sargyrop
+* CxAODReader_VHbb : 2Lep Reader: turning optimizing cuts on by default, sargyrop
+* CxAODReader_VHbb : getKF called if N(jets)=N(selected_jets), ckato
+* CxAODReader_VHbb : move pTB145 cut to common cuts, hanar
+* CxAODReader_VHbb : Reverted changes to VHbb1lep & event selection. Spliced all changes into trunk version, sjiggins
+* FrameworkSub : tag first version of PMGTools, thompson
+
+## 16-06-14
+* FrameworkSub : Bump to 2.4.11, nmorange

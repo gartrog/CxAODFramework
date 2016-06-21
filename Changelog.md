@@ -2122,3 +2122,108 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 
 ## 16-06-14
 * FrameworkSub : Bump to 2.4.11, nmorange
+* CxAODMaker : Add PtReco derived in mc15c 20.7 with ICHEP recommendations. Still keep the PtReco from the trunk, introduced after Moriond. Some checks still needed to choose which one to use for ICHEP., abuzatu
+* CxAODMaker : Add PtReco files retrained in 20.7 to use for ICHEP (to be confirmed), abuzatu
+* CxAODMaker : add RandomRunNumber, lulu
+* CxAODMaker : Compute and store EMScaleEta for jets, used in PassJvtMedium, abuzatu
+* CxAODMaker : Fixed typo, abuzatu
+* CxAODMaker : update electron eff SF, lulu
+* CxAODReader : implemented Sherpa 2.2 Njet reweighting in analysis reader, cmaiani
+* CxAODReader_VHbb : removed mbb window cut from SM VH cutflow histo filling, cmaiani
+* CxAODTools : Add EMScaleEta for jets, used in PassJvtMedium, abuzatu
+* CxAODTools : add RandomRunNumber, lulu
+* CxAODTools : Fixed typo at parantheses in if, abuzatu
+* CxAODTools : for JVT if EMScaleEta is not stored as Prop, use incorrect but ok jet->eta(), abuzatu
+* CxAODTools : Removed commented lines with 50 instead of 50 and 0.64 instead of 0.59, abuzatu
+* CxAODTools : updated BTaggingTool with track-jet requirements, jhetherl
+* CxAODTools : Update jet cleaning JVT requirement, abuzatu
+* CxAODTools : Use EMScaleEta instead of jet eta in Jvt cut, abuzatu
+* CxAODTools : When hard coded to recomputed Jvt cut, updated cuts from 50 GeV to 60 GeV and form 0.64 to 0.59, abuzatu
+* FrameworkExe : add instructions for CxAOD-21-xx vs CxAOD-20-xx running - default is still CxAOD-20-xx, will be changed soon, hanar
+* FrameworkExe : should be set to true for CxAOD-20-xx, hanar
+* FrameworkSub : JetEtMiss experts confirm we can use JetSubstructure packages from AnalysisBase 2.4.11, abuzatu
+* FrameworkSub : JetEtMiss group recommends JetUncertainties-00-09-46, not yet in AB 2.4.11, abuzatu
+
+## 16-06-15
+* CxAODMaker : For fat jets too Updated JES calibration and uncertainty configuration strings for 20.7 ICHEP recommendations, abuzatu
+* CxAODMaker : switch to es2015PRE for calibration, lulu
+* CxAODMaker : switch to es2016PRE for calibration, lulu
+* CxAODMaker : Updated JES calibration and uncertainty configuration strings for 20.7 ICHEP recommendations, abuzatu
+* CxAODMaker : update to ESModel for 2016, prose
+* CxAODReader : Added NNLO reweighting to reader, abell
+* CxAODReader_VHbb : Added NNLO reweighting to reader, abell
+* CxAODReader_VHbb : changed name of BDT variable for 0lep analysis, for fit inputs compatibility, cmaiani
+* CxAODReader_VHbb : harmonize HVT and AZh selection: 1+ track jets, hanar
+* FrameworkSub : Added NNLO reweighting to reader - NNLOReweighter package needs to be checked out, abell
+* FrameworkSub : Update to JetUncertainties-00-09-47, abuzatu
+
+## 16-06-16
+* CxAODMaker : comment old setting: better remove completely, hanar
+* CxAODMaker : CXAOD-33: fix crash for MET maker debug output, enable it, dbuesche
+* CxAODMaker : Readded PtReco after code checked it worked. We need to select the desired PtReco and set to store only that one for production, abuzatu
+* CxAODMaker : resolve seg fault by reverting...need to be properly followed up, hanar
+* CxAODMaker : temporary solution: write RandomRunNumber to original EventInfo so that it is accessible for the electron efficiency tool; CXAOD-263, hanar
+* CxAODReader : Add Ghost Matching of TrackJets+FatJets, ahoenle
+* CxAODReader_VHbb : Add Ghost Matching of TrackJets+FatJets, ahoenle
+* CxAODReader_VHbb : modified the ordering of selected jets for the AllSigJets b-tagging strategy to match the twiki, cmaiani
+* CxAODTools : remove property, not needed, hanar
+* FrameworkExe : Add Ghost Matching of TrackJets+FatJets, ahoenle
+* FrameworkExe : move to class access mode, hanar
+* FrameworkSub : remove out-dated packages from packages-trunk to switch to the recommended ones in the release, lshi
+
+## 16-06-17
+* CxAODMaker : adding new electron matching triggers, amontalb
+* CxAODMaker : a minor change to run data15+data16 with the same config file, tnobe
+* CxAODMaker : =change to signal lepton MJ MET definition, schae
+* CxAODMaker : fix: don't call tool twice just copy random runnumber to original container as needed by ele eff tool to avoid crash on data - should be removed once new ele eff tool is available, hanar
+* CxAODMaker : set random runnumber only for MC, hanar
+* CxAODMaker : Turn off PtReco trained after Moriond, remaining only 3 PtReco trained now, abuzatu
+* CxAODMaker : update trigger matching dR for photon, lshi
+* CxAODMaker : updating deltaR for electron trigger matching, amontalb
+* CxAODMaker_VHbb : change electron cut for MJ study, nishijim
+* CxAODMaker_VHbb : My update to CxAODMaker_VHbb in mydevbranch, nishijim
+* CxAODMaker : write some jet properties not affected by systematics for nominal only -> -10% CxAOD size, dbuesche
+* CxAODReader_VHbb : extra line to be sure b-tag tool is configured for the right jets in vbf+photon reader, prose
+* CxAODReader_VHbb : Fix missing implementation of setevent_flavourGhost(), ahoenle
+* CxAODReader_VHbb : latest updates to AnalysisReader_VBFHbb, prose
+* CxAODReader_VHbb : Re-activate setevent_flavourGhost after successful checks., ahoenle
+* CxAODReader_VHbb : Update to MVATree VBFHbb, prose
+* CxAODReader_VHbb : update VBF+photon reader: merge with trigger study; update variables in MVATree to take the uncorrect b jet variables, lshi
+* CxAODTools : adding electron matching props, amontalb
+* CxAODTools : =add option for Scale factor calculation, schae
+* CxAODTools : a minor change to calculate PU weight for 2015+2016 data, tnobe
+* CxAODTools : making 1 lepton muon events trigger on MET trigger, amontalb
+* CxAODTools : put property back, currently needed by ele eff tool...should be removed again soon once new tool available, hanar
+* FrameworkExe : Fix missing implementation of setevent_flavourGhost(), ahoenle
+* FrameworkExe : grid job can be submitted with phys-exotics role, tnobe
+* FrameworkExe : updating MJ run config, amontalb
+* FrameworkSub : adding the METUtilities-00-02-29 in the list of packeges, francav
+* FrameworkSub : fix broken file, lulu
+
+## 16-06-18
+* CxAODMaker : added option for AF-II, tnobe
+* CxAODMaker : Added some documentation of running multiple JES schemes in JetHandler class, zxi
+* CxAODMaker : Added support for running multiple JES NP schemes in a single run; code still compatiable with the old config, zxi
+* CxAODMaker : Only check duplicates bewteen begin of m_jesProvidersWZ and m_jesProviderHbb, zxi
+* CxAODMaker : retrieve info on AFII vs full sim; use it in electron and jet handler; ToDo: double check grid running and switches in object handlers; CXAOD-243, hanar
+* CxAODMaker_VHbb : retrieve info on AFII vs full sim; use it in electron and jet handler; ToDo: double check grid running and switches in object handlers; CXAOD-243, hanar
+* CxAODTools : Fix compilation warning, nmorange
+* FrameworkExe : Added support for running multiple JES NP schemes in a single run -- an example of config file, zxi
+* FrameworkExe : Added support for running multiple JES NP schemes in a single run -- an example of config file, zxi
+* FrameworkExe : deleted bad commit, zxi
+* FrameworkExe : Make default test run an 1lep mc15c ttbar file, abuzatu
+* FrameworkExe : Remove duplicate fat jet systs, nmorange
+* FrameworkExe : reverted  , zxi
+* FrameworkExe : Update config file with all systematics, nmorange
+* FrameworkSub : Add Lists of datasets of 20.7.6.4 production, nmorange
+* FrameworkSub : bump tag release to 2.4.11, haysjm
+* FrameworkSub : updated packages.txt for v22 tag, haysjm
+
+## 16-06-19
+* CxAODMaker : Bugfix for JVT calculation, nmorange
+* CxAODMaker : PassJvtMedium should now be copied again for every syst, nmorange
+* FrameworkSub : Fixing typo in RS_G M2750 causing empty sample names., fmueller
+* FrameworkSub : Uses new CxAODMaker tag, nmorange
+
+## 16-06-20
+* CxAODReader_VHbb : add MVA cutflow, ckato

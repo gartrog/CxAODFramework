@@ -2227,3 +2227,93 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 
 ## 16-06-20
 * CxAODReader_VHbb : add MVA cutflow, ckato
+
+## 16-06-21
+* CxAODMaker : add single photon triggers to trigger list, lshi
+* CxAODMaker_VHbb : Tentatively fix a Jet Cleaning bug, nmorange
+* CxAODReader : Added jet author check for b-tag tool, stchan
+* CxAODReader_VHbb : Cleaned up old truth tagging methods, stchan
+* CxAODReader_VHbb : move namespace OneLeptonResolvedCuts to VHbb1Lep.h, yama
+* CxAODTools : Cleaned up old truth tagging methods, stchan
+* FrameworkExe : added script to merge truth and direct tagging samples, cmaiani
+* FrameworkExe : updated merging script, cmaiani
+* FrameworkSub : removing un-used and confusing mc15b files, fsforza
+* FrameworkSub : Use new CxAODMaker_VHbb tag, nmorange
+
+## 16-06-22
+* CxAODReader : Recovered PtRecoParton and Regression at Reader level; stored also PtReco version 1, 2, 3 and Regression in the style of OneMu, KF already stored, to have the histograms all together, abuzatu
+* CxAODReader_VHbb : 2Lep Reader: adding options for labeling fat-jets with 1 track-jet based on Andreas' studies. Default is TrackJetHybrid, sargyrop
+* CxAODReader_VHbb : Recovered PtRecoParton and Regression at Reader level; stored also PtReco version 1, 2, 3 and Regression in the style of OneMu, KF already stored, to have the histograms all together, abuzatu
+* CxAODReader_VHbb : Update for fat jet labeling baseline solution (TrackJetHybrid), ahoenle
+* CxAODTools : Changed default behavior to return no tags if njets<nRequiredTTags, stchan
+* CxAODTools : Second bugfix on Jvt+bad jets cleaning, nmorange
+* CxAODTools : updated for 2D tagging testing, jhetherl
+* FrameworkExe : Adding macro to make pie charts, sargyrop
+* FrameworkExe : bool doResolution = true # true for 2 lepton, ckato
+* FrameworkExe : updated for 2D tagging testing, jhetherl
+* FrameworkSub : Add new lists of samples, nmorange
+* FrameworkSub : dos2unix all list files, nmorange
+* FrameworkSub : update HistSvc names for vbf+photon, prose
+* FrameworkSub : Update packages list, nmorange
+* FrameworkSub : Use new CxAODTools tag, nmorange
+
+## 16-06-23
+* CxAODReader : Adding variables needed by HH->bbtautau reader (hope they doesn't hurt...), carquin
+* CxAODReader : Change in AnalysisReader.cxx to implement 2D cut for merged analysis, sargyrop
+* CxAODReader : Modified getMuonInJetCorrTLV to retrieve correct Regression and PtReco also for systematics, yesterday I had corrected just for Nominal, reorganised code to be used for both nominal and systematic jet, abuzatu
+* CxAODReader : Replaced assert(...) with Warning(...), abuzatu
+* CxAODReader_VHbb : Add some missing instructions to use EasyTree, cdelport
+* CxAODReader_VHbb : Change in AnalysisReader_VHbb.cxx to implement 2D cut for merged analysis. When 2D cut is used the analysis strategy is forced to be Merged., sargyrop
+* CxAODReader_VHbb : move to common getMuonInJetCorrTLV method, hanar
+* CxAODReader_VHbb : MVA part : Some cleaning + set the input variables in an extra function, cdelport
+* CxAODReader_VHbb : Removed printout for debug, abuzatu
+* CxAODReader_VHbb : Revert back from using mbb full range used in testing, abuzatu
+* CxAODReader_VHbb : Three ptreco from 22-xx previously hard coded stored as the PtReco given by user, to be able to work also in 20-xx and 21-xx, abuzatu
+* CxAODTools : Change in BTaggingTool to implement 2D cut for merged analysis. Is switched off by default, sargyrop
+* FrameworkExe : Added clarifications and examples of b-jet energy corrections to be run in 20-xx, 21-xx, 22-xx, abuzatu
+* FrameworkExe : It was decided to use PtRecollbbOneMuTruthWZNoneNewTrue, to be consistent with JetEtMiss group and be able to show public plots, as the performance of the different PtReco are very similar, abuzatu
+* FrameworkExe : Reader config: add flag for using 2D b-tagging cuts, sargyrop
+
+## 16-06-24
+* CxAODReader : resolve some compiler warnings, hanar
+* CxAODReader_VHbb : IF use2DbTagCut TRUE: make code crash if use2DbTagCut is enabled and another strategy than Merged is chosen; fix bug; silence errors from btagging tool for calo jets by disabling the call to the btagging tool, hanar
+* CxAODReader_VHbb : Preparing some material for the parallel evaluation of several BDTs simultaneously, cdelport
+* CxAODReader_VHbb : Updated pTW cut in resolved analysis PTW >150GeV now, sjiggins
+* CxAODReader_VHbb : Update to VBF+photon reader, prose
+* CxAODReader_VHbb : update vbf+photon BDT weights to 11 input vars and truth tagging 77%, lshi
+* FrameworkExe : add plotting macro for vbf + photon, prose
+* FrameworkExe : consistent settings; updated comment for 2DbTagCut, hanar
+* FrameworkExe : some cleanup, sensible defaults, hanar
+* FrameworkSub : Adding xAODBTaggingEfficiency to packages.txt and switching from using tag to using the trunk of said package, sargyrop
+* FrameworkSub : Add xAODBTaggingEfficiency package to trunk packages, lkaplan
+
+## 16-06-25
+* CxAODReader_VHbb : 0lep reader: introduce doMergeModel flag to split events with 1 track-jet from events with at least 2 track-jets in the leading fat-jet, sargyrop
+* CxAODReader_VHbb : 2Lep reader: Re-introducing doMergeModel, sargyrop
+
+## 16-06-26
+* CxAODMaker : add systematic variation MET_SoftTrk_ResoCorr, tnobe
+* CxAODReader : Adding the tree for the overlap studies needed for the Higgs combination for SM and BSM, francav
+* CxAODReader : Adding the tree for the overlap studies needed for the Higgs combination for SM and BSM, francav
+* CxAODReader_VHbb : Adding the tree for the overlap studies needed for the Higgs combination for SM and BSM, francav
+* CxAODReader_VHbb : Adding the tree for the overlap studies needed for the Higgs combination for SM and BSM, francav
+* CxAODReader_VHbb : doResolution, ckato
+* CxAODReader_VHbb : Updated plot creation as default & mBB rescaling fix, sjiggins
+* FrameworkExe : added new samples (see the previous commit), tnobe
+* FrameworkExe : add systematic variation MET_SoftTrk_ResoCorr, tnobe
+* FrameworkExe : revert back the list of MET uncertainty, tnobe
+* FrameworkSub : adding vbf + photon yields for mc15c, prose
+* FrameworkSub : fill in cross section for HVT WW->lvqq, WZ->lvqq and RS G->WW->lvqq, lulu
+* KinematicFit : TF made from CxAOD 22-01, ckato
+
+## 16-06-27
+* CxAODReader_VHbb : small updates to run 0lep SM VH code on mc15c BDT xml, cmaiani
+* CxAODReader_VHbb : update VBF+photon reader: trigger part, lshi
+* CxAODTools : Added/commented out example of how to do fixed fraction of events with 1tag, rest in 2tag, stchan
+* FrameworkSub : Add new file lists as well on the trunk, nmorange
+* KinematicFit : comment out truth pT(j) pdf before clean up, ckato
+* KinematicFit : ICHEP PtReco when fit is not converged, ckato
+
+## 16-06-28
+* CxAODMaker : added electron trigger SF, correct tau SF new triggers, agbet
+* CxAODTools : new props electron SF, agbet

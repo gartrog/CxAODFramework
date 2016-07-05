@@ -2317,3 +2317,65 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 ## 16-06-28
 * CxAODMaker : added electron trigger SF, correct tau SF new triggers, agbet
 * CxAODTools : new props electron SF, agbet
+* CxAODReader_VHbb : Adding new 0Lep-BDT xml files, cdelport
+* CxAODReader_VHbb : up 0lep reader to properly read more than one xml, cmaiani
+* CxAODReader_VHbb : update VBF+photon reader: add dEtaJJ reweighting, lshi
+* CxAODTools : new CDI file in BTaggingTool, jhetherl
+* CxAODTools : new props electron SF, agbet
+* FrameworkExe : adding flags for 0-lep SM VH BDT reading, cdelport
+* FrameworkSub : added latest muon-CP pkg, fsforza
+* FrameworkSub : new CDI file uses Sherpa DSID not previously in XSections file - dummy entry for is now included, jhetherl
+
+## 16-06-29
+* CorrsAndSysts : CXAOD-272 add ttbar pTV syst from elisabeth, dbuesche
+* CorrsAndSysts : CXAOD-272 merge from devbranch: remove Run 1 stuff, dbuesche
+* CxAODReader : need to recompute random runnumber also if not recomputing muon trigger SFs; add some protections, hanar
+* CxAODReader : =set jet pt cut, schae
+* CxAODReader_VHbb : CXAOD-272 remove calls to Run 1 corrs and systs, dbuesche
+* CxAODReader_VHbb : Remove three types of PtReco stored for private study; remain only GSC, OnMu, standard PtReco, Regression and KF, abuzatu
+* CxAODReader_VHbb : Revert mbb bins from 2.5 to 502.5 from private study to 0 to 500 as before in trunk, abuzatu
+* CxAODReader_VHbb : small updates for naming, cmaiani
+* CxAODTools : el trigger is now present in MC, remove fix for new CxAODs, amontalb
+* CxAODTools : Implementing whichData flag which allows to reweight to PU profile of 2015 and 2016 data separately. Default is to reweight to combined 2015+2016 PU profile, sargyrop
+* CxAODTools : =jet ptcut setting, schae
+* CxAODTools : trigger for 2016 data; note: no lepton trigger SFs; CXAOD-271, hanar
+* FrameworkExe : Implementing whichData flag in reader config, sargyrop
+* FrameworkExe : new TriggerMenu, hanar
+
+## 16-06-30
+* CxAODReader_VHbb : getKF if(2 jet & pT>1 GeV & resolution>0.001), ckato
+* CxAODReader_VHbb : mBB monitor only in 2 lepton, ckato
+* FrameworkExe : lumi for different years, hanar
+* FrameworkExe : updated macro for merging truth and direct tagged samples, cmaiani
+* FrameworkSub : 2 lepton yields for 22-01, hanar
+
+## 16-07-01
+* CorrsAndSysts : Minor fixes, nmorange
+* CxAODMaker : use ConeExcl matched hadrons instead of ghost matched...need to clean-up code sometime; CXAOD-273, hanar
+* FrameworkSub : change XSextion_13TeV.txt, nishijim
+* FrameworkSub : change XSextion_13TeV.txt, nishijim
+* FrameworkSub : correct 2 lepton yields file, hanar
+
+## 16-07-02
+* FrameworkExe : Update makePieCharts.C macro, sargyrop
+
+## 16-07-03
+* CxAODReader_VHbb : change mindPhi cut for nJets >= 4 to be in agreement with David D's recommendation for AZh/HVT; SMVH unchanged, hanar
+* CxAODReader_VHbb : fill only mVH for AZh/HVT if only inputs; merge jet categories if doMergeJetBins set to true, hanar
+* CxAODReader_VHbb : fixing a segfault issue in HVT/AZh reader for 0 lepton, francav
+* CxAODReader_VHbb : use new topemucr definition = using SR mLL cut, hanar
+* FrameworkSub : 0 lep yields file, hanar
+* FrameworkSub : updated 2 lep yields file, hanar
+
+## 16-07-04
+* CxAODMaker : protection swtich fot the EMScale eta. default behavior as before., agbet
+* CxAODMaker : Remove hadronic tau jets from counting of truth jets for Sherpa reweighting, abuzatu
+* CxAODReader : add FakeFactor, nishijim
+* CxAODReader_VHbb : add fakefactor method, nishijim
+* CxAODTools : add FakeFactor, nishijim
+* CxAODTools : Fixed inclusive truth tagging., stchan
+* FrameworkExe : add 1lepton cofig, nishijim
+* FrameworkExe : Update electron efficiency uncertainties, tnobe
+* FrameworkSub : add fakefactor and mva xml, nishijim
+* FrameworkSub : fix XSection_13TeV.txt, nishijim
+* FrameworkSub : new TauAnalysisTools, agbet

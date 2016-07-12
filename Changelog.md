@@ -2381,107 +2381,107 @@ CxAODReader\_VHbb : New feature for 2lep: doReduceFillHistos flag that allows to
 * FrameworkSub : new TauAnalysisTools, agbet
 
 ## 16-07-05
-2016-07-05 : CxAODMaker : fix selection for METMJLoose, nishijim
-2016-07-05 : CxAODReader_VHbb : don't write PU histos if m_doOnlyInputs and if PU weight is applied, hanar
-2016-07-05 : CxAODTools : add xe100_mht trigger, add met trigger SFs for 2016, update SF for 2015 with 20.7, wangwe
-2016-07-05 : CxAODTools : Fix MET SF calculation in 1 muon channel, nmorange
-2016-07-05 : CxAODTools : removing forcing m_recomputePUWeight to true when running on  a single data period, dimicco
-2016-07-05 : FrameworkExe : fixing framework-run.cfg to properly handle 2015 and 2016 ilumiCalc files, dimicco
-2016-07-05 : FrameworkSub : add new fakefactor file, nishijim
-2016-07-05 : FrameworkSub : new ilumi calcs and GRL for 2015 and 2016 with GRL-v79 and 3.2+5.1 fb-1, fsforza
+* CxAODMaker : fix selection for METMJLoose, nishijim
+* CxAODReader_VHbb : don't write PU histos if m_doOnlyInputs and if PU weight is applied, hanar
+* CxAODTools : add xe100_mht trigger, add met trigger SFs for 2016, update SF for 2015 with 20.7, wangwe
+* CxAODTools : Fix MET SF calculation in 1 muon channel, nmorange
+* CxAODTools : removing forcing m_recomputePUWeight to true when running on  a single data period, dimicco
+* FrameworkExe : fixing framework-run.cfg to properly handle 2015 and 2016 ilumiCalc files, dimicco
+* FrameworkSub : add new fakefactor file, nishijim
+* FrameworkSub : new ilumi calcs and GRL for 2015 and 2016 with GRL-v79 and 3.2+5.1 fb-1, fsforza
 
 ## 16-07-07
-2016-07-06 : CxAODMaker : added missing dep for Asg_MCUtil - pointed out by sekula, haysjm
-2016-07-06 : CxAODMaker : change of default: need to set storeGAParticlesInJets explicitely to true in config to write number of associated hadrons to CxAOD - current default caused issues for other analyses, hanar
-2016-07-06 : CxAODReader_VHbb : 3pjet was not for trunk, ckato
-2016-07-06 : CxAODReader_VHbb : use isTagged information in getKF, ckato
-2016-07-06 : CxAODTools : fix a bug in trigger decision, wangwe
-2016-07-06 : FrameworkExe : change: need to set storeGAParticlesInJets explicitely to true to write number of associated hadrons to CxAOD, hanar
-2016-07-06 : FrameworkExe : change setting: don't write number of hadrons associated to jets before we are sure it works on all samples; CXAOD-273, hanar
-2016-07-06 : FrameworkSub : adding HFOR testing tool, useful for possible Alpgen studies, fsforza
-2016-07-06 : FrameworkSub : bump to 2.4.13, haysjm
+* CxAODMaker : added missing dep for Asg_MCUtil - pointed out by sekula, haysjm
+* CxAODMaker : change of default: need to set storeGAParticlesInJets explicitely to true in config to write number of associated hadrons to CxAOD - current default caused issues for other analyses, hanar
+* CxAODReader_VHbb : 3pjet was not for trunk, ckato
+* CxAODReader_VHbb : use isTagged information in getKF, ckato
+* CxAODTools : fix a bug in trigger decision, wangwe
+* FrameworkExe : change: need to set storeGAParticlesInJets explicitely to true to write number of associated hadrons to CxAOD, hanar
+* FrameworkExe : change setting: don't write number of hadrons associated to jets before we are sure it works on all samples; CXAOD-273, hanar
+* FrameworkSub : adding HFOR testing tool, useful for possible Alpgen studies, fsforza
+* FrameworkSub : bump to 2.4.13, haysjm
 
 ## 16-07-07
-2016-07-07 : CorrsAndSysts : CXAOD-281 merge from devbranch: add SysTTbarMBB, SysW/ZPtV/Mbb, dbuesche
-2016-07-07 : CxAODMaker : added JvtEfficiency uncertainty, tnobe
-2016-07-07 : CxAODMaker : rename JvtEfficiency uncertainties, hanar
-2016-07-07 : CxAODMaker : set CorrelationModel for elecEffSF tools explicitly as TOTAL since the default is now SIMPLIFIED, lulu
-2016-07-07 : CxAODReader_VHbb : 2Lep Reader: fix definition of mBB sidebands, sargyrop
-2016-07-07 : CxAODReader_VHbb : 2Lep Reader: re-introduce modelType to split between HVT and AZh. Fix sideband definition, sargyrop
-2016-07-07 : CxAODReader_VHbb : add usefull comment, hanar
-2016-07-07 : CxAODReader_VHbb : hack HVT CorrsAndSyst to make it work for Sherpa 2.2, hanar
-2016-07-07 : CxAODReader_VHbb : HVT CorrsAndSyst - needs to be further validated, hanar
-2016-07-07 : CxAODReader_VHbb : Moved V+Jet and TTbar HVT Merged Systematic CorrsAndSysts instantiation ton AnalysisReader_VHbb.cxx, sjiggins
-2016-07-07 : CxAODTools : Added Alpgen string to BTaggingTool::indexMCEfficiencyFrom*, tursom
-2016-07-07 : CxAODTools : PURewightingTool: call getRndNumber with true argument to comply with CP reccomendations, dimicco
-2016-07-07 : FrameworkExe : added JVT systematics and missing JET_SR1_JET_EtaIntercalibration_NonClosure, hanar
-2016-07-07 : FrameworkExe : Add Hbb fat jet systematics, before only WZ in previous production; to be discussed further if these are what we want, abuzatu
-2016-07-07 : FrameworkExe : updating to the last 2016 grl and ilumicalc 6.3 fb-1, dimicco
-2016-07-07 : FrameworkSub : Updated Alpgen V+jets sample names in data/XSections_13TeV.txt, tursom
-2016-07-07 : FrameworkSub : updating GRL and ilumicalc file to 2016 6.3 fb-1, dimicco
-2016-07-07 : FrameworkSub : updating to release 2.3.14, dimicco
+* CorrsAndSysts : CXAOD-281 merge from devbranch: add SysTTbarMBB, SysW/ZPtV/Mbb, dbuesche
+* CxAODMaker : added JvtEfficiency uncertainty, tnobe
+* CxAODMaker : rename JvtEfficiency uncertainties, hanar
+* CxAODMaker : set CorrelationModel for elecEffSF tools explicitly as TOTAL since the default is now SIMPLIFIED, lulu
+* CxAODReader_VHbb : 2Lep Reader: fix definition of mBB sidebands, sargyrop
+* CxAODReader_VHbb : 2Lep Reader: re-introduce modelType to split between HVT and AZh. Fix sideband definition, sargyrop
+* CxAODReader_VHbb : add usefull comment, hanar
+* CxAODReader_VHbb : hack HVT CorrsAndSyst to make it work for Sherpa 2.2, hanar
+* CxAODReader_VHbb : HVT CorrsAndSyst - needs to be further validated, hanar
+* CxAODReader_VHbb : Moved V+Jet and TTbar HVT Merged Systematic CorrsAndSysts instantiation ton AnalysisReader_VHbb.cxx, sjiggins
+* CxAODTools : Added Alpgen string to BTaggingTool::indexMCEfficiencyFrom*, tursom
+* CxAODTools : PURewightingTool: call getRndNumber with true argument to comply with CP reccomendations, dimicco
+* FrameworkExe : added JVT systematics and missing JET_SR1_JET_EtaIntercalibration_NonClosure, hanar
+* FrameworkExe : Add Hbb fat jet systematics, before only WZ in previous production; to be discussed further if these are what we want, abuzatu
+* FrameworkExe : updating to the last 2016 grl and ilumicalc 6.3 fb-1, dimicco
+* FrameworkSub : Updated Alpgen V+jets sample names in data/XSections_13TeV.txt, tursom
+* FrameworkSub : updating GRL and ilumicalc file to 2016 6.3 fb-1, dimicco
+* FrameworkSub : updating to release 2.3.14, dimicco
 
 ## 16-07-08
-2016-07-08 : CorrsAndSysts : adding SysTTbarPTVMBB, nishijim
-2016-07-08 : CxAODMaker : 2016 bbtautau (hadhad) triggers and SFs, carquin
-2016-07-08 : CxAODMaker : implementing ICHEP_v2 recommendation from  Egamma in ElectronHandler, dimicco
-2016-07-08 : CxAODMaker_VHbb : change muon MJ selection, nishijim
-2016-07-08 : CxAODReader : adding jetRapidityCut, vcairo
-2016-07-08 : CxAODReader_VHbb : CorrsAndSyst for HVT, hanar
-2016-07-08 : CxAODTools : adding jetRapidityCut, vcairo
-2016-07-08 : CxAODTools : adding jetRapidityCut, vcairo
-2016-07-08 : CxAODTools : tau trigger SFs, carquin
-2016-07-08 : CxAODTools_VHbb : remove muon trigger SF computation for now; has to be done at reader level; CXAOD-283, hanar
-2016-07-08 : CxAODTools_VHbb : return code was missing in 1 lepton after trig muon sf comment out, ckato
-2016-07-08 : FrameworkExe : keep medium and strong schemes commented; removed outdated list of systematics, hanar
-2016-07-08 : FrameworkExe : remove weak and strong correlation schemes for WZ fat jet JES syst; remove Hbb JES syst identical to WZ ones, hanar
-2016-07-08 : FrameworkSub : Add datasets to produce, basewd on July 07 snapshot of derivations, nmorange
-2016-07-08 : FrameworkSub : Add Out/ directory, nmorange
-2016-07-08 : FrameworkSub : fix cx k-factor on the base of latest studies from Marco and Jose, fsforza
-2016-07-08 : FrameworkSub : prep for v24 tag, haysjm
-2016-07-08 : FrameworkSub : updated CxAODMaker_VHbb tag, haysjm
-2016-07-08 : FrameworkSub : updateed CxAODMaker tag, haysjm
+* CorrsAndSysts : adding SysTTbarPTVMBB, nishijim
+* CxAODMaker : 2016 bbtautau (hadhad) triggers and SFs, carquin
+* CxAODMaker : implementing ICHEP_v2 recommendation from  Egamma in ElectronHandler, dimicco
+* CxAODMaker_VHbb : change muon MJ selection, nishijim
+* CxAODReader : adding jetRapidityCut, vcairo
+* CxAODReader_VHbb : CorrsAndSyst for HVT, hanar
+* CxAODTools : adding jetRapidityCut, vcairo
+* CxAODTools : adding jetRapidityCut, vcairo
+* CxAODTools : tau trigger SFs, carquin
+* CxAODTools_VHbb : remove muon trigger SF computation for now; has to be done at reader level; CXAOD-283, hanar
+* CxAODTools_VHbb : return code was missing in 1 lepton after trig muon sf comment out, ckato
+* FrameworkExe : keep medium and strong schemes commented; removed outdated list of systematics, hanar
+* FrameworkExe : remove weak and strong correlation schemes for WZ fat jet JES syst; remove Hbb JES syst identical to WZ ones, hanar
+* FrameworkSub : Add datasets to produce, basewd on July 07 snapshot of derivations, nmorange
+* FrameworkSub : Add Out/ directory, nmorange
+* FrameworkSub : fix cx k-factor on the base of latest studies from Marco and Jose, fsforza
+* FrameworkSub : prep for v24 tag, haysjm
+* FrameworkSub : updated CxAODMaker_VHbb tag, haysjm
+* FrameworkSub : updateed CxAODMaker tag, haysjm
 
 ## 16-07-09
-2016-07-09 : CxAODMaker : added filenames for temporary electron efficiency bugfixes, haysjm
-2016-07-09 : CxAODMaker : adding electron trigger, dimicco
-2016-07-09 : CxAODMaker : adding one more ele trigger to list, hanar
-2016-07-09 : CxAODMaker : try fixing the electorn triggers again, haysjm
-2016-07-09 : CxAODTools : adapt comment to previous commit, hanar
-2016-07-09 : CxAODTools : added trigger, hanar
-2016-07-09 : CxAODTools : adding pass and match electron trigger flags, dimicco
-2016-07-09 : CxAODTools : update for recomputing muon trigger SF for both 2015 and 2016 data; not sure backwards compatible; usage requires enabling in reader config; CXAOD-283, hanar
-2016-07-09 : FrameworkExe : updated names of EL_EFF_* uncertainties, tnobe
-2016-07-09 : FrameworkSub : updated CxAODMaker tag again - pull in electorn efficiency fix, haysjm
-2016-07-09 : FrameworkSub : updated cxaodtools_vhbb tag, haysjm
-2016-07-09 : FrameworkSub : updated tags for CxAODMaker and CxAODTools for update from hannah, haysjm
-2016-07-09 : FrameworkSub : updated tags for hopefully final tag for ichep, haysjm
-2016-07-09 : FrameworkSub : updatr cxaodtooks tag', haysjm
+* CxAODMaker : added filenames for temporary electron efficiency bugfixes, haysjm
+* CxAODMaker : adding electron trigger, dimicco
+* CxAODMaker : adding one more ele trigger to list, hanar
+* CxAODMaker : try fixing the electorn triggers again, haysjm
+* CxAODTools : adapt comment to previous commit, hanar
+* CxAODTools : added trigger, hanar
+* CxAODTools : adding pass and match electron trigger flags, dimicco
+* CxAODTools : update for recomputing muon trigger SF for both 2015 and 2016 data; not sure backwards compatible; usage requires enabling in reader config; CXAOD-283, hanar
+* FrameworkExe : updated names of EL_EFF_* uncertainties, tnobe
+* FrameworkSub : updated CxAODMaker tag again - pull in electorn efficiency fix, haysjm
+* FrameworkSub : updated cxaodtools_vhbb tag, haysjm
+* FrameworkSub : updated tags for CxAODMaker and CxAODTools for update from hannah, haysjm
+* FrameworkSub : updated tags for hopefully final tag for ichep, haysjm
+* FrameworkSub : updatr cxaodtooks tag', haysjm
 
 ## 16-07-10
-2016-07-10 : CxAODMaker : fixed METMJTight, nishijim
-2016-07-10 : CxAODReader_VHbb : Updated basic input histogram to exclude only mVH & mBB when blinded, sjiggins
-2016-07-10 : CxAODReader_VHbb : Updated doMbbRescaling for merged analysis, sjiggins
-2016-07-10 : CxAODTools : fixing and restyling TriggerTool, use proper random run number extraction, dimicco
-2016-07-10 : CxAODTools : fix memory leak in MET trig SF computation, hanar
-2016-07-10 : FrameworkSub : fixed typo in packages file, haysjm
-2016-07-10 : FrameworkSub : tags for CxAODMaker and CxAODTools updated to pull in missing electron triggers, haysjm
+* CxAODMaker : fixed METMJTight, nishijim
+* CxAODReader_VHbb : Updated basic input histogram to exclude only mVH & mBB when blinded, sjiggins
+* CxAODReader_VHbb : Updated doMbbRescaling for merged analysis, sjiggins
+* CxAODTools : fixing and restyling TriggerTool, use proper random run number extraction, dimicco
+* CxAODTools : fix memory leak in MET trig SF computation, hanar
+* FrameworkSub : fixed typo in packages file, haysjm
+* FrameworkSub : tags for CxAODMaker and CxAODTools updated to pull in missing electron triggers, haysjm
 
 ## 16-07-11
-2016-07-11 : CxAODMaker : trigger effSF input file for looseLH isolLooseTrackOnly, lulu
-2016-07-11 : CxAODReader : protection no longer needed here, hanar
-2016-07-11 : CxAODReader_VHbb : fix getMuonInJetCorrTLV usage in merged regime, hanar
-2016-07-11 : CxAODTools : debugging Trigger Tool, dimicco
-2016-07-11 : CxAODTools : forcing the recomputation of the muon trigger SFs since no longer stored in CxAODs; CXAOD-283, hanar
-2016-07-11 : CxAODTools : putting back the set run number for TriggerSF also for data, it can help in spotting problems, dimicco
-2016-07-11 : FrameworkExe : setting sensible defaults (again), hanar
-2016-07-11 : FrameworkExe : update framework-run-MJ.cfg, nishijim
-2016-07-11 : FrameworkSub : add latest fackfactor root files, nishijim
-2016-07-11 : FrameworkSub : change muon fakefactor root file, nishijim
-2016-07-11 : FrameworkSub : Updated 2HDM bbtautau filter eff, gwilliam
-2016-07-11 : FrameworkSub : update data16 list files, yama
-2016-07-11 : FrameworkSub : updated packages list for 24-MJ, haysjm
-2016-07-11 : FrameworkSub : Updated RSG lh filter eff, gwilliam
+* CxAODMaker : trigger effSF input file for looseLH isolLooseTrackOnly, lulu
+* CxAODReader : protection no longer needed here, hanar
+* CxAODReader_VHbb : fix getMuonInJetCorrTLV usage in merged regime, hanar
+* CxAODTools : debugging Trigger Tool, dimicco
+* CxAODTools : forcing the recomputation of the muon trigger SFs since no longer stored in CxAODs; CXAOD-283, hanar
+* CxAODTools : putting back the set run number for TriggerSF also for data, it can help in spotting problems, dimicco
+* FrameworkExe : setting sensible defaults (again), hanar
+* FrameworkExe : update framework-run-MJ.cfg, nishijim
+* FrameworkSub : add latest fackfactor root files, nishijim
+* FrameworkSub : change muon fakefactor root file, nishijim
+* FrameworkSub : Updated 2HDM bbtautau filter eff, gwilliam
+* FrameworkSub : update data16 list files, yama
+* FrameworkSub : updated packages list for 24-MJ, haysjm
+* FrameworkSub : Updated RSG lh filter eff, gwilliam
 
 ## 16-07-12
-2016-07-12 : CxAODMaker : Fixing tau trigger systematics, carquin
+* CxAODMaker : Fixing tau trigger systematics, carquin
